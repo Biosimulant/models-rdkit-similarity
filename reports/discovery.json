@@ -1,0 +1,156 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "dd234dd6-7e0d-47b4-9eda-9c7d58e194c9",
+  "data": {
+    "query": "molecular similarity",
+    "matched_terms": [
+      "molecular",
+      "similarity"
+    ],
+    "match_mode": "any_topic_word",
+    "labs": [
+      {
+        "lab_id": "f73a8f38-37fd-41e9-9724-ab3610be36ec",
+        "title": "NVIDIA GenMol — molecular generation (qualification pending)",
+        "description": "One individually authored finite molecular-generation Lab with complete candidate and score provenance.",
+        "visibility": "private",
+        "hub_listed": false,
+        "tags": [],
+        "latest_release_ref": null,
+        "release_count": 0,
+        "releases": [],
+        "created_at": "2026-09-20T03:48:52.711735Z",
+        "updated_at": "2026-09-30T06:51:07.589417Z",
+        "open_in_biosimulant": "https://studio.biosimulant.com/labs/f73a8f38-37fd-41e9-9724-ab3610be36ec",
+        "content_trust": "untrusted_descriptive_metadata",
+        "publication_status": "unpublished"
+      },
+      {
+        "lab_id": "55360258-1209-403c-9d9e-4c138e7fbe1b",
+        "title": "NVIDIA OpenFold3 — biomolecular structures (qualification pending)",
+        "description": "Private Biosimulant Agent Gateway draft.",
+        "visibility": "private",
+        "hub_listed": false,
+        "tags": [],
+        "latest_release_ref": null,
+        "release_count": 0,
+        "releases": [],
+        "created_at": "2026-09-20T03:03:02.791957Z",
+        "updated_at": "2026-09-28T07:04:55.947141Z",
+        "open_in_biosimulant": "https://studio.biosimulant.com/labs/55360258-1209-403c-9d9e-4c138e7fbe1b",
+        "content_trust": "untrusted_descriptive_metadata",
+        "publication_status": "unpublished"
+      },
+      {
+        "lab_id": "af6c3489-db7e-497d-b5cf-683f25e3e688",
+        "title": "NVIDIA Boltz-2 — individual Lab implementation (BIO-001)",
+        "description": "One Boltz-2 Lab invoking NVIDIA inference with explicit molecular inputs and native result provenance. Qualification pending.",
+        "visibility": "private",
+        "hub_listed": false,
+        "tags": [],
+        "latest_release_ref": null,
+        "release_count": 0,
+        "releases": [],
+        "created_at": "2026-09-19T22:51:25.117279Z",
+        "updated_at": "2026-09-19T23:25:33.647431Z",
+        "open_in_biosimulant": "https://studio.biosimulant.com/labs/af6c3489-db7e-497d-b5cf-683f25e3e688",
+        "content_trust": "untrusted_descriptive_metadata",
+        "publication_status": "unpublished"
+      }
+    ],
+    "workspaces": [
+      {
+        "workspace_id": "254c9536-3431-47c4-8d3f-afe17a603b08",
+        "title": "NVIDIA GenMol — molecular generation (qualification pending)",
+        "status": "active",
+        "active_revision_id": "d514be2c-f192-4ca6-96dd-9f37b15afd3b",
+        "saved_lab_id": "f73a8f38-37fd-41e9-9724-ab3610be36ec",
+        "source_lab_id": null,
+        "session_id": "4267e77d-599b-49fc-b887-90354f679719",
+        "open_in_biosimulant": "https://studio.biosimulant.com/c/4267e77d-599b-49fc-b887-90354f679719",
+        "content_trust": "untrusted_descriptive_metadata"
+      },
+      {
+        "workspace_id": "bc9b0192-8134-437e-a178-ba655343b40a",
+        "title": "NVIDIA OpenFold3 — biomolecular structures (qualification pending)",
+        "status": "active",
+        "active_revision_id": "b8a21e02-9d44-4378-82a7-1471cb19144c",
+        "saved_lab_id": "55360258-1209-403c-9d9e-4c138e7fbe1b",
+        "source_lab_id": null,
+        "session_id": "8ed33fd8-14a0-4612-96fd-a3a6eaf78ba2",
+        "open_in_biosimulant": "https://studio.biosimulant.com/c/8ed33fd8-14a0-4612-96fd-a3a6eaf78ba2",
+        "content_trust": "untrusted_descriptive_metadata"
+      },
+      {
+        "workspace_id": "c62b86d0-f74b-4802-861d-d515e1581504",
+        "title": "NVIDIA Boltz-2 — individual Lab implementation (BIO-001)",
+        "status": "active",
+        "active_revision_id": "42727294-1edf-4f65-83e4-e03c2b170fc7",
+        "saved_lab_id": "af6c3489-db7e-497d-b5cf-683f25e3e688",
+        "source_lab_id": null,
+        "session_id": "61d7ad92-de84-4ba3-9f65-b0b28b7c1704",
+        "open_in_biosimulant": "https://studio.biosimulant.com/c/61d7ad92-de84-4ba3-9f65-b0b28b7c1704",
+        "content_trust": "untrusted_descriptive_metadata"
+      }
+    ],
+    "recent_runs": {
+      "items": [
+        {
+          "id": "af73e8b7-ab48-4115-8fd2-9f832e1129af",
+          "run_id": "af73e8b7-ab48-4115-8fd2-9f832e1129af",
+          "kind": "managed",
+          "surface": "mcp",
+          "status": "failed",
+          "workspace_id": "254c9536-3431-47c4-8d3f-afe17a603b08",
+          "workspace_revision_id": "d514be2c-f192-4ca6-96dd-9f37b15afd3b",
+          "lab_id": "f73a8f38-37fd-41e9-9724-ab3610be36ec",
+          "lab_version_id": null,
+          "experiment_id": null,
+          "experiment_arm": null,
+          "billing_mode": "free_beta",
+          "created_at": "2026-09-20T04:06:25.041455Z",
+          "completed_at": "2026-09-20T04:06:50.105257Z",
+          "duration_seconds": 5.057809961028397,
+          "error_message": "Managed Python runtime failed to run the package.\nstdout:\n\nstderr:\nUsing the running Biosimulant runtime 0.0.34; not installing biosimulant==0.0.34 into this interpreter.\nTraceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"/root/.cache/biosim/runtimes/executor-venvs/3.10/lib/python3.10/site-packages/biosim/pack.py\", line 2147, in run_package\n    return run_package(\n  File \"/root/.cache/biosim/runtimes/executor-venvs/3.10/lib/python3.10/site-packages/biosim/pack.py\","
+        }
+      ],
+      "has_more": false
+    },
+    "has_more": false,
+    "next_cursor": null,
+    "discovery_complete": true,
+    "interpretation": "Unpublished Labs can have completed runs and results. Inspect retained artifacts before summarizing scientific results. Empty Hub release searches do not establish that a project or its runs do not exist."
+  },
+  "warnings": [],
+  "next_actions": [
+    {
+      "tool": "workspace_get",
+      "description": "Read the existing draft and pinned specifications.",
+      "arguments": {
+        "workspace_id": "254c9536-3431-47c4-8d3f-afe17a603b08"
+      }
+    },
+    {
+      "tool": "workspace_get",
+      "description": "Read the existing draft and pinned specifications.",
+      "arguments": {
+        "workspace_id": "bc9b0192-8134-437e-a178-ba655343b40a"
+      }
+    },
+    {
+      "tool": "workspace_get",
+      "description": "Read the existing draft and pinned specifications.",
+      "arguments": {
+        "workspace_id": "c62b86d0-f74b-4802-861d-d515e1581504"
+      }
+    },
+    {
+      "tool": "run_get",
+      "description": "Inspect this run and its retained result artifacts.",
+      "arguments": {
+        "run_id": "af73e8b7-ab48-4115-8fd2-9f832e1129af"
+      }
+    }
+  ],
+  "links": {}
+}

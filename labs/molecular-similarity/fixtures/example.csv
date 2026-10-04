@@ -1,0 +1,14 @@
+molecule_id,smiles
+ethanol,CCO
+ethanol-equivalent,OCC
+ethanol,CCO
+propanol,CCCO
+butanol,CCCCO
+ethylamine,CCN
+acetate,CC(=O)O
+benzene,c1ccccc1
+alanine-L,N[C@@H](C)C(=O)O
+alanine-D,N[C@H](C)C(=O)O
+salt,CC(=O)[O-].[Na+]
+invalid,not-a-smiles
+blank,

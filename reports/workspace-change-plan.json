@@ -1,0 +1,248 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "00fb7513-9b1b-46d1-839a-09f7bc9ba337",
+  "data": {
+    "plan_id": "3c30e3ed-a410-4533-b40c-c93dffe65bcf",
+    "plan_sha256": "4ccde5dd752840c60142b53b020a04dcf8f8dfe3146ffc416b909fa314136fa1",
+    "expires_at": "2026-10-04T06:58:15.168450Z",
+    "base_revision_id": "c8a588bc-f70d-4fc9-9031-e006022e4854",
+    "base_sha256": "c31cd81652b044f15369d9b01f5c0c27b5ad1463557c71a0e5c151ca79eba127",
+    "findings": [],
+    "blockers": [],
+    "diff": [
+      {
+        "kind": "file_upsert",
+        "path": "NOTICE.md",
+        "size_bytes": 503,
+        "content_sha256": "742485ea331b94db853de92eb434fdf97ac629201eb7ee5ac9191be70f7df919"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "fixtures/example.csv",
+        "size_bytes": 245,
+        "content_sha256": "09b7415cace9b0bf071d0faa5e25e34cc8b96b7fb89202d7ce73bf556d6e5d89"
+      },
+      {
+        "kind": "owned_file_copy",
+        "path": "models/search/assets/drawing-libraries.zip",
+        "source_file_id": "0d43be33-1471-4224-ad65-db4e6f1bf5f5",
+        "content_sha256": "d266eaf494da3597f1938b1d70379a1c11bf12baa3bae18ad86f54ba5abbbba5",
+        "size_bytes": 1031610
+      },
+      {
+        "kind": "file_upsert",
+        "path": "models/search/assets/native-runtime-pin.json",
+        "size_bytes": 373,
+        "content_sha256": "2c833182ea70279ae22e93e15001d68275e06883da8766396a607cc36e456279"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "models/search/model.yaml",
+        "size_bytes": 1659,
+        "content_sha256": "ef464c536a7cd010e7d4ebd1d9b954d0f2b2ea3720ac5194de1d4392e27bdf7a"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "models/search/src/__init__.py",
+        "size_bytes": 0,
+        "content_sha256": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "models/search/src/linux_libraries.py",
+        "size_bytes": 2360,
+        "content_sha256": "e953f7dd6a1ab2fcdaf7ae43bfb67fddaebe8aa9402dc1adfcc71a1921b4189c"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "models/search/src/search.py",
+        "size_bytes": 13459,
+        "content_sha256": "15d21eb91247dcda51106c5070158160ade4db237eeafc1e62ae7d3a32657c46"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/RDKIT-LICENSE.txt",
+        "size_bytes": 1580,
+        "content_sha256": "5dee81f141e5290d88efff593c9e76533ebb76b3a197c2c7d8fe266846f8f6fd"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-distributions.json",
+        "size_bytes": 2666,
+        "content_sha256": "93b444d9f5ec4d4fdde6eb1aa3b7396c7baca75f90fb1c49ce829a5926524859"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-notices/biosimulant-licenses_LICENSE.txt",
+        "size_bytes": 1068,
+        "content_sha256": "bfee38e1fa4358b7824b2523fedccf4eca15fa641f0e829a3949b7f627e678cc"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-notices/numpy-LICENSE.txt",
+        "size_bytes": 47755,
+        "content_sha256": "b50d1ea171f074c81ebf290939b9973938d589ab165322dd958b24370d63d2ba"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-notices/pillow-licenses_LICENSE",
+        "size_bytes": 66498,
+        "content_sha256": "d307169a9c6240a6c7e899c6f82f36d0b5c6cd88336dd48880470f7b3e1c429a"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-notices/rdkit-LICENSE.md",
+        "size_bytes": 1077,
+        "content_sha256": "816533226b4963f7db0ee25e1f71407e5ec090ac364de764e611986913c4a30c"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-notices/rdkit-OFL.txt",
+        "size_bytes": 4390,
+        "content_sha256": "ef183e244726eece6d6e29fa39e84400a93e6192249c08e127b51e396f10a5fe"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-notices/rdkit-license.txt",
+        "size_bytes": 1580,
+        "content_sha256": "5dee81f141e5290d88efff593c9e76533ebb76b3a197c2c7d8fe266846f8f6fd"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/dependency-notices/rdkit-telex_font_license.txt",
+        "size_bytes": 4401,
+        "content_sha256": "9cf8d010ae665c0066baed5190c4c3415a9ab317d47a9bacdfe6be022542784a"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-distributions.json",
+        "size_bytes": 6170,
+        "content_sha256": "41c441eef1c1283eaced15ff0ecddfa8ec70c3105897fb8de17cf0ce29a54957"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libbsd0-copyright",
+        "size_bytes": 23960,
+        "content_sha256": "e2e253e17d3de3da8124a4774d294f5087029d553270ccddb4e12cb041b1f159"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libexpat1-copyright",
+        "size_bytes": 1756,
+        "content_sha256": "48ac5c93fd81cc5abbedfa0bcdda31f80a10096d34e68179b0644992ac837232"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libmd0-copyright",
+        "size_bytes": 8018,
+        "content_sha256": "5e614c2e8172c95077b56d855d335c885bfd7abebfa2fdc39c33043b35330f44"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libx11-6-copyright",
+        "size_bytes": 47102,
+        "content_sha256": "0a3d5ddd9cf4cf3b07dff9b5ea301e713124bdd96168c0815bcfe78128441ef2"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libxau6-copyright",
+        "size_bytes": 1224,
+        "content_sha256": "294370390a342cbe59a2264956dcbae3f19b5dda7351f65501b5ba3cadd57906"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libxcb1-copyright",
+        "size_bytes": 1781,
+        "content_sha256": "89fe24ca3b4bab95f5f6ec37fd45660ff536e353f704fb1bc253453857d426e6"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libxdmcp6-copyright",
+        "size_bytes": 1265,
+        "content_sha256": "d080567a315c2cdbc66335c9f02e151c663bec7805f96e2aaee48e4adc9ab411"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libxext6-copyright",
+        "size_bytes": 10421,
+        "content_sha256": "7b61bb3765c6bfe1f70b039e3c451ff17ee8dbd934edc883a18ac2f4618534f1"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/native-library-notices/libxrender1-copyright",
+        "size_bytes": 2252,
+        "content_sha256": "112ee7ed17cc52f5d327d9ee8f166ea8c142ae0d20dd4880996286d561dc0eba"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/provenance.json",
+        "size_bytes": 1038,
+        "content_sha256": "2c5662c3b260a9ead626a9cc306d6b366b75ea2b11487f3bc1d3bc128f6bc98c"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "sources/rdkit-descriptor-guide.rst",
+        "size_bytes": 167232,
+        "content_sha256": "63afd17d667c5ae6dec13932683cf12ac2d553bcd1168c95fb5adc038d483a79"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "tests/test_acceptance.py",
+        "size_bytes": 8110,
+        "content_sha256": "881aa564a39541c65fa412cf05c105d71caf90701438c172026680c0a6470c6b"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "MRS.md",
+        "size_bytes": 10245,
+        "content_sha256": "f9ba7aea65c7f5f01a3572638688dab4fe2c63ec8bd95e4fa217a7ded4c1135f"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "MTS.md",
+        "size_bytes": 10618,
+        "content_sha256": "d27b57a1e2a71af9c3d70593bba6a3f2eb41ae8d97e0bafcd15e0aee6440df9f"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "LICENSE",
+        "size_bytes": 1603,
+        "content_sha256": "7bf69b5b7ef479e69c84b36738a8ca321a250abd0d7abd6719e240e5b1e821dd"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "freeze-manifest.json",
+        "size_bytes": 5714,
+        "content_sha256": "e3595b0f54e0ae785740d9a0e30a239565900534adddb866fbbb8665c3e4de10"
+      },
+      {
+        "kind": "manifest_replace",
+        "manifest_sha256": "8a6603761d4b92a9eaff197d024546523ab3b14561cb49a854a8f3b2de530faf"
+      },
+      {
+        "kind": "file_upsert",
+        "path": ".biosimulant/evidence.json",
+        "size_bytes": 2,
+        "content_sha256": "b3283bf184bb082f364b8537776bc6b15fce2ff9f9acb3fb11ae87da394bfd4b"
+      }
+    ],
+    "operation_count": 35,
+    "requires_confirmation": true
+  },
+  "warnings": [
+    "No workspace content changed. Apply the exact digest only after user confirmation."
+  ],
+  "next_actions": [
+    {
+      "tool": "workspace_change_apply",
+      "description": "After explicit confirmation, apply this exact approved plan.",
+      "arguments": {
+        "plan_id": "3c30e3ed-a410-4533-b40c-c93dffe65bcf",
+        "plan_sha256": "4ccde5dd752840c60142b53b020a04dcf8f8dfe3146ffc416b909fa314136fa1"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}

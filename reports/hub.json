@@ -1,0 +1,34 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "ead97502-2e04-4f7a-8071-d27d60260d76",
+  "data": {
+    "items": [],
+    "result_count": 0,
+    "total_matched": 0,
+    "next_cursor": null,
+    "as_of": "2026-10-04T06:26:29.805323",
+    "selection_required": false,
+    "owned_work": {
+      "query": "similarity",
+      "matched_terms": [
+        "similarity"
+      ],
+      "match_mode": "any_topic_word",
+      "labs": [],
+      "workspaces": [],
+      "recent_runs": {
+        "items": [],
+        "has_more": false
+      },
+      "has_more": false,
+      "next_cursor": null,
+      "discovery_complete": true,
+      "interpretation": "Unpublished Labs can have completed runs and results. Inspect retained artifacts before summarizing scientific results. Empty Hub release searches do not establish that a project or its runs do not exist."
+    }
+  },
+  "warnings": [
+    "Hub search covers released packages. No matching release does not mean no private draft or run exists."
+  ],
+  "next_actions": [],
+  "links": {}
+}

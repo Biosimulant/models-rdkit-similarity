@@ -1,0 +1,21 @@
+{
+  "rdkit_version": "2025.9.1",
+  "tag": "Release_2025_09_1",
+  "git_commit": "237a1d9027c800784afed8788540f38a3aa595f8",
+  "files": [
+    {
+      "path": "sources/RDKIT-LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/rdkit/rdkit/237a1d9027c800784afed8788540f38a3aa595f8/license.txt",
+      "size_bytes": 1580,
+      "sha256": "daeb8d194502cbcf34c05c39541a0d02be65bc9bada5b891c1974cd24e9fca30"
+    },
+    {
+      "path": "sources/rdkit-descriptor-guide.rst",
+      "url": "https://raw.githubusercontent.com/rdkit/rdkit/237a1d9027c800784afed8788540f38a3aa595f8/Docs/Book/GettingStartedInPython.rst",
+      "size_bytes": 167232,
+      "sha256": "59a87cf2287f0aa3363dc24d022972bdf83e97b278d7073cc0e0c6c64d92135d"
+    }
+  ],
+  "license_obligations": "Retain full BSD-3-Clause RDKit copyright, conditions and disclaimer; no endorsement. No weights or external chemical data used.",
+  "purpose": "Pinned upstream guide includes authoritative fingerprints and Tanimoto documentation; reused intact from descriptor Lab staging."
+}

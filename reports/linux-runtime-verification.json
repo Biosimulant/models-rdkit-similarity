@@ -1,0 +1,210 @@
+{
+  "scope": "Local composed CLI from dedicated staging source; no managed Run, hosted deployment or end-to-end platform staging evidence",
+  "python": "3.12.15 (main, Oct  1 2026, 21:47:32) [GCC 14.2.0]",
+  "cases": [
+    {
+      "case": "example-text",
+      "status": "PASS",
+      "elapsed_seconds": 7.398528746096417,
+      "returned_hits": 11,
+      "eligible_hits": 11,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 617,
+          "sha256": "92275b8b60666064b8c7c04695bbaf5aa531280945e3dfae1f71c7982ea69023"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 4844,
+          "sha256": "cf6e10e5b3d5e227eb6df7eaf3880b0fdd2cdc66e0394579f4624ab9a31ff1ec"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1941,
+          "sha256": "458713f427641c1a3c068e6c451779d88b80956639fecdfb093f47f965c64486"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 65164,
+          "sha256": "cc966b78056819a202e69e59ba0ef29d49e3a9894d6fcc3816d3529fc0ae5abe"
+        }
+      ]
+    },
+    {
+      "case": "example-upload",
+      "status": "PASS",
+      "elapsed_seconds": 4.426865629036911,
+      "returned_hits": 11,
+      "eligible_hits": 11,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 617,
+          "sha256": "92275b8b60666064b8c7c04695bbaf5aa531280945e3dfae1f71c7982ea69023"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 4844,
+          "sha256": "34e28e77d6e6af85e84405836f6b0dd55059cdf7b0d66532c49881bd73bfae37"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1941,
+          "sha256": "1e41fb432134088f76e4b6bc2871256e76f1ca34152b63e666396b7bce8d48f0"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 65164,
+          "sha256": "cc966b78056819a202e69e59ba0ef29d49e3a9894d6fcc3816d3529fc0ae5abe"
+        }
+      ]
+    },
+    {
+      "case": "strict-threshold",
+      "status": "PASS",
+      "elapsed_seconds": 4.389933728030883,
+      "returned_hits": 3,
+      "eligible_hits": 3,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 180,
+          "sha256": "51cd8c231cb5acc3a2e0c9f09e5ec9cd5de140387c1de48dedffb28a82ca8863"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 3085,
+          "sha256": "3dacb5bc8718b8ef022fffdff4e64fb85f44031d0746024ba66121edfafd8679"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1939,
+          "sha256": "176ad3d4428cc01826502f9415ca948e394fb2ab2e19a8f0bf9a8445c53b8b10"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 15245,
+          "sha256": "1b52310ce5de37fb1c8a7c0f02e9e050936ce8847b94c95794838d9271c25739"
+        }
+      ]
+    },
+    {
+      "case": "no-matches",
+      "status": "PASS",
+      "elapsed_seconds": 4.10978709498886,
+      "returned_hits": 0,
+      "eligible_hits": 0,
+      "typed_outputs": 7,
+      "renders": [
+        "image",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 79,
+          "sha256": "3d301d5af5aa1d53e9e12e05648098bf07caf2a916809e0b86be893065b33f33"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 2076,
+          "sha256": "72129615b8710a3d9ce192565c202a1089a83b7dffe9623bb586659a212c38e5"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 56,
+          "sha256": "c3046020619bbd986b60b8ee087d72bbbd2fd849c5c2ce9d3f9b56de12be46ae"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1933,
+          "sha256": "640447a573b26c5387978b45e6235be6c436162f24289f66f372aacbaf0a4135"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 6105,
+          "sha256": "16cccb432b400c885a6f2b8859d7c6e84f8d05fc47654c8587c28239ff4fcd39"
+        }
+      ]
+    },
+    {
+      "case": "chiral-pair",
+      "status": "PASS",
+      "elapsed_seconds": 4.001055976958014,
+      "returned_hits": 2,
+      "eligible_hits": 2,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 200,
+          "sha256": "57dcfc107b8695ea059a683f369bd59ac695f7d06d4c88e89b269bdff8d7be60"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 2554,
+          "sha256": "740b6d4d918bd4e2ae489c09c9b34d15dcbec43cbf57ecffb25573855256bd28"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 56,
+          "sha256": "c3046020619bbd986b60b8ee087d72bbbd2fd849c5c2ce9d3f9b56de12be46ae"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1958,
+          "sha256": "152994932ee74f0584f0cba89b879fff5262be29f9f566e929d251c79f954e65"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 17302,
+          "sha256": "a9e4188619fdf5327265c6e5648b68579cfebbdc2d279a61704089b22548c8c5"
+        }
+      ]
+    }
+  ],
+  "output_directory_isolation": "PASS"
+}

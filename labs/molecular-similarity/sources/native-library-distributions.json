@@ -1,0 +1,181 @@
+{
+  "files": [
+    {
+      "path": "lib/libX11.so.6",
+      "sha256": "688d7edc1a02a0e7993722d57a42821b22435e249071554625a5ec4784787d3d",
+      "size_bytes": 1318408
+    },
+    {
+      "path": "lib/libXau.so.6",
+      "sha256": "833aa73cf8f645330907d5923fcbf380e0895ab2551d522b41b0308747a51e27",
+      "size_bytes": 14496
+    },
+    {
+      "path": "lib/libXdmcp.so.6",
+      "sha256": "911ecd1cf42f310e788652f2719803bb4632e077b6e292af31b876c836bba264",
+      "size_bytes": 22728
+    },
+    {
+      "path": "lib/libXext.so.6",
+      "sha256": "32471a718f4cfef053aae4b84154ebb34ad16996d5db5dd6254e41e5fb36079e",
+      "size_bytes": 81568
+    },
+    {
+      "path": "lib/libXrender.so.1",
+      "sha256": "5cd723d723504af24d297cf9bc87156c0e023f4becbee2ce8432555cbaa73836",
+      "size_bytes": 47608
+    },
+    {
+      "path": "lib/libbsd.so.0",
+      "sha256": "c34693b27401e6e74d7ac32184c79bfb0cca936d3b1be990d435124a6a5686f5",
+      "size_bytes": 84840
+    },
+    {
+      "path": "lib/libexpat.so.1",
+      "sha256": "453732cb225bc46f9337066d782118d24194bccee4c85b59eccf7e8714b5e62f",
+      "size_bytes": 178280
+    },
+    {
+      "path": "lib/libmd.so.0",
+      "sha256": "9e8462f7650da0b39ecfe1680fa87fe393f0710b324250931ab36fa0135b14cc",
+      "size_bytes": 47312
+    },
+    {
+      "path": "lib/libxcb.so.1",
+      "sha256": "35e218293d7c1f65b765337b92c6425f3495e80f5973058d8847fa08258cb97e",
+      "size_bytes": 166824
+    },
+    {
+      "path": "notices/libbsd0-copyright",
+      "sha256": "00fd7be5d907a6bcc409a80f2d565f508673db4761d54623691f89ae3aa20fc7",
+      "size_bytes": 23960
+    },
+    {
+      "path": "notices/libexpat1-copyright",
+      "sha256": "60919fe1a156395ff14511bb6ff79756c50ade2fff59ac60c9bae1d8a7fe6292",
+      "size_bytes": 1756
+    },
+    {
+      "path": "notices/libmd0-copyright",
+      "sha256": "4365ef6255ad553fce69dd4bc0e093472c5d0e41b8ea493a545cc926ce171aa6",
+      "size_bytes": 8018
+    },
+    {
+      "path": "notices/libx11-6-copyright",
+      "sha256": "0b380a7fd5b2228f26e9585e56f14812efd3350f3df307507d2bc055dfd8de3e",
+      "size_bytes": 47102
+    },
+    {
+      "path": "notices/libxau6-copyright",
+      "sha256": "118dd263a7b91c8f21c489f949bf13281dff9e766deea92b829dac4dce66601a",
+      "size_bytes": 1224
+    },
+    {
+      "path": "notices/libxcb1-copyright",
+      "sha256": "4f7cb9db6bf6542f5417e3d674c780d3a5fd12291a54d63054fb576ee0cfae80",
+      "size_bytes": 1781
+    },
+    {
+      "path": "notices/libxdmcp6-copyright",
+      "sha256": "1bcbb50f8603fe8b86d330bfa460b772ea04fbd3c70e4499f0768b5340b9fd6e",
+      "size_bytes": 1265
+    },
+    {
+      "path": "notices/libxext6-copyright",
+      "sha256": "bc57e445ca1d9fe082c8d54189dd411ff26caa8552c9c63d44ea06a982f32124",
+      "size_bytes": 10421
+    },
+    {
+      "path": "notices/libxrender1-copyright",
+      "sha256": "ed2a78123a5076b4f11da38cb1ffb85b5cb9fdc26b5746c517b1d7e7a9029704",
+      "size_bytes": 2252
+    }
+  ],
+  "license_policy": "Unmodified Debian libraries; full upstream copyright/license notices retained",
+  "load_order": [
+    "libmd.so.0",
+    "libbsd.so.0",
+    "libXau.so.6",
+    "libXdmcp.so.6",
+    "libxcb.so.1",
+    "libX11.so.6",
+    "libXext.so.6",
+    "libXrender.so.1",
+    "libexpat.so.1"
+  ],
+  "packages": [
+    {
+      "name": "libmd0",
+      "sha256": "03539fd30c509e27101d13a56e52eda9062bdf1aefe337c07ab56def25a13eab",
+      "size_bytes": 29456,
+      "soname": "libmd.so.0",
+      "url": "https://deb.debian.org/debian/pool/main/libm/libmd/libmd0_1.0.4-2_amd64.deb",
+      "version": "1.0.4-2"
+    },
+    {
+      "name": "libbsd0",
+      "sha256": "bb31cc8b40f962a85b2cec970f7f79cc704a1ae4bad24257a822055404b2c60b",
+      "size_bytes": 117416,
+      "soname": "libbsd.so.0",
+      "url": "https://deb.debian.org/debian/pool/main/libb/libbsd/libbsd0_0.11.7-2_amd64.deb",
+      "version": "0.11.7-2"
+    },
+    {
+      "name": "libxau6",
+      "sha256": "679db1c4579ec7c61079adeaae8528adeb2e4bf5465baa6c56233b995d714750",
+      "size_bytes": 19720,
+      "soname": "libXau.so.6",
+      "url": "https://deb.debian.org/debian/pool/main/libx/libxau/libxau6_1.0.9-1_amd64.deb",
+      "version": "1:1.0.9-1"
+    },
+    {
+      "name": "libxdmcp6",
+      "sha256": "ecb8536f5fb34543b55bb9dc5f5b14c9dbb4150a7bddb3f2287b7cab6e9d25ef",
+      "size_bytes": 26344,
+      "soname": "libXdmcp.so.6",
+      "url": "https://deb.debian.org/debian/pool/main/libx/libxdmcp/libxdmcp6_1.1.2-3_amd64.deb",
+      "version": "1:1.1.2-3"
+    },
+    {
+      "name": "libxcb1",
+      "sha256": "fdc61332a3892168f3cc9cfa1fe9cf11a91dc3e0acacbc47cbc50ebaa234cc71",
+      "size_bytes": 144052,
+      "soname": "libxcb.so.1",
+      "url": "https://deb.debian.org/debian/pool/main/libx/libxcb/libxcb1_1.15-1_amd64.deb",
+      "version": "1.15-1"
+    },
+    {
+      "name": "libx11-6",
+      "sha256": "d88c973e79fd9b65838d77624142952757e47a6eb1a58602acf0911cf35989f4",
+      "size_bytes": 759544,
+      "soname": "libX11.so.6",
+      "url": "https://deb.debian.org/debian/pool/main/libx/libx11/libx11-6_1.8.4-2+deb12u2_amd64.deb",
+      "version": "2:1.8.4-2+deb12u2"
+    },
+    {
+      "name": "libxext6",
+      "sha256": "504b7be9d7df4f6f4519e8dd4d6f9d03a9fb911a78530fa23a692fba3058cba6",
+      "size_bytes": 52932,
+      "soname": "libXext.so.6",
+      "url": "https://deb.debian.org/debian/pool/main/libx/libxext/libxext6_1.3.4-1+b1_amd64.deb",
+      "version": "2:1.3.4-1+b1"
+    },
+    {
+      "name": "libxrender1",
+      "sha256": "b2a6d160578f359220101947c8d67059b44704a251e688de1d0b744fefedfd1a",
+      "size_bytes": 33228,
+      "soname": "libXrender.so.1",
+      "url": "https://deb.debian.org/debian/pool/main/libx/libxrender/libxrender1_0.9.10-1.1_amd64.deb",
+      "version": "1:0.9.10-1.1"
+    },
+    {
+      "name": "libexpat1",
+      "sha256": "ed010cc41577d75ab01cccc6afa93496d9a99f1e16bd469caf58e1b81fddae80",
+      "size_bytes": 105852,
+      "soname": "libexpat.so.1",
+      "url": "https://security.debian.org/debian-security/pool/updates/main/e/expat/libexpat1_2.5.0-1+deb12u4_amd64.deb",
+      "version": "2.5.0-1+deb12u4"
+    }
+  ],
+  "purpose": "Pinned Linux x86_64 glibc drawing dependencies; no inference-time network service"
+}

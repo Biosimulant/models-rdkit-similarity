@@ -1,0 +1,31 @@
+# Acceptance evidence — RDKit Molecular Similarity Search
+
+Status: IN_PROGRESS — exact private workspace change awaits human approval. Public release, managed run, public study and active hosting have not been executed or verified. No original requirement is waived. Small-fixture parity is software verification, not broad chemistry/biological validation.
+
+| Gate | State | Evidence / remaining work |
+| --- | --- | --- |
+| A1 | PASS locally/isolated | Frozen 28-test suite independently invokes pinned upstream AllChem fingerprints and Tanimoto calls; every score/complete ranking within 1e-12, identity1 and bounds[0,1]. [macOS tests](frozen-tests.txt), [Linux tests](linux-tests.txt), [test source](../labs/molecular-similarity/tests/test_acceptance.py). No managed claim. |
+| A2 | PASS locally/isolated | Same suite verifies inclusive threshold then top_k, Unicode ID/row ties, no matches, genuine duplicates, equivalent SMILES, invalid rows; five composed real text/upload cases check outputs/downloads. [Runtime](local-runtime-verification.json), [Linux runtime](linux-runtime-verification.json). |
+| A3 | PASS locally/isolated | Alanine stereoisomer pair: includeChirality=True separates fingerprints; independent disabled-chirality control scores1. Parameter release fixed. |
+| A4 | PASS locally/isolated | Exact uploaded BOM/CRLF bytes hashed; query checksum, counts/IDs/originals and duplicate row indices verified; downloaded JSON matches typed results. |
+| A5 | PARTIAL | [Local retained comparison](local-comparison.json): threshold0.2 yields6 hits and0.6 yields3 on same13-row collection (11 valid/2 invalid). [Computed drawings](example-molecules.png). Required public actual MCP study and searched-collection UI remain unverified. |
+| H1 | PARTIAL | Source/dependency/native/font pins and notices retained; original public fixtures licensed BSD-3-Clause, no commercial database/weights. [Freeze](freeze-manifest.json), [notices](../labs/molecular-similarity/NOTICE.md), upstream source/guide re-fetched and byte hashes confirmed. Exact Hub release absent. Existing native bundle artifact re-download returned403; local retained zip independently matches pin and isolated Linux runtime verifies every archive member. |
+| H2 | PARTIAL | This matrix covers all gates without weakened criteria; MRS/MTS structural validators0errors/0warnings. Final managed/public evidence not collected. |
+| H3 | NOT_RUN | Workspace contains blank revision until approved apply. Need bounded managed run, seven typed outputs plus computed visuals, independent downloaded artifact hashes and matching Passport. |
+| H4 | NOT_RUN | No immutable public release/Hub listing/non-owner page or invocation auth/payment verification yet. GitHub repository is public and is not a Hub release. |
+| H5 | NOT_RUN | No hosting request/deployment/invocation. Must verify exact release on approved Modal, real uploaded collection, cold/subsequent invocation, frozen120s bounds. Production unchanged. |
+| H6 | NOT_RUN | No public retained managed example or experiment. Local fixture/plots do not satisfy Hub Results/Experiments. |
+| H7 | PARTIAL | [Local pilot/upper bound](local-benchmark.json), [Linux isolated](linux-benchmark.json). Linux0.5CPU/512MiB/networknone: pilot100=2.095s/180719616-byte peak; benchmark10000=4.183s/188071936-byte peak.0GPU. User charge for this item managed compute=$0 because no managed runs; actual provider spend/hosted cold-warm/timeout/cancellation/account isolation/idle policy unavailable or not run. Local instance/directory isolation passed. |
+| H8 | PARTIAL | Dedicated staging repo and precise status/blockers retained. No public Lab URL/release/run/study/hosting identity yet. Exact staging commit recorded after commit. Rollback: no hosting to pause; when hosting exists read current revision then pause/withdraw through MCP, preserve immutable evidence. |
+
+## Approval boundary and operational blockers
+
+Prepared exact private change: plan3c30e3ed-a410-4533-b40c-c93dffe65bcf, SHA2564ccde5dd752840c60142b53b020a04dcf8f8dfe3146ffc416b909fa314136fa1, basec8a588bc-f70d-4fc9-9031-e006022e4854, expires2026-10-04T06:58:15.168450Z (07:58WAT).35operations, no findings/blockers. Apply requires explicit exact-plan confirmation per live MCP/skill; no active grant covers this action. See workspace-change-plan.json.
+
+After apply, prepare one item-specific bounded pilot first (<=100 molecules, timeout120s, CPU free Modal profile). Measure it before a10000-row managed benchmark/endpoint enablement. Then prepare one two-arm study thresholds0.2/0.6. Present exact live cost/resource plans for approval. Public publication always needs separate exact approval and hosting requires exact release/administrator capability. Current live hosting authoring topic twice returned internal_error; retain request a751da37-68b1-4639-8bc9-587438b7758c, retryable. Descriptor item's historical CSV/public-study limits are risks to recheck against this item, not verified similarity hosting failures.
+
+## Environment and synchronization
+
+New dedicated repository initially has only staging and no main baseline; no preexisting commits to preserve. Core biosim main/staging baseline95071d18412aa9c3a174a38a066fd85e39428cc6. Core backend maincd1b8312b2db5c29ec494d3f063bd8ac2ebfbcc2 is ancestor of inspected staging4b1dfd3529920db7bc3eafb52c9d78c3c9de40da; staging-only commit preserved. Clean local core staging checkouts fast-forwarded to those inspected baselines; no source modification, push, production deployment or provider switch. Existing detached worktrees (including ongoing CSV hosting work) were inspected read-only and left untouched.
+
+All tests run from dedicated staging source. Linux harness is an isolated local adapter/runtime test, not a core end-to-end staging deployment or managed Modal run. Build/provision network allowed for pinned dependencies; test runtime network disabled. Harness containers --rm and unique verification image removed after checks; base cache and local venv retained.

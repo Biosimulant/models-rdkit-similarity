@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.biosimulant/
+labs/molecular-similarity/outputs/
+*.pyc
+outputs/

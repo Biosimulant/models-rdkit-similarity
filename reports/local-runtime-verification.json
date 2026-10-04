@@ -1,0 +1,210 @@
+{
+  "scope": "Local composed CLI from dedicated staging source; no managed Run, hosted deployment or end-to-end platform staging evidence",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "cases": [
+    {
+      "case": "example-text",
+      "status": "PASS",
+      "elapsed_seconds": 1.152816958958283,
+      "returned_hits": 11,
+      "eligible_hits": 11,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 617,
+          "sha256": "92275b8b60666064b8c7c04695bbaf5aa531280945e3dfae1f71c7982ea69023"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 4845,
+          "sha256": "6a92f90ed0e229281660e574f561bf5fca4c9cf5a29b9d9e4049a3b85b5347d2"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1942,
+          "sha256": "9251a6254cef0394384b76dfb70d88822c5cb9ebc822d415c63c0521d220e6e6"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 63566,
+          "sha256": "11a48b020d490fbc1bfb8840a24b8c19957cb378d21fa29ab1d72865b4f66bea"
+        }
+      ]
+    },
+    {
+      "case": "example-upload",
+      "status": "PASS",
+      "elapsed_seconds": 0.8765168749960139,
+      "returned_hits": 11,
+      "eligible_hits": 11,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 617,
+          "sha256": "92275b8b60666064b8c7c04695bbaf5aa531280945e3dfae1f71c7982ea69023"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 4845,
+          "sha256": "44bbebc35d1ec9461f20e4abad41168f69016563341b147087604517844fd3e8"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1942,
+          "sha256": "479bf57752d3c7ec721a90d78cc49798f15cd4b8c5a7bdfd65a06d77e20fa3e3"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 63566,
+          "sha256": "11a48b020d490fbc1bfb8840a24b8c19957cb378d21fa29ab1d72865b4f66bea"
+        }
+      ]
+    },
+    {
+      "case": "strict-threshold",
+      "status": "PASS",
+      "elapsed_seconds": 0.8152802080148831,
+      "returned_hits": 3,
+      "eligible_hits": 3,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 180,
+          "sha256": "51cd8c231cb5acc3a2e0c9f09e5ec9cd5de140387c1de48dedffb28a82ca8863"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 3086,
+          "sha256": "ee70e89beb278a5f7c5df3bba66f0fd89fbfcc400ebc54b71ee45cb186b01167"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1940,
+          "sha256": "a0e9ef768c3ee3c4cbfe0a8dc852e4169ef385105d03b21b2b049add321959cc"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 14981,
+          "sha256": "2ed74a79bdce75edb4d3eb4ca611b63c698c29335c9ce86667b0b3c9c3b72eb8"
+        }
+      ]
+    },
+    {
+      "case": "no-matches",
+      "status": "PASS",
+      "elapsed_seconds": 0.7974041659617797,
+      "returned_hits": 0,
+      "eligible_hits": 0,
+      "typed_outputs": 7,
+      "renders": [
+        "image",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 79,
+          "sha256": "3d301d5af5aa1d53e9e12e05648098bf07caf2a916809e0b86be893065b33f33"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 2077,
+          "sha256": "b823c9351c49f080ad16ff8c662ed0b8b8317453f370e1aa65baaa4abf21e8d3"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 56,
+          "sha256": "c3046020619bbd986b60b8ee087d72bbbd2fd849c5c2ce9d3f9b56de12be46ae"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1934,
+          "sha256": "12c8aab420a655740ac84a636c5d7771b4a725f685f6095c62319d8305346411"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 6032,
+          "sha256": "42967b712ecf55589479630fb9d53c821917c617bab05cf90300a4f8efbedab3"
+        }
+      ]
+    },
+    {
+      "case": "chiral-pair",
+      "status": "PASS",
+      "elapsed_seconds": 0.7995370839489624,
+      "returned_hits": 2,
+      "eligible_hits": 2,
+      "typed_outputs": 7,
+      "renders": [
+        "bar",
+        "image",
+        "table",
+        "text"
+      ],
+      "artifacts": [
+        {
+          "port": "rankings_csv",
+          "size_bytes": 200,
+          "sha256": "57dcfc107b8695ea059a683f369bd59ac695f7d06d4c88e89b269bdff8d7be60"
+        },
+        {
+          "port": "rankings_json",
+          "size_bytes": 2555,
+          "sha256": "9c5b4f7f9cd815e1f592b6b2367686eb1fe8bcb148b6452056672746fa489035"
+        },
+        {
+          "port": "invalid_csv",
+          "size_bytes": 56,
+          "sha256": "c3046020619bbd986b60b8ee087d72bbbd2fd849c5c2ce9d3f9b56de12be46ae"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1959,
+          "sha256": "b3dc2806bb4c9407fb910145e86761f89502285e342d561c44733dd8cc5fab4e"
+        },
+        {
+          "port": "drawings",
+          "size_bytes": 17031,
+          "sha256": "cf25031440fa2b398b6ebbf77e0b013a001d31512287bf120bb63ff460ade941"
+        }
+      ]
+    }
+  ],
+  "output_directory_isolation": "PASS"
+}

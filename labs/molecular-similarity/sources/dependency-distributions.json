@@ -1,0 +1,77 @@
+[
+  {
+    "wheel": "biosimulant-0.0.34-py3-none-any.whl",
+    "size_bytes": 2564896,
+    "sha256": "acb85acc14d286737a8cefb4c53e82eb5fab1593ff2b895cbd2ccc1a47595482",
+    "notices": [
+      {
+        "path": "sources/dependency-notices/biosimulant-licenses_LICENSE.txt",
+        "sha256": "681636d4c15af45744d3121bd26b3db37477326be423fbbfb6dc49532dfcc2fd",
+        "size_bytes": 1068
+      }
+    ],
+    "name": "biosimulant",
+    "version": "0.0.34",
+    "license_metadata": "MIT"
+  },
+  {
+    "wheel": "numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "size_bytes": 16527618,
+    "sha256": "fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249",
+    "notices": [
+      {
+        "path": "sources/dependency-notices/numpy-LICENSE.txt",
+        "sha256": "c002bd26de7dc7aa464250a0de063d58fe55974452e4389e5c21c350a820bf06",
+        "size_bytes": 47755
+      }
+    ],
+    "name": "numpy",
+    "version": "2.2.6",
+    "license_metadata": "BSD-3-Clause; bundled-library notices retained verbatim (OpenBLAS/GCC-runtime/libquadmath)"
+  },
+  {
+    "wheel": "pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "size_bytes": 6645236,
+    "sha256": "676b2815362456b5b3216b4fd5bd89d362100dc6f4945154ff172e206a22c024",
+    "notices": [
+      {
+        "path": "sources/dependency-notices/pillow-licenses_LICENSE",
+        "sha256": "2c40a7d8894126ff7a993a752505b915694aafe7a620889ef368acbf54b87144",
+        "size_bytes": 66498
+      }
+    ],
+    "name": "pillow",
+    "version": "11.3.0",
+    "license_metadata": "MIT-CMU"
+  },
+  {
+    "wheel": "rdkit-2025.9.1-cp312-cp312-manylinux_2_28_x86_64.whl",
+    "size_bytes": 36167555,
+    "sha256": "cf7f05cea1e1c11662490e9bd5f95d44591dddc4c8f6a792d0eca6394edc606b",
+    "notices": [
+      {
+        "path": "sources/dependency-notices/rdkit-LICENSE.md",
+        "sha256": "e39092217179a1f07b086c349ef4e2ef3e816742c7643dce5351e2e3b88df9d6",
+        "size_bytes": 1077
+      },
+      {
+        "path": "sources/dependency-notices/rdkit-license.txt",
+        "sha256": "daeb8d194502cbcf34c05c39541a0d02be65bc9bada5b891c1974cd24e9fca30",
+        "size_bytes": 1580
+      },
+      {
+        "path": "sources/dependency-notices/rdkit-telex_font_license.txt",
+        "sha256": "b76d2e0cf60d47d9ee90148bb1740ab7f13586a0f2c7295861661e67d655cb8e",
+        "size_bytes": 4401
+      },
+      {
+        "path": "sources/dependency-notices/rdkit-OFL.txt",
+        "sha256": "7c38a22e5878e60fe423360553e63dd7be23d29f1f60336034935dbfc96e8320",
+        "size_bytes": 4390
+      }
+    ],
+    "name": "rdkit",
+    "version": "2025.9.1",
+    "license_metadata": "BSD-3-Clause"
+  }
+]

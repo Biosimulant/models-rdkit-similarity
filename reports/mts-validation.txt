@@ -1,0 +1,2 @@
+INFO [semantic-review] Validator checks identifier coverage, not semantic fidelity. Compare every acceptance criterion and grouped mapping with the approved MRS before approval.
+/Users/demi/Documents/projects-local/bsim/models/models-rdkit-similarity/specifications/rdkit-molecular-similarity-search/mts.md: 0 error(s), 0 warning(s)

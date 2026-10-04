@@ -1,0 +1,79 @@
+schema_version: '2.0'
+package: rdkit-similarity-ranker
+version: 0.1.0
+title: RDKit Similarity Ranker
+description: Finite Morgan/Tanimoto structural search adapter.
+standard: other
+license: BSD-3-Clause
+biosim:
+  entrypoint: src.search:MolecularSimilarity
+  execution_policy: once_before_run
+  communication_step: 1.0
+io:
+  inputs:
+  - name: query_smiles
+    signal_type: scalar
+    dtype: str
+    value_type: string
+  - name: collection_csv
+    signal_type: scalar
+    dtype: str
+    value_type: string
+  - name: collection_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+  - name: top_k
+    signal_type: scalar
+    dtype: int64
+    value_type: integer
+  - name: minimum_similarity
+    signal_type: scalar
+    dtype: float64
+    value_type: number
+  outputs:
+  - name: report
+    signal_type: record
+    schema:
+      hits: json
+      invalid_rows: json
+      receipt: json
+    emitted_unit: '1'
+  - name: hit_count
+    signal_type: scalar
+    dtype: int64
+    emitted_unit: count
+  - name: rankings_csv
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+  - name: rankings_json
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+  - name: invalid_csv
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+  - name: receipt_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+  - name: drawings
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: png
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - biosimulant==0.0.34
+    - rdkit==2025.9.1
+    - numpy==2.2.6
+    - Pillow==11.3.0

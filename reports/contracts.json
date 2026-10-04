@@ -1,0 +1,1068 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "a237e733-dacd-406c-a11d-1dc80f94d6f0",
+  "data": {
+    "contract_version": "biosimulant-cli-0.0.34/lab-schema-2.0/scientific-authoring-14",
+    "runtime_version": "0.0.34",
+    "schema_version": "2.0",
+    "selected_topics": [
+      "compute",
+      "visualization",
+      "biomodule"
+    ],
+    "guidance": {
+      "compute": {
+        "path": "lab.yaml:hardware.compute",
+        "input_schema": {
+          "additionalProperties": false,
+          "description": "Optional Lab hardware.compute contract; sizes are allocations, not CPU models.",
+          "properties": {
+            "device": {
+              "enum": [
+                "cpu",
+                "gpu",
+                "either"
+              ],
+              "title": "Device",
+              "type": "string"
+            },
+            "cpu_cores": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "number"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Cpu Cores"
+            },
+            "memory_mb": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Memory Mb"
+            },
+            "gpu_count": {
+              "anyOf": [
+                {
+                  "exclusiveMinimum": 0,
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Gpu Count"
+            },
+            "gpu_type": {
+              "anyOf": [
+                {
+                  "maxLength": 32,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Gpu Type"
+            },
+            "recommended_profile": {
+              "anyOf": [
+                {
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "title": "Recommended Profile"
+            }
+          },
+          "required": [
+            "device"
+          ],
+          "title": "LabCompute",
+          "type": "object"
+        },
+        "schema": {
+          "device": "Required: cpu (CPU-only), gpu (GPU required), or either (both supported).",
+          "cpu_cores": "Optional positive minimum CPU allocation, finite number.",
+          "memory_mb": "Optional positive integer minimum host RAM in MiB.",
+          "gpu_count": "Optional positive integer minimum GPU count for GPU profiles.",
+          "gpu_type": "Optional exact GPU catalog type; compare case-insensitively.",
+          "recommended_profile": "Optional catalog name, advisory and separate from requirements."
+        },
+        "cpu_example": {
+          "hardware": {
+            "compute": {
+              "device": "cpu",
+              "cpu_cores": 1,
+              "memory_mb": 1024
+            }
+          }
+        },
+        "gpu_example": {
+          "hardware": {
+            "compute": {
+              "device": "gpu",
+              "cpu_cores": 4,
+              "memory_mb": 16384,
+              "gpu_count": 1,
+              "recommended_profile": "gpu-t4"
+            }
+          }
+        },
+        "rules": [
+          "Read compute_profile_list before creating/updating a Lab or preparing compute; never invent profile IDs or hardcode the available catalog.",
+          "Declare actual execution support based on the code and dependencies. A CUDA-only component requires device=gpu; either requires a working CPU and GPU path.",
+          "Aggregate runnable component requirements into Lab-level hardware.compute; reassess requirements whenever components, dependencies or workload change.",
+          "CPU cores and memory are minimum allocations, not a CPU vendor or model. memory_mb is host RAM; GPU VRAM minimums are not currently exposed or enforceable and must not be claimed.",
+          "Use manifest_patch to update hardware.compute in an approval-bound immutable Lab revision. Unknown compute fields and contradictory CPU/GPU declarations block validation.",
+          "Pass a discovered item id as compute_profile_id in run_prepare or each experiment arm. Explicit selection overrides recommendations but cannot bypass requirements or provider availability.",
+          "Omitting compute_profile_id uses a compatible recommendation, then the configured compatible default/catalog order. Legacy Labs retain their established default selection.",
+          "Review resolved provider, profile, CPU, RAM, GPU, timeout and provider-cost estimate before approval. The provider is platform-controlled; no Modal credentials or local repository are needed.",
+          "Profile discovery checks configuration/account access, not live capacity. run_prepare is the authoritative compatibility and cost preflight; never silently replace an unavailable explicit profile.",
+          "Hardware requirements are enforced for managed runs; local host checks remain separate evidence and do not certify managed availability."
+        ]
+      },
+      "visualization": {
+        "guidance": "Almost every new Lab and scientific result model needs a useful visualization of actual computed outputs. Available renderers: timeseries (time evolution), bar (categories), scatter (observed versus predicted), heatmap (matrices/spatial fields), graph (networks), table (exact values), image (scientific images/overlays), structure3d (coordinates), and text (interpretation/caveats). Choose by the user's question; a table is not the default for every result. Before authoring, read get_biosimulant_authoring_contract topic visualization. Record visuals in MRS/MTS, implement BioModule.visualize() from computed state and declare lab.yaml visualization requirements. Infrastructure-only components may opt out with a recorded reason. Ad-hoc chat charts do not satisfy reusable Lab visualization requirements. Retain typed scientific outputs alongside visuals.",
+        "catalog": {
+          "schema_version": "1",
+          "limits": {
+            "visual_bytes": 2000000,
+            "visuals": 64,
+            "points": 10000
+          },
+          "renderers": {
+            "timeseries": {
+              "use_when": "Changes over time; include time and quantity units",
+              "example": {
+                "schema_version": "1",
+                "render": "timeseries",
+                "data": {
+                  "x_label": "Time",
+                  "x_unit": "h",
+                  "y_label": "Population",
+                  "y_unit": "CFU",
+                  "series": [
+                    {
+                      "name": "Population",
+                      "points": [
+                        [
+                          0,
+                          1
+                        ],
+                        [
+                          1,
+                          2
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "bar": {
+              "use_when": "Compare categories, endpoint counts or scenario summaries",
+              "example": {
+                "schema_version": "1",
+                "render": "bar",
+                "data": {
+                  "items": [
+                    {
+                      "label": "Control",
+                      "value": 12,
+                      "unit": "CFU"
+                    }
+                  ]
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "scatter": {
+              "use_when": "Compare measurements, predictions, residuals or uncertainty",
+              "example": {
+                "schema_version": "1",
+                "render": "scatter",
+                "data": {
+                  "x_label": "Observed",
+                  "y_label": "Predicted",
+                  "x_unit": "CFU",
+                  "y_unit": "CFU",
+                  "points": [
+                    {
+                      "x": 12,
+                      "y": 13,
+                      "label": "Plate 1"
+                    }
+                  ]
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "heatmap": {
+              "use_when": "Matrices, spatial fields, correlations or parameter sweeps",
+              "example": {
+                "schema_version": "1",
+                "render": "heatmap",
+                "data": {
+                  "x_labels": [
+                    "A",
+                    "B"
+                  ],
+                  "y_labels": [
+                    "Control"
+                  ],
+                  "values": [
+                    [
+                      1,
+                      2
+                    ]
+                  ],
+                  "unit": "CFU"
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "graph": {
+              "use_when": "Measured or modeled networks and dependencies",
+              "example": {
+                "schema_version": "1",
+                "render": "graph",
+                "data": {
+                  "nodes": [
+                    {
+                      "id": "A"
+                    },
+                    {
+                      "id": "B"
+                    }
+                  ],
+                  "edges": [
+                    {
+                      "source": "A",
+                      "target": "B"
+                    }
+                  ]
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "table": {
+              "use_when": "Exact values and metadata; accompany a plot when one aids interpretation",
+              "example": {
+                "schema_version": "1",
+                "render": "table",
+                "data": {
+                  "columns": [
+                    "Plate",
+                    "Count (CFU)"
+                  ],
+                  "rows": [
+                    [
+                      "A",
+                      12
+                    ]
+                  ]
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "image": {
+              "use_when": "Scientific images, annotations, segmentation masks and overlays",
+              "example": {
+                "schema_version": "1",
+                "render": "image",
+                "data": {
+                  "source": {
+                    "kind": "artifact",
+                    "path": "outputs/annotated.png"
+                  },
+                  "alt": "Detected colonies with numbered bounding boxes",
+                  "caption": "Computed detections; inspect low-confidence regions."
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "structure3d": {
+              "use_when": "Molecular or structural coordinates (PDB/mmCIF common subset)",
+              "example": {
+                "schema_version": "1",
+                "render": "structure3d",
+                "data": {
+                  "format": "pdb",
+                  "source": {
+                    "kind": "artifact",
+                    "path": "outputs/structure.pdb"
+                  }
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            },
+            "text": {
+              "use_when": "Interpretation, caveats, abstentions or a result with no numeric plot",
+              "example": {
+                "schema_version": "1",
+                "render": "text",
+                "data": {
+                  "text": "Interpret the computed result within its declared intended use."
+                }
+              },
+              "clients": [
+                "local",
+                "web",
+                "desktop"
+              ]
+            }
+          },
+          "custom_renderers": "Unsupported unless a renderer is registered in every target client; v1 uses the nine portable kinds."
+        },
+        "visual_spec_schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "$id": "https://docs.biosimulant.com/schemas/visual-spec-v1.json",
+          "title": "Biosimulant VisualSpec v1",
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "timeseries"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "series": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "points": {
+                            "type": "array",
+                            "minItems": 1,
+                            "maxItems": 10000,
+                            "items": {
+                              "type": "array",
+                              "minItems": 2,
+                              "maxItems": 2,
+                              "items": {
+                                "type": "number"
+                              }
+                            }
+                          }
+                        },
+                        "required": [
+                          "points"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "series"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "bar"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "label": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "value": {
+                            "type": "number"
+                          },
+                          "unit": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "label",
+                          "value"
+                        ]
+                      }
+                    },
+                    "bars": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "label": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "value": {
+                            "type": "number"
+                          },
+                          "unit": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "label",
+                          "value"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [],
+                  "anyOf": [
+                    {
+                      "required": [
+                        "items"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "bars"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "scatter"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "points": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "x": {
+                            "type": "number"
+                          },
+                          "y": {
+                            "type": "number"
+                          },
+                          "label": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "x",
+                          "y"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "points"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "heatmap"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "values": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 10000,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    },
+                    "x_labels": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "y_labels": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "matrix": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "array",
+                        "minItems": 1,
+                        "maxItems": 10000,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  },
+                  "required": [],
+                  "anyOf": [
+                    {
+                      "required": [
+                        "values"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "matrix"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "graph"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "nodes": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "id"
+                        ]
+                      }
+                    },
+                    "edges": {
+                      "type": "array",
+                      "minItems": 0,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "source": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "target": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        },
+                        "required": [
+                          "source",
+                          "target"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "nodes"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "table"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "columns": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "rows": {
+                      "type": "array",
+                      "minItems": 1,
+                      "maxItems": 10000,
+                      "items": {
+                        "type": "array",
+                        "items": {}
+                      }
+                    }
+                  },
+                  "required": [
+                    "columns",
+                    "rows"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "image"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "source": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "const": "artifact"
+                            },
+                            "artifact_id": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "path": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "kind"
+                          ],
+                          "anyOf": [
+                            {
+                              "required": [
+                                "artifact_id"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "path"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "const": "url"
+                            },
+                            "url": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "kind",
+                            "url"
+                          ]
+                        }
+                      ]
+                    },
+                    "src": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "alt": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "url": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "alt"
+                  ],
+                  "anyOf": [
+                    {
+                      "required": [
+                        "source"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "src"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "url"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "structure3d"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "source": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "const": "artifact"
+                            },
+                            "artifact_id": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "path": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "kind"
+                          ],
+                          "anyOf": [
+                            {
+                              "required": [
+                                "artifact_id"
+                              ]
+                            },
+                            {
+                              "required": [
+                                "path"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "const": "url"
+                            },
+                            "url": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          },
+                          "required": [
+                            "kind",
+                            "url"
+                          ]
+                        }
+                      ]
+                    },
+                    "format": {
+                      "enum": [
+                        "pdb",
+                        "mmcif",
+                        "cif"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "source",
+                    "format"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "schema_version": {
+                  "const": "1"
+                },
+                "render": {
+                  "const": "text"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "markdown": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [],
+                  "anyOf": [
+                    {
+                      "required": [
+                        "text"
+                      ]
+                    },
+                    {
+                      "required": [
+                        "markdown"
+                      ]
+                    }
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schema_version",
+                "render",
+                "data"
+              ]
+            }
+          ]
+        },
+        "requirements": {
+          "schema_version": "1",
+          "required": [
+            {
+              "module": "summary",
+              "render": "timeseries",
+              "min_count": 1
+            }
+          ]
+        },
+        "placement": "Declare visualization at the top level of lab.yaml; module names are actual composed runtime aliases (including child prefixes).",
+        "lifecycle": "visualize() reads computed state after execute; use ONCE_AFTER_RUN for finite downstream analysis with real typed wiring. Do not perform inference, evolve scientific state or fabricate results in visualize().",
+        "assets": "Use data.source={kind: artifact, path: outputs/annotated.png} for images or structure files and emit the same path on a typed file output. Managed execution retains and rewrites it to artifact_id. Reopened clients fetch through authorized run context; never persist temporary paths or expiring URLs as the delivered visual. Small images may use a complete data:image/...;base64,... URI, not raw base64.",
+        "acceptance": "Test the composed CLI results, payload validity, labels/units, plotted values against typed outputs, retained assets, and reopening. Required visual failure blocks qualification/publication while scientific outputs remain available. Runtime visualization diagnostics expose failures; visual count alone is insufficient.",
+        "specifications": "MRS: user question, expected view, source outputs, units, intended-use caveats, usability acceptance and justified opt-outs. MTS: chosen render/schema_version, owning module, typed wiring, lifecycle, preview limits, artifact retention and executable checks. Almost every Lab needs a view; infrastructure-only components may opt out with a nonempty reason.",
+        "studio_charts": "create_visualization creates a separate chat resource; it does not implement reusable model/lab visualize()."
+      },
+      "biomodule": {
+        "required_api": [
+          "subclass biosim.BioModule",
+          "inputs() -> mapping[str, SignalSpec] when inputs exist",
+          "outputs() -> mapping[str, SignalSpec] when outputs exist",
+          "execute(inputs, *, context) for all newly authored modules",
+          "an explicit ExecutionPolicy for every newly authored module",
+          "advance_window(start, end) plus set_inputs()/get_outputs() remains supported for imported temporal modules that require settle participation",
+          "snapshot() and restore(snapshot) for stateful modules"
+        ],
+        "units": "Declare output units with SignalSpec.emitted_unit and accepted input units with AcceptedSignalProfile entries in SignalSpec.accepted_profiles. The runtime does not silently convert units; use an explicit converter BioModule when needed.",
+        "input_values": "Connected values in execute(inputs, *, context) are BioSignal objects. Read the scientific payload from inputs['port'].value before passing it to domain logic; do not treat the signal wrapper as a bare dict, list, or number.",
+        "validation": "Reject biologically invalid inputs at the component boundary and test the exact port names, signal kinds, dtypes, shapes, units, and state lifecycle. A direct BioModule used in Lab wiring must implement typed inputs() and outputs() methods; model.yaml io is descriptive metadata and does not replace the runtime methods.",
+        "runtime_observability": "The terminal result or summary BioModule must implement visualize() so the actual composed-run observables are serialized under visuals in the CLI results JSON. Domain acceptance must inspect that runtime JSON; directly calling components in a test is useful unit coverage but is not evidence that the composed Lab propagated signals correctly.",
+        "window_performance": "New temporal modules implement execute(inputs, *, context), explicitly use ExecutionPolicy.EACH_WINDOW, and read context.window_start/window_end. Import ExecutionPolicy from biosim (or biosimulant). Finite preprocessing and inference use ExecutionPolicy.ONCE_BEFORE_RUN; final analysis and export use ExecutionPolicy.ONCE_AFTER_RUN. An AI component that participates in temporal feedback uses ExecutionPolicy.EACH_WINDOW. Never quote an uppercase enum member name: the only accepted string values are once_before_run, each_window, and once_after_run. Existing advance_window() modules remain supported for compatibility and zero-time settle participation. Never override both hooks, generate the unreleased one-argument execute signature, invent wrapper-local run-once caches, or perform a full-horizon integration once per communication window. Ask for intended temporal semantics when the correct policy is ambiguous.",
+        "manifest_execution_policy": "Repeat the class's policy in model.yaml as biosim.execution_policy using the exact lowercase value (once_before_run, each_window, or once_after_run), next to biosim.entrypoint. It must match the Python execution_policy attribute: the runtime refuses to load a model whose declaration disagrees, and Studio and the Hub use it to decide whether duration and communication_step apply without importing model code. Leave biosim.execution_policy out when the policy depends on parameters or other runtime values, for example when __init__ selects it from a mode argument.",
+        "visualize_template": "def visualize(self):\n    return {\n        'schema_version': '1',\n        'render': 'table',\n        'data': {'columns': list(COLUMNS), 'rows': list(self.rows)},\n        'description': 'Requested observables from the actual composed run',\n    }\nThis table is only one example. Read the visualization topic for all nine kinds; choose the appropriate plot/image/structure for the user. The return value must be one VisualSpec or a list of VisualSpecs. Every spec requires a non-empty render string and a JSON-serializable data mapping; an arbitrary result dictionary is filtered out and produces visuals: [].",
+        "managed_runtime": {
+          "rule": "The system /usr/bin/python does not contain biosim. Do not probe for it. Biosimulant CLI commands use the managed runtime automatically.",
+          "direct_test_command": "/opt/biosimulant/cli/bin/python -m unittest discover -s tests -v",
+          "dependency_test_command": ".biosimulant/envs/primary/bin/python -m unittest discover -s tests -v",
+          "dependency_cli_command": ".biosimulant/envs/primary/bin/biosimulant --no-open labs validate . --json",
+          "dependency_environment": "After ensure_python_environment succeeds, its primary environment contains the exact managed Biosimulant/Biosim release plus all resolved scientific dependencies. Use its python and biosimulant executables for every direct Python command, Lab command, and acceptance test that imports those dependencies; do not mix that code with /opt/biosimulant/cli/bin/python.",
+          "scratch_lab_scaffold": "biosimulant --no-open labs init . --name <slug> --description <quoted-description> --empty --force --json"
+        },
+        "reference_template": "from typing import Any, Mapping\nfrom biosim import (AcceptedSignalProfile, BioModule, BioSignal, ExecutionContext, ExecutionPolicy, SignalSpec)\n\nUNIT = 'replace-with-real-unit'\n\nclass Component(BioModule):\n    execution_policy = ExecutionPolicy.EACH_WINDOW\n\n    def __init__(self):\n        self.time = 0.0\n        self.latest = None\n\n    def inputs(self):\n        profile = AcceptedSignalProfile(\n            signal_type='scalar', dtype='float64', accepted_units=(UNIT,)\n        )\n        return {'x': SignalSpec.scalar(\n            dtype='float64', accepted_profiles=(profile,)\n        )}\n\n    def outputs(self):\n        return {'y': SignalSpec.scalar(\n            dtype='float64', emitted_unit=UNIT\n        )}\n\n    def execute(\n        self, inputs: Mapping[str, BioSignal], *, context: ExecutionContext\n    ) -> Mapping[str, Any | BioSignal]:\n        self.time = context.simulated_time\n        self.latest = inputs.get('x')\n        return {} if self.latest is None else {'y': float(self.latest.value)}\n\n    def snapshot(self):\n        return {'time': self.time}\n\n    def restore(self, snapshot):\n        self.time = float(snapshot['time'])\n",
+        "record_signal_template": {
+          "schema": {
+            "substrate_uM": "float64",
+            "inhibitor_uM": "float64"
+          },
+          "input_spec": "SignalSpec.record(schema=SCHEMA, accepted_profiles=(AcceptedSignalProfile(signal_type='record', schema=SCHEMA, accepted_units=('micromole/L',)),))",
+          "output_spec": "SignalSpec.record(schema=SCHEMA, emitted_unit='micromole/L')",
+          "emission": "return {'record': dict(payload)}  # BioWorld validates, binds, and timestamps it",
+          "rule": "SignalSpec.record schema values are dtypes. Use a record-level emitted or accepted unit only when every numeric field shares that unit; otherwise split ports or make field units explicit in the typed schema and tests."
+        },
+        "event_signal_contract": {
+          "spec": "SignalSpec.event(schema={'event_id': 'str', 'dose_mg': 'float64'})",
+          "emission": "EventSignal(source='doser', name='dose_event', value={'event_id': event_id, 'dose_mg': dose_mg}, emitted_at=event_time, spec=self.outputs()['dose_event'])",
+          "runtime_semantics": "BioWorld delivers an event at most once per connection for a strictly increasing emitted_at timestamp and preserves that delivery cursor across snapshot/restore. Emit an event only when it becomes due. Re-returning the same timestamp is suppressed, and a later delivery with an equal or older timestamp is also suppressed. Multiple distinct events at the same time on one port must therefore be represented as one schema-bound batch event or as distinct event ports.",
+          "rule": "Represent discrete interventions with SignalSpec.event and EventSignal, not a state RecordSignal that is replayed every communication window. Include a stable event_id when domain-level deduplication or auditability matters; the runtime cursor is timestamp-based, not an event-ID registry. Test missing, duplicate, same-time, stale, and out-of-order events through the composed runtime, including after snapshot/restore."
+        }
+      }
+    }
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

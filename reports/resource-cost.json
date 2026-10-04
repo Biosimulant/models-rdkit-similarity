@@ -1,0 +1,80 @@
+{
+  "managed_item_runs": 0,
+  "managed_item_user_charge_usd": 0,
+  "managed_provider_spend_usd": null,
+  "hosted_identity": null,
+  "hosted_cold_warm_latency": null,
+  "gpu": false,
+  "local_macos": {
+    "scope": "Local staging process; not Modal/hosted evidence",
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "pilot_before_upper_bound": true,
+    "records": [
+      {
+        "rows": 100,
+        "status": "PASS",
+        "calculation_seconds": 0.014003583928570151,
+        "total_seconds": 0.48814083298202604,
+        "process_peak_rss_bytes": 141279232,
+        "returned_hits": 100,
+        "collection_bytes": 2570,
+        "allocation_limit_bytes": 536870912
+      },
+      {
+        "rows": 10000,
+        "status": "PASS",
+        "calculation_seconds": 0.6131229579914361,
+        "total_seconds": 1.0391737919999287,
+        "process_peak_rss_bytes": 149798912,
+        "returned_hits": 100,
+        "collection_bytes": 255570,
+        "allocation_limit_bytes": 536870912
+      }
+    ]
+  },
+  "local_linux_isolated": {
+    "scope": "Local staging process; not Modal/hosted evidence",
+    "python": "3.12.15 (main, Oct  1 2026, 21:47:32) [GCC 14.2.0]",
+    "pilot_before_upper_bound": true,
+    "records": [
+      {
+        "rows": 100,
+        "status": "PASS",
+        "calculation_seconds": 0.4105760760139674,
+        "total_seconds": 2.0954687939956784,
+        "process_peak_rss_bytes": 180719616,
+        "returned_hits": 100,
+        "collection_bytes": 2570,
+        "allocation_limit_bytes": 536870912
+      },
+      {
+        "rows": 10000,
+        "status": "PASS",
+        "calculation_seconds": 2.992739287088625,
+        "total_seconds": 4.183015076909214,
+        "process_peak_rss_bytes": 188071936,
+        "returned_hits": 100,
+        "collection_bytes": 255570,
+        "allocation_limit_bytes": 536870912
+      }
+    ]
+  },
+  "linux_test_allocation": {
+    "cpu": 0.5,
+    "memory_mb": 512,
+    "network": "none"
+  },
+  "cleanup": {
+    "containers": "--rm; no remaining verification containers",
+    "verification_image": "removed df8bd05c9c0caa44c38c41ba763a8aa8fdd47e1271ba9811abf9c2bc7fbe0076",
+    "base_image_cache": "retained",
+    "local_venv": "retained"
+  },
+  "limits": {
+    "collection_rows": 10000,
+    "collection_bytes": 2097152,
+    "top_k": 100,
+    "timeout_seconds": 120
+  },
+  "limitations": "Local/isolated evidence only; no managed run/Passport, hosted provider invoice or cancellation/account-isolation verification."
+}

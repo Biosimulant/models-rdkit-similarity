@@ -1,0 +1,114 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "8d9f6830-f683-4da7-8f36-719250d68ad1",
+  "data": {
+    "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+    "session_id": "c5047973-eee0-4833-af6c-8ee863bfb79f",
+    "title": "RDKit Molecular Similarity Search",
+    "status": "active",
+    "quality_profile_ref": "research-ready@2",
+    "intended_use_profile": {
+      "statement": "Rank only the supplied collection by Morgan radius-2 2048-bit fingerprints with chirality enabled and Tanimoto similarity; no pharmacological or patent claims."
+    },
+    "active_revision": {
+      "revision_id": "c8a588bc-f70d-4fc9-9031-e006022e4854",
+      "sequence": 1,
+      "sha256": "c31cd81652b044f15369d9b01f5c0c27b5ad1463557c71a0e5c151ca79eba127",
+      "created_at": "2026-10-04T06:28:51.951863Z"
+    },
+    "is_active_revision": true,
+    "manifest": {
+      "schema_version": "2.0",
+      "package": "rdkit-molecular-similarity-search",
+      "version": "0.1.0",
+      "title": "RDKit Molecular Similarity Search",
+      "description": "Private Biosimulant Lab draft.",
+      "models": [],
+      "wiring": [],
+      "runtime": {
+        "duration": 1,
+        "communication_step": 0.1,
+        "initial_inputs": {}
+      },
+      "intended_use": {
+        "statement": "Research use only; intended use is not yet defined."
+      },
+      "caveats": [
+        "Draft lab. Scientific qualification is incomplete."
+      ],
+      "prohibited_claims": [
+        "Do not use for clinical decisions or regulated claims."
+      ]
+    },
+    "wiring_layout": null,
+    "files": [
+      {
+        "path": "CAVEATS.md",
+        "size_bytes": 60,
+        "content_included": true,
+        "content": "# Caveats\n\n- Draft; scientific qualification is incomplete.\n",
+        "content_trust": "untrusted_workspace_content"
+      },
+      {
+        "path": "MRS.md",
+        "size_bytes": 50,
+        "content_included": true,
+        "content": "# Model Requirements Specification\n\nStatus: draft\n",
+        "content_trust": "untrusted_workspace_content"
+      },
+      {
+        "path": "MTS.md",
+        "size_bytes": 50,
+        "content_included": true,
+        "content": "# Modeling Technical Specification\n\nStatus: draft\n",
+        "content_trust": "untrusted_workspace_content"
+      },
+      {
+        "path": "lab.yaml",
+        "size_bytes": 476,
+        "content_included": true,
+        "content": "schema_version: '2.0'\npackage: rdkit-molecular-similarity-search\nversion: 0.1.0\ntitle: RDKit Molecular Similarity Search\ndescription: Private Biosimulant Lab draft.\nmodels: []\nwiring: []\nruntime:\n  duration: 1.0\n  communication_step: 0.1\n  initial_inputs: {}\nintended_use:\n  statement: Research use only; intended use is not yet defined.\ncaveats:\n- Draft lab. Scientific qualification is incomplete.\nprohibited_claims:\n- Do not use for clinical decisions or regulated claims.\n",
+        "content_trust": "untrusted_workspace_content"
+      }
+    ],
+    "evidence_resources": [],
+    "mutation_summary": "Created blank lab workspace",
+    "history": {
+      "entries": [
+        {
+          "kind": "revision",
+          "outcome": "executed",
+          "summary": "The workspace changed.",
+          "detail": "Created blank lab workspace",
+          "agent": null,
+          "revision_sequence": 1,
+          "resource_type": "workspace_revision",
+          "resource_id": "c8a588bc-f70d-4fc9-9031-e006022e4854",
+          "blocked_by": [],
+          "occurred_at": "2026-10-04T06:28:51.951863"
+        }
+      ],
+      "total": 1,
+      "truncated": false
+    },
+    "content_trust": "untrusted_workspace_content"
+  },
+  "warnings": [],
+  "next_actions": [
+    {
+      "tool": "passport_get",
+      "description": "Review the exact revision's per-check evidence and caveats.",
+      "arguments": {
+        "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+        "revision_id": "c8a588bc-f70d-4fc9-9031-e006022e4854"
+      }
+    },
+    {
+      "tool": "workspace_change_prepare",
+      "description": "When a bounded edit is ready, validate it against this exact base revision."
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Local staging process; not Modal/hosted evidence",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "pilot_before_upper_bound": true,
+  "records": [
+    {
+      "rows": 100,
+      "status": "PASS",
+      "calculation_seconds": 0.014003583928570151,
+      "total_seconds": 0.48814083298202604,
+      "process_peak_rss_bytes": 141279232,
+      "returned_hits": 100,
+      "collection_bytes": 2570,
+      "allocation_limit_bytes": 536870912
+    },
+    {
+      "rows": 10000,
+      "status": "PASS",
+      "calculation_seconds": 0.6131229579914361,
+      "total_seconds": 1.0391737919999287,
+      "process_peak_rss_bytes": 149798912,
+      "returned_hits": 100,
+      "collection_bytes": 255570,
+      "allocation_limit_bytes": 536870912
+    }
+  ]
+}

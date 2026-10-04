@@ -1,0 +1,10 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "a751da37-68b1-4639-8bc9-587438b7758c",
+  "code": "internal_error",
+  "message": "Biosimulant could not complete this operation.",
+  "retryable": true,
+  "field": null,
+  "details": {},
+  "resolution": "Retry once; if the problem continues, use the request ID with support."
+}

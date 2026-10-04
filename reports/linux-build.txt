@@ -1,0 +1,32 @@
+#0 building with "orbstack" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.verify
+#1 transferring dockerfile: 214B done
+#1 WARN: FromPlatformFlagConstDisallowed: FROM --platform flag should not use constant value "linux/amd64" (line 1)
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context:
+#3 transferring context: 74B done
+#3 DONE 0.1s
+
+#4 [1/3] FROM docker.io/library/python:3.12-slim
+#4 DONE 0.0s
+
+#5 [2/3] RUN pip install --no-cache-dir biosimulant==0.0.34 rdkit==2025.9.1 numpy==2.2.6 Pillow==11.3.0 pytest==8.4.2
+#5 CACHED
+
+#6 [3/3] WORKDIR /work
+#6 DONE 0.1s
+
+#7 exporting to image
+#7 exporting layers 0.1s done
+#7 writing image sha256:df8bd05c9c0caa44c38c41ba763a8aa8fdd47e1271ba9811abf9c2bc7fbe0076 done
+#7 naming to docker.io/library/rdkit-similarity-staging-verify:20261004 done
+#7 DONE 0.1s
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - FromPlatformFlagConstDisallowed: FROM --platform flag should not use constant value "linux/amd64" (line 1)

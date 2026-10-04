@@ -1,0 +1,220 @@
+{
+  "scope": "Local staging, not managed experiment",
+  "query": "CCO",
+  "arms": [
+    {
+      "hits": [
+        {
+          "rank": 1,
+          "row_index": 0,
+          "molecule_id": "ethanol",
+          "original_smiles": "CCO",
+          "canonical_smiles": "CCO",
+          "score": 1.0,
+          "exact_match": true
+        },
+        {
+          "rank": 2,
+          "row_index": 2,
+          "molecule_id": "ethanol",
+          "original_smiles": "CCO",
+          "canonical_smiles": "CCO",
+          "score": 1.0,
+          "exact_match": true
+        },
+        {
+          "rank": 3,
+          "row_index": 1,
+          "molecule_id": "ethanol-equivalent",
+          "original_smiles": "OCC",
+          "canonical_smiles": "CCO",
+          "score": 1.0,
+          "exact_match": true
+        },
+        {
+          "rank": 4,
+          "row_index": 3,
+          "molecule_id": "propanol",
+          "original_smiles": "CCCO",
+          "canonical_smiles": "CCCO",
+          "score": 0.5555555555555556,
+          "exact_match": false
+        },
+        {
+          "rank": 5,
+          "row_index": 4,
+          "molecule_id": "butanol",
+          "original_smiles": "CCCCO",
+          "canonical_smiles": "CCCCO",
+          "score": 0.4166666666666667,
+          "exact_match": false
+        },
+        {
+          "rank": 6,
+          "row_index": 5,
+          "molecule_id": "ethylamine",
+          "original_smiles": "CCN",
+          "canonical_smiles": "CCN",
+          "score": 0.3333333333333333,
+          "exact_match": false
+        }
+      ],
+      "invalid_rows": [
+        {
+          "row_index": 11,
+          "molecule_id": "invalid",
+          "original_smiles": "not-a-smiles",
+          "error_code": "parse_error",
+          "error": "parse_error: unsupported or invalid SMILES"
+        },
+        {
+          "row_index": 12,
+          "molecule_id": "blank",
+          "original_smiles": "",
+          "error_code": "input_limit",
+          "error": "input_limit: SMILES must contain 1..8192 characters"
+        }
+      ],
+      "receipt": {
+        "rdkit_version": "2025.09.1",
+        "adapter_version": "0.1.0",
+        "query_original_smiles": "CCO",
+        "query_canonical_smiles": "CCO",
+        "query_sha256": "ab1de819ede91df490e6441934decfa9041b49f91d6bbadbba4df634ccff57fa",
+        "collection_sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+        "collection_size_bytes": 245,
+        "collection_identity": "SHA-256 of exact submitted UTF-8 bytes including BOM/newlines",
+        "collection_rows": 13,
+        "valid_entries": 11,
+        "searched_entries": 11,
+        "invalid_entries": 2,
+        "threshold_hit_count": 6,
+        "returned_hits": 6,
+        "top_k": 100,
+        "minimum_similarity": 0.2,
+        "fingerprint_parameters": {
+          "algorithm": "Morgan",
+          "radius": 2,
+          "fpSize": 2048,
+          "includeChirality": true,
+          "useBondTypes": true,
+          "countSimulation": false,
+          "includeRingMembership": true,
+          "onlyNonzeroInvariants": false,
+          "includeRedundantEnvironments": false,
+          "metric": "Tanimoto",
+          "score_unit": "1",
+          "definition": "on-bit intersection / on-bit union; RDKit TanimotoSimilarity"
+        },
+        "duplicate_policy": "Keep every valid collection row, including repeated IDs and equivalent SMILES; row_index distinguishes occurrences.",
+        "tie_policy": "Descending score, then exact molecule_id in ascending Unicode code-point order, then zero-based CSV data-row index.",
+        "exact_match_definition": "Equal canonical isomeric SMILES, not fingerprint equality",
+        "standardization": "None; retain all fragments, charges, isotopes and stereochemistry",
+        "limits": {
+          "rows": 10000,
+          "collection_bytes": 2097152,
+          "smiles_characters": 8192,
+          "atoms": 256,
+          "bonds": 512,
+          "timeout_seconds": 120
+        },
+        "calculation_seconds": 0.012625250034034252,
+        "caveat": "Searches only the supplied collection. Structural similarity does not establish equal potency, activity, toxicity, safety or patent status. Fingerprint collisions can score 1 without structural identity."
+      }
+    },
+    {
+      "hits": [
+        {
+          "rank": 1,
+          "row_index": 0,
+          "molecule_id": "ethanol",
+          "original_smiles": "CCO",
+          "canonical_smiles": "CCO",
+          "score": 1.0,
+          "exact_match": true
+        },
+        {
+          "rank": 2,
+          "row_index": 2,
+          "molecule_id": "ethanol",
+          "original_smiles": "CCO",
+          "canonical_smiles": "CCO",
+          "score": 1.0,
+          "exact_match": true
+        },
+        {
+          "rank": 3,
+          "row_index": 1,
+          "molecule_id": "ethanol-equivalent",
+          "original_smiles": "OCC",
+          "canonical_smiles": "CCO",
+          "score": 1.0,
+          "exact_match": true
+        }
+      ],
+      "invalid_rows": [
+        {
+          "row_index": 11,
+          "molecule_id": "invalid",
+          "original_smiles": "not-a-smiles",
+          "error_code": "parse_error",
+          "error": "parse_error: unsupported or invalid SMILES"
+        },
+        {
+          "row_index": 12,
+          "molecule_id": "blank",
+          "original_smiles": "",
+          "error_code": "input_limit",
+          "error": "input_limit: SMILES must contain 1..8192 characters"
+        }
+      ],
+      "receipt": {
+        "rdkit_version": "2025.09.1",
+        "adapter_version": "0.1.0",
+        "query_original_smiles": "CCO",
+        "query_canonical_smiles": "CCO",
+        "query_sha256": "ab1de819ede91df490e6441934decfa9041b49f91d6bbadbba4df634ccff57fa",
+        "collection_sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+        "collection_size_bytes": 245,
+        "collection_identity": "SHA-256 of exact submitted UTF-8 bytes including BOM/newlines",
+        "collection_rows": 13,
+        "valid_entries": 11,
+        "searched_entries": 11,
+        "invalid_entries": 2,
+        "threshold_hit_count": 3,
+        "returned_hits": 3,
+        "top_k": 100,
+        "minimum_similarity": 0.6,
+        "fingerprint_parameters": {
+          "algorithm": "Morgan",
+          "radius": 2,
+          "fpSize": 2048,
+          "includeChirality": true,
+          "useBondTypes": true,
+          "countSimulation": false,
+          "includeRingMembership": true,
+          "onlyNonzeroInvariants": false,
+          "includeRedundantEnvironments": false,
+          "metric": "Tanimoto",
+          "score_unit": "1",
+          "definition": "on-bit intersection / on-bit union; RDKit TanimotoSimilarity"
+        },
+        "duplicate_policy": "Keep every valid collection row, including repeated IDs and equivalent SMILES; row_index distinguishes occurrences.",
+        "tie_policy": "Descending score, then exact molecule_id in ascending Unicode code-point order, then zero-based CSV data-row index.",
+        "exact_match_definition": "Equal canonical isomeric SMILES, not fingerprint equality",
+        "standardization": "None; retain all fragments, charges, isotopes and stereochemistry",
+        "limits": {
+          "rows": 10000,
+          "collection_bytes": 2097152,
+          "smiles_characters": 8192,
+          "atoms": 256,
+          "bonds": 512,
+          "timeout_seconds": 120
+        },
+        "calculation_seconds": 0.0009080410236492753,
+        "caveat": "Searches only the supplied collection. Structural similarity does not establish equal potency, activity, toxicity, safety or patent status. Fingerprint collisions can score 1 without structural identity."
+      }
+    }
+  ],
+  "explanation": "Raising inclusive threshold from 0.2 to 0.6 reduces eligible hits from 6 to 3 in the same checksummed collection. Threshold changes the minimum fingerprint overlap, not potency or biological activity."
+}
