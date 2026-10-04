@@ -13,7 +13,7 @@ Status: BLOCKED — public immutable release, Hub listing, actual example result
 | H2 | PASS | Every gate is mapped here; MRS/MTS validators0errors/0warnings, exact release/scoring/tolerances retained. Demonstrations and small-fixture parity are software verification, not broad chemistry/biological validation. Failed gates remain failed. |
 | H3 | PARTIAL/BLOCKED | [Pilot completed](managed-pilot-status.json), seven typed outputs/four computed visuals, [matching REVIEW Passport](pilot-passport.json); six non-HTML artifacts independently verify, including CSV/JSON/receipt/PNG/results. [HTML verification](managed-pilot/report.html.verification.json) fails: advertised100263 bytes vs downloaded100630; SHA differs. Platform-added HTML bytes prevent the all-artifact gate from passing. |
 | H4 | PARTIAL | Public exact release demi/rdkit-molecular-similarity-search@0.1.0: [publication](published.json), [listing](listing.json), [discovery](public-search.json), anonymous page/package verified. Hub Run it opens Studio and requires its normal authenticated managed-run approval; no private owner key or local install is needed to read examples/downloads. No active anonymous hosted inference/payment flow can be verified until H5. Registry qualification is schema_valid, runtime_valid=false; four actual managed runs pass but this does not upgrade the registry validator. |
-| H5 | BLOCKED | [Exact hosting preflight](hosting-plan.json) omits collection_file, caps query/collection text at2000chars vs8192chars/2MiB, resolves timeout300s vs120s. [Contract mismatch](hosting-contract-blockers.json), [no hosting](hosting-status.json). Not executed. No cold/subsequent hosted input invocation; production remains Modal. |
+| H5 | BLOCKED | Current live preflight rejects `collection_csv` length bounds; [error](hosting-current-preflight.json). Staging transport fixes at `3848b4e` are deployed and healthy; [rollout evidence](hosting-progress-20261004.json). Candidate0.1.1 exposes all five inputs and exact limits, but its refreshed exact private approval is pending. No production deployment, hosting request or cold/warm invocation; current MCP readback is `hosted:null`. |
 | H6 | PARTIAL/BLOCKED | Three deliberate original-fixture public runs appear in Hub Results after refresh, with image/text/bar/table. [22 anonymous access/artifact checks](public-examples-verification.json) pass all non-HTML bytes for all arms; public Studio run pages expose seven Files download controls; anonymous API transfers verify. Hub Results does not offer a dedicated artifact-download panel; use the public run Files or API links. [Actual retained study](study-final.json) exists, but [public Experiments limitation](public-experiments-blocker.png) remains. |
 | H7 | PARTIAL | [Resources/cost](resource-cost.json): managed pilot1.943s,10k4.835s, Modal0.5CPU/512MiB,0GPU, requested120s/profile300s. Isolated Linux10k peak188071936 bytes under512MiB. Four-run provider estimate$0.011064; beta user charge$0; actual invoice/managed peak absent. Hosted cold/warm, cancellation, cross-account input isolation/idle behavior not run. Local unique mode700/600 invocation directories pass isolation. Proposed hosting max1/minwarm0/idle300s/networkblocked only. No private molecule data or signed URLs are in deliberate public examples. |
 | H8 | PARTIAL delivery record / overall incomplete | [Completion record](brief-completion-record.md) records exact source commit, immutable release, public URL, workspace/revision, runs/study/Passports, costs/blockers/rollback. Hosting identity is explicitly none. Brief/index remain BLOCKED, not DONE. |
@@ -74,3 +74,16 @@ fresh private/public exact plans, separately approved production rollout,
 correct-contract public hosting/admin approval, cold/warm invocations and
 limits/cancellation/isolation/idle metrics, public actual study display, and
 unmodified public HTML bytes. **Not DONE.**
+
+
+Live continuation readback, 2026-10-04: [production HTML recheck](live-html-recheck-20261004.json)
+still fails exact bytes/hash, with no no-transform header on the production
+response. The same original public fixture run is absent (404) on staging,
+so the successful staging deployment/health cannot establish actual invocation
+or live artifact-transfer acceptance. [Study readback](study-readback-20261004.json)
+confirms three completed arms and 11/6/3 hits; this is owned access only. Local
+Hub staging source `11347bdca65627d63ffc84c1afb15982b49b6ae7` explicitly renders
+an authenticated Studio Experiments handoff, matching the retained public UI
+blocker. No broader public study capability is inferred. New private plan is
+[retained](candidate-v011-private-plan-refreshed.json) awaiting exact approval;
+previous expired proposal remains retained separately. No new compute.

@@ -1,0 +1,55 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "810c1f7c-bbec-4024-a63f-60a2f70273d6",
+  "data": {
+    "plan_id": "bd54fad0-c07b-4fe6-b2ac-99ad7fab4f65",
+    "plan_sha256": "33cf4b414d2eeaa2595de3728a177b750f5a490007b331a82079e3dc5d914635",
+    "expires_at": "2026-10-04T08:28:50.354766Z",
+    "base_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+    "base_sha256": "0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3",
+    "findings": [],
+    "blockers": [],
+    "diff": [
+      {
+        "kind": "file_upsert",
+        "path": "MTS.md",
+        "size_bytes": 11605,
+        "content_sha256": "ca526de7bc3700e7c1dcbb15414b4d3504c78df1ca68ec66f6a95b9d4ca2d9a0"
+      },
+      {
+        "kind": "file_upsert",
+        "path": "freeze-candidate-v011.json",
+        "size_bytes": 5742,
+        "content_sha256": "ce0f035232847913d4fe0e2c8e3ab09c3decb476d2029840d9dd7d0e26815a51"
+      },
+      {
+        "kind": "manifest_replace",
+        "manifest_sha256": "18a647385b91ba4251d59f136d3d214fd24fb5e2fe5db515b97a3e69c186dea0"
+      },
+      {
+        "kind": "file_upsert",
+        "path": ".biosimulant/evidence.json",
+        "size_bytes": 2,
+        "content_sha256": "b3283bf184bb082f364b8537776bc6b15fce2ff9f9acb3fb11ae87da394bfd4b"
+      }
+    ],
+    "operation_count": 3,
+    "requires_confirmation": true
+  },
+  "warnings": [
+    "No workspace content changed. Apply the exact digest only after user confirmation."
+  ],
+  "next_actions": [
+    {
+      "tool": "workspace_change_apply",
+      "description": "After explicit confirmation, apply this exact approved plan.",
+      "arguments": {
+        "plan_id": "bd54fad0-c07b-4fe6-b2ac-99ad7fab4f65",
+        "plan_sha256": "33cf4b414d2eeaa2595de3728a177b750f5a490007b331a82079e3dc5d914635"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-10-04T08:14:59.720384+00:00",
+  "run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd",
+  "artifact_id": "workspace-report",
+  "scope": "Read-only anonymous requests to deliberately public original-fixture run; no owner credential or new compute",
+  "checks": [
+    {
+      "environment": "production",
+      "check": "anonymous run access",
+      "http_status": 200,
+      "is_public": true
+    },
+    {
+      "environment": "production",
+      "check": "anonymous unchanged HTML transfer",
+      "http_status": 200,
+      "actual_size_bytes": 100630,
+      "declared_size_bytes": 100263,
+      "actual_sha256": "13682ac94f4922d5886f0b7b982761a6d951279f09e8b2efafc0b11a7fd7d802",
+      "declared_sha256": "2b94ce52c5c567ac682742de21b1466933b953eabdc54ea0daae823c4c2f1b03",
+      "cache_control": null,
+      "content_type": "text/html; charset=utf-8",
+      "verified": false
+    },
+    {
+      "environment": "staging",
+      "check": "anonymous run access",
+      "http_status": 404,
+      "is_public": null
+    }
+  ]
+}

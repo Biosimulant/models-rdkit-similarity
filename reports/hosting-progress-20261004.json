@@ -24,9 +24,9 @@
     "archive_bytes": 1149313,
     "archive_sha256": "6e1df71a1593759cdee991beea376fac2d4eed576f449d3eee3ee1a11f11aba4",
     "spec_sha256": "977a3553bd7aa06ba3ba373bbc980d01292f7e29e46ca5d502161c958c18a6ad",
-    "private_plan_id": "dfaeb752-faec-4ad8-8d16-d28178c57714",
-    "private_plan_digest": "8e6c50c75705939ecabbc628728b6016e41db4bc6920adadc143c742ad960a08",
-    "approval": "No user reply; plan expired at 2026-10-04T08:08:13Z without apply. Refresh exact plan before later approval/apply."
+    "private_plan_id": "bd54fad0-c07b-4fe6-b2ac-99ad7fab4f65",
+    "private_plan_digest": "33cf4b414d2eeaa2595de3728a177b750f5a490007b331a82079e3dc5d914635",
+    "approval": "Refreshed exact plan awaiting user reply; expires 2026-10-04T08:28:50Z. No apply."
   },
   "ci": {
     "id": 37187418150,
@@ -70,5 +70,12 @@
     "started_at": "2026-10-04T07:58:31Z",
     "duration_seconds": 67,
     "deployment_id": "zikr2gw8lobsn1tqomcm67yg"
+  },
+  "latest_live_checks": {
+    "report": "live-html-recheck-20261004.json",
+    "production_html_bytes_verified": false,
+    "staging_same_public_fixture": "404: production run absent; no actual staging HTTP/worker result verification",
+    "hosting": "none, production MCP readback",
+    "study": "completed, three runs; owned access only"
   }
 }

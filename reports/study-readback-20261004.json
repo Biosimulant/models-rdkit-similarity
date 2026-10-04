@@ -1,0 +1,80 @@
+{
+  "experiment_id": "f82e8c35-0803-41a7-a253-4541c25ba8ea",
+  "status": "completed",
+  "totals": {
+    "runs": 3,
+    "completed": 3
+  },
+  "comparison": {
+    "metrics": [
+      "search.hit_count"
+    ],
+    "rows": [
+      {
+        "arm_key": "143eb65618657bf1",
+        "arm": "pilot-unfiltered",
+        "status": "completed",
+        "run_count": 1,
+        "representative_run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd",
+        "values": {
+          "search.hit_count": 11
+        },
+        "stats": {
+          "search.hit_count": {
+            "kind": "scalar",
+            "n": 1,
+            "mean": 11,
+            "sd": null,
+            "min": 11,
+            "max": 11,
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "arm_key": "defcae0be30489d4",
+        "arm": "threshold-0.2",
+        "status": "completed",
+        "run_count": 1,
+        "representative_run_id": "1169e304-181a-44ad-b089-8d252145cd41",
+        "values": {
+          "search.hit_count": 6
+        },
+        "stats": {
+          "search.hit_count": {
+            "kind": "scalar",
+            "n": 1,
+            "mean": 6,
+            "sd": null,
+            "min": 6,
+            "max": 6,
+            "unit": "count"
+          }
+        }
+      },
+      {
+        "arm_key": "1eeb728647fe77ce",
+        "arm": "threshold-0.6",
+        "status": "completed",
+        "run_count": 1,
+        "representative_run_id": "e4b31111-37b1-4faa-aead-323bcd0b54a5",
+        "values": {
+          "search.hit_count": 3
+        },
+        "stats": {
+          "search.hit_count": {
+            "kind": "scalar",
+            "n": 1,
+            "mean": 3,
+            "sd": null,
+            "min": 3,
+            "max": 3,
+            "unit": "count"
+          }
+        }
+      }
+    ]
+  },
+  "scope": "Owned study read through Biosimulant MCP; no public study visibility asserted",
+  "observed_at": "2026-10-04T08:16:00Z"
+}
