@@ -1,0 +1,128 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "8df79e82-f24f-4ea6-a786-4c74b109886a",
+  "data": {
+    "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+    "environment": "production",
+    "image_inputs_enabled": true,
+    "hosted": {
+      "id": "a363d62f-278a-48e6-96d3-088fa31f9a15",
+      "key": "lab_f0291213a0634aeb89818e0e739f665d",
+      "scope": "public",
+      "status": "ready",
+      "status_reason": null,
+      "revision": 3,
+      "paused_by": null,
+      "spec_id": "2ec49c32-a01f-4f85-b18f-8365aaee4c6c",
+      "spec_sha256": "9940744e190ff8c004f5345b4c4c2a9408975c93277cc586b029176cef54fdb5",
+      "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+      "hub_sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+      "approval": "approved",
+      "inputs": {
+        "query_smiles": {
+          "type": "string",
+          "maps_to": "query_smiles",
+          "label": "Query smiles",
+          "default": null,
+          "required": true,
+          "description": "One query molecular SMILES; all fragments retained.",
+          "max_length": 8192,
+          "preserve_text": true
+        },
+        "collection_csv": {
+          "type": "string",
+          "maps_to": "collection_csv",
+          "label": "Collection csv",
+          "default": "",
+          "required": false,
+          "description": "Paste UTF-8 molecule_id,smiles CSV; search only this collection, <=10000 rows / 2 MiB.",
+          "max_length": 2097152,
+          "max_bytes": 2097152,
+          "max_rows": 10000,
+          "multiline": true,
+          "preserve_text": true,
+          "format": "csv"
+        },
+        "collection_file": {
+          "type": "stored_file",
+          "maps_to": "collection_file",
+          "label": "Collection file",
+          "default": null,
+          "required": false,
+          "description": "Upload UTF-8 molecule_id,smiles CSV; <=10000 rows / 2 MiB.",
+          "formats": [
+            "csv"
+          ],
+          "max_bytes": 2097152,
+          "max_rows": 10000
+        },
+        "top_k": {
+          "type": "integer",
+          "maps_to": "top_k",
+          "label": "Top k",
+          "default": 10,
+          "required": false,
+          "description": "Maximum ranked hits; integer 1..100.",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "minimum_similarity": {
+          "type": "number",
+          "maps_to": "minimum_similarity",
+          "label": "Minimum similarity",
+          "default": 0,
+          "required": false,
+          "description": "Inclusive Tanimoto threshold in [0,1].",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "compute": {
+        "size": "free",
+        "gpu": null,
+        "cpu": 0.5,
+        "memory_mb": 512,
+        "timeout_seconds": 120,
+        "max_containers": 1,
+        "scaledown_window": 300,
+        "network": "blocked"
+      },
+      "checks": [
+        {
+          "check": "archive",
+          "status": "pass",
+          "details": {
+            "packages": [
+              "rdkit==2025.9.1",
+              "numpy==2.2.6",
+              "Pillow==11.3.0"
+            ]
+          }
+        },
+        {
+          "check": "image",
+          "status": "pass",
+          "details": {
+            "app_name": "biosimulant-curated-lab_f0291213a06-4eee505cfff3d153-production"
+          }
+        },
+        {
+          "check": "archive_cache",
+          "status": "pass",
+          "details": null
+        },
+        {
+          "check": "smoke",
+          "status": "pass",
+          "details": {
+            "values": {},
+            "duration_seconds": 1.598
+          }
+        }
+      ]
+    }
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

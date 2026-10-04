@@ -1,0 +1,12 @@
+{
+  "PASS": true,
+  "hits": 3,
+  "threshold": 0.6,
+  "outputs": 7,
+  "visuals": 4,
+  "artifacts": 6,
+  "execution_seconds": 0.9587,
+  "wall_seconds": 4.155509,
+  "browser_download_save": "download event timed out; controls visible; all MCP artifact bytes verified",
+  "cold_start": "not proven"
+}

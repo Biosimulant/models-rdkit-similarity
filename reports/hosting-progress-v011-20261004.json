@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T09:00:00Z",
+  "updated_at": "2026-10-04T09:31:25.910034+00:00",
   "overall": "BLOCKED, not DONE",
   "release": {
     "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
@@ -61,7 +61,7 @@
     "migrations": false
   },
   "hosting": {
-    "state": "exact plan prepared, not executed; no hosting identity",
+    "state": "ready",
     "plan": "candidate-v011-hosting-ready-plan.json",
     "all_five_inputs_and_exact_bounds": true,
     "admin_approval_required": true,
@@ -71,20 +71,66 @@
     "timeout_seconds": 120,
     "min_warm_containers": 0,
     "scaledown_window_seconds": 300,
-    "network": "blocked"
+    "network": "blocked",
+    "hosted_id": "a363d62f-278a-48e6-96d3-088fa31f9a15",
+    "key": "lab_f0291213a0634aeb89818e0e739f665d",
+    "revision": 3,
+    "spec_id": "2ec49c32-a01f-4f85-b18f-8365aaee4c6c",
+    "spec_sha256": "9940744e190ff8c004f5345b4c4c2a9408975c93277cc586b029176cef54fdb5",
+    "request_evidence": "candidate-v011-hosting-requested.json",
+    "checks": [
+      "archive pass",
+      "image pass",
+      "archive_cache pass",
+      "smoke pass (1.598 seconds)"
+    ],
+    "admin_console": "https://admin.internal.biosimulant.com/ops/hosted/a363d62f-278a-48e6-96d3-088fa31f9a15",
+    "admin_access": "Authenticated administrator approval completed through console; no role or access controls changed",
+    "evidence": "hosted-v011-paste/hosting.json"
   },
   "cost": {
     "managed_runs": 5,
     "provider_estimate_usd": 0.01383,
     "beta_user_charge_usd": 0,
     "actual_provider_spend_usd": null,
-    "hosting_spend_usd": null
+    "hosting_spend_usd": null,
+    "hosted_invocations": 4,
+    "hosted_completed": 2,
+    "hosted_failed_dual_source": 1,
+    "hosted_cancelled": 1,
+    "hosting_smoke_checks": 1,
+    "hosted_provider_spend_usd": null,
+    "hosted_user_charge_usd": null,
+    "cost_limitation": "Hosted plans provide resource bounds but no price; actual provider invoice/billed memory/CPU unavailable"
   },
   "remaining": [
-    "Exact hosting-plan approval, administrator review and active checks",
-    "Cold and subsequent hosted invocation, pasted/uploaded CSV, all outputs and downloads",
-    "Hosted bounds, timeout/cancellation, cross-account isolation and idle/resource evidence",
-    "Actual public retained study UI; Hub Experiments redirects to authenticated Studio"
+    "Confirmed cold-start/container and warm latency telemetry",
+    "Browser file-save completion despite visible controls and verified artifact API bytes",
+    "Actual public study display in Hub Experiments",
+    "Cross-account isolation and idle resource/peak memory/spend evidence",
+    "Actual enforced timeout evidence (declared 120 seconds; no synthetic production timeout test)",
+    "Full 2 MiB pasted-envelope verification: gateway rejected 2 MiB+1 request with HTTP413; exact 2 MiB JSON overhead behavior not proven"
   ],
-  "delivery_commit": "96a3b8aa7f9d8a4a742739e0299b6d5cae2162df"
+  "delivery_commit": "be3e91e851fb153ecf11fb0ba6ebd718e0640a14 (prior evidence; new staging commit follows)",
+  "administrator_approval": {
+    "approved": true,
+    "status": "checking",
+    "hosting_revision": 2,
+    "evidence": "admin-hosting-approved.json",
+    "screenshot": "admin-hosting-approved.png"
+  },
+  "current_state": "administrator approved; exact public release actively hosted on Modal; pasted and uploaded fixture verified",
+  "hosted_verification": {
+    "pasted": "hosted-v011-paste/acceptance-verification.json",
+    "uploaded": "hosted-v011-upload/acceptance-verification.json",
+    "pasted_invocation": "8c7b1978-8c74-46cf-817a-3df0f7ba21fc",
+    "uploaded_invocation": "9f24cf70-26e6-431c-b927-f3b2d70735ff",
+    "artifact_hashes_pass": 12,
+    "all_seven_outputs": true,
+    "all_four_visuals": true,
+    "cancellation_status": "cancelled; retained terminal status; lease revocation, no result; underlying provider resource-stop telemetry unavailable",
+    "operations": "hosted-v011-operations.json",
+    "browser_result_screenshot": "hosted-v011-result-visible.png",
+    "browser_download_save": "one event timeout, unverified; MCP bytes/hash verified"
+  }
 }

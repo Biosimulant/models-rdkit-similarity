@@ -1,0 +1,46 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "86789b1a-e4c9-4ea0-a00e-f5127bb40ff5",
+  "data": {
+    "plan_id": "a454c57b-3c2b-49d1-8b01-1500b029036a",
+    "plan_sha256": "82d073145dbfce3c849505ba6739ec61558a7d14d8493f8c48bf6faee98e3f4b",
+    "expires_at": "2026-10-04T09:34:20.915496",
+    "requires_confirmation": true,
+    "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "hub_sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+    "parameters": {
+      "query_smiles": "CCO",
+      "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+      "collection_file": null,
+      "top_k": 10,
+      "minimum_similarity": 0.2
+    },
+    "compute": {
+      "size": "free",
+      "gpu": null,
+      "cpu": 0.5,
+      "memory_mb": 512,
+      "timeout_seconds": 120,
+      "max_containers": 1,
+      "scaledown_window": 300,
+      "network": "blocked",
+      "provider": "modal",
+      "environment": "production"
+    },
+    "blockers": []
+  },
+  "warnings": [
+    "No invocation started. Approve this exact input and deployment before execution."
+  ],
+  "next_actions": [
+    {
+      "tool": "hosted_invocation_execute",
+      "description": "Execute the approved plan.",
+      "arguments": {
+        "plan_id": "a454c57b-3c2b-49d1-8b01-1500b029036a",
+        "plan_sha256": "82d073145dbfce3c849505ba6739ec61558a7d14d8493f8c48bf6faee98e3f4b"
+      }
+    }
+  ],
+  "links": {}
+}

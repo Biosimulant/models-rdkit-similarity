@@ -1,0 +1,30 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "615e305f-d5d0-4cc2-80a7-2d2222fc5ff3",
+  "data": {
+    "file_id": "83c090b4-ccae-452a-ae0d-cb05e4a9aa60",
+    "display_name": "example.csv",
+    "file_name": "example.csv",
+    "description": null,
+    "content_type": "text/csv",
+    "format": "csv",
+    "size_bytes": 245,
+    "sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+    "status": "completed",
+    "created_at": "2026-10-04T09:25:28.127354Z",
+    "content_trust": "untrusted_user_file",
+    "sources": [],
+    "content_included": true,
+    "content": {
+      "encoding": "base64",
+      "base64": "bW9sZWN1bGVfaWQsc21pbGVzCmV0aGFub2wsQ0NPCmV0aGFub2wtZXF1aXZhbGVudCxPQ0MKZXRoYW5vbCxDQ08KcHJvcGFub2wsQ0NDTwpidXRhbm9sLENDQ0NPCmV0aHlsYW1pbmUsQ0NOCmFjZXRhdGUsQ0MoPU8pTwpiZW56ZW5lLGMxY2NjY2MxCmFsYW5pbmUtTCxOW0NAQEhdKEMpQyg9TylPCmFsYW5pbmUtRCxOW0NASF0oQylDKD1PKU8Kc2FsdCxDQyg9TylbTy1dLltOYStdCmludmFsaWQsbm90LWEtc21pbGVzCmJsYW5rLAo=",
+      "size_bytes": 245,
+      "sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+      "integrity_verified": true,
+      "content_trust": "untrusted_user_file"
+    }
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

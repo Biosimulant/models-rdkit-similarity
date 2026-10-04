@@ -1,0 +1,73 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "831ad03d-50d9-4a6b-a5ae-23b720bde6e5",
+  "data": {
+    "invocation_id": "9f24cf70-26e6-431c-b927-f3b2d70735ff",
+    "status": "completed",
+    "error_code": null,
+    "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "hub_sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+    "spec_sha256": "9940744e190ff8c004f5345b4c4c2a9408975c93277cc586b029176cef54fdb5",
+    "input_sha256": "143fe50ae7050b312308a89e05a1b73b1bd2af2d675c44b96489549161b5547b",
+    "source": "api",
+    "attempt": 1,
+    "created_at": "2026-10-04T09:26:11.711036",
+    "completed_at": "2026-10-04T09:26:15.866545",
+    "result": {
+      "values": {},
+      "value_meta": {},
+      "input_files": {
+        "collection_file": {
+          "file_id": "83c090b4-ccae-452a-ae0d-cb05e4a9aa60",
+          "sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+          "size_bytes": 245,
+          "format": "csv",
+          "rows": 13
+        }
+      }
+    },
+    "result_included": true,
+    "files": [
+      {
+        "port": "search.rankings_csv",
+        "file_name": "rankings.csv",
+        "format": "csv",
+        "bytes": 180,
+        "sha256": "51cd8c231cb5acc3a2e0c9f09e5ec9cd5de140387c1de48dedffb28a82ca8863"
+      },
+      {
+        "port": "search.rankings_json",
+        "file_name": "rankings.json",
+        "format": "json",
+        "bytes": 3085,
+        "sha256": "947889a682ab95fff6af76e5f31afc82a358ed7f822f79e9f2529d650086c05f"
+      },
+      {
+        "port": "search.invalid_csv",
+        "file_name": "invalid-rows.csv",
+        "format": "csv",
+        "bytes": 211,
+        "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+      },
+      {
+        "port": "search.receipt_file",
+        "file_name": "receipt.json",
+        "format": "json",
+        "bytes": 1939,
+        "sha256": "cfc4b33b4654e539b67fad440c6661c26e6e60284c289b21a907a6c6d8b4d330"
+      },
+      {
+        "port": "search.drawings",
+        "file_name": "molecules.png",
+        "format": "png",
+        "bytes": 15245,
+        "sha256": "1b52310ce5de37fb1c8a7c0f02e9e050936ce8847b94c95794838d9271c25739"
+      }
+    ],
+    "execution_origin": "managed_hosted",
+    "assurance": "Invocation completion is execution evidence, not scientific validation."
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

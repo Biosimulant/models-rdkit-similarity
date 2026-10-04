@@ -1,0 +1,3 @@
+row_index,molecule_id,original_smiles,error_code,error
+11,invalid,not-a-smiles,parse_error,parse_error: unsupported or invalid SMILES
+12,blank,,input_limit,input_limit: SMILES must contain 1..8192 characters

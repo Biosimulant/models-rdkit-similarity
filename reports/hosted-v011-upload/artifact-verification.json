@@ -1,0 +1,38 @@
+[
+  {
+    "port": "search.rankings_csv",
+    "file_name": "rankings.csv",
+    "size_bytes": 180,
+    "sha256": "51cd8c231cb5acc3a2e0c9f09e5ec9cd5de140387c1de48dedffb28a82ca8863"
+  },
+  {
+    "port": "search.rankings_json",
+    "file_name": "rankings.json",
+    "size_bytes": 3085,
+    "sha256": "947889a682ab95fff6af76e5f31afc82a358ed7f822f79e9f2529d650086c05f"
+  },
+  {
+    "port": "search.invalid_csv",
+    "file_name": "invalid-rows.csv",
+    "size_bytes": 211,
+    "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+  },
+  {
+    "port": "search.receipt_file",
+    "file_name": "receipt.json",
+    "size_bytes": 1939,
+    "sha256": "cfc4b33b4654e539b67fad440c6661c26e6e60284c289b21a907a6c6d8b4d330"
+  },
+  {
+    "port": "search.drawings",
+    "file_name": "annotated.png",
+    "size_bytes": 15245,
+    "sha256": "1b52310ce5de37fb1c8a7c0f02e9e050936ce8847b94c95794838d9271c25739"
+  },
+  {
+    "port": "result",
+    "file_name": "result.json",
+    "size_bytes": 55239,
+    "sha256": "32336ac57b0284ef6ec609cf08e08e63f5e42ee182e8bf99dc2ddcbc6cf8c80d"
+  }
+]

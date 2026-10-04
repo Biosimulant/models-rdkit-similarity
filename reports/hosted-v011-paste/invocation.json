@@ -1,0 +1,64 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "6a5656d4-adab-4990-969d-2480ee659637",
+  "data": {
+    "invocation_id": "8c7b1978-8c74-46cf-817a-3df0f7ba21fc",
+    "status": "completed",
+    "error_code": null,
+    "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "hub_sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+    "spec_sha256": "9940744e190ff8c004f5345b4c4c2a9408975c93277cc586b029176cef54fdb5",
+    "input_sha256": "4b64b27a719dc2eec4d8dcff694a908abb77cab8d5af3bf401aa573a27515a45",
+    "source": "api",
+    "attempt": 1,
+    "created_at": "2026-10-04T09:20:31.972320",
+    "completed_at": "2026-10-04T09:20:35.660606",
+    "result": {
+      "values": {},
+      "value_meta": {}
+    },
+    "result_included": true,
+    "files": [
+      {
+        "port": "search.rankings_csv",
+        "file_name": "rankings.csv",
+        "format": "csv",
+        "bytes": 328,
+        "sha256": "0050733f6bb18831a3987506aa183193e43d0201a583bd049e6d056d8339739f"
+      },
+      {
+        "port": "search.rankings_json",
+        "file_name": "rankings.json",
+        "format": "json",
+        "bytes": 3728,
+        "sha256": "837ced87cbe81b76257b0a36433e172beac57c94fb93d9005d820c22d9bbc26a"
+      },
+      {
+        "port": "search.invalid_csv",
+        "file_name": "invalid-rows.csv",
+        "format": "csv",
+        "bytes": 211,
+        "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+      },
+      {
+        "port": "search.receipt_file",
+        "file_name": "receipt.json",
+        "format": "json",
+        "bytes": 1939,
+        "sha256": "e4e251930cf02f0900af5bdc7a7ad01ea96960bda7681177a9128c74017c7f07"
+      },
+      {
+        "port": "search.drawings",
+        "file_name": "molecules.png",
+        "format": "png",
+        "bytes": 30708,
+        "sha256": "493dc18ce2175e22f94500bef48c935cc378b840a67c7650fb9d8f8f2b9d344d"
+      }
+    ],
+    "execution_origin": "managed_hosted",
+    "assurance": "Invocation completion is execution evidence, not scientific validation."
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

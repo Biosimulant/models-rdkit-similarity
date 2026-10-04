@@ -1,0 +1,11 @@
+{
+  "PASS": true,
+  "artifacts": 6,
+  "outputs": 7,
+  "visuals": 4,
+  "hits": 6,
+  "invalid_rows": 2,
+  "duration_seconds": 1.076,
+  "wall_seconds": 3.688286,
+  "cold_or_warm": "not proven: administrator smoke already ran; container telemetry unavailable"
+}

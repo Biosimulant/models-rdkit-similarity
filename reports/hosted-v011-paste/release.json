@@ -1,0 +1,124 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "cc0f7f19-d6ce-4eb0-bd6f-70a70eee527f",
+  "data": {
+    "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "hub_sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+    "title": "RDKit Molecular Similarity Search",
+    "summary": "Rank molecules in your supplied collection using Morgan radius 2, 2048 bits, chirality enabled and Tanimoto similarity. Query/hit drawings, exact scores and downloadable rankings; CPU only.",
+    "inputs": {
+      "query_smiles": {
+        "type": "string",
+        "maps_to": "query_smiles",
+        "label": "Query smiles",
+        "default": null,
+        "required": true,
+        "description": "One query molecular SMILES; all fragments retained.",
+        "max_length": 8192,
+        "preserve_text": true,
+        "min_length": 0
+      },
+      "collection_csv": {
+        "type": "string",
+        "maps_to": "collection_csv",
+        "label": "Collection csv",
+        "default": "",
+        "required": false,
+        "description": "Paste UTF-8 molecule_id,smiles CSV; search only this collection, <=10000 rows / 2 MiB.",
+        "max_length": 2097152,
+        "max_bytes": 2097152,
+        "max_rows": 10000,
+        "multiline": true,
+        "preserve_text": true,
+        "format": "csv",
+        "min_length": 0
+      },
+      "collection_file": {
+        "type": "stored_file",
+        "maps_to": "collection_file",
+        "label": "Collection file",
+        "default": null,
+        "required": false,
+        "description": "Upload UTF-8 molecule_id,smiles CSV; <=10000 rows / 2 MiB.",
+        "formats": [
+          "csv"
+        ],
+        "max_bytes": 2097152,
+        "max_rows": 10000
+      },
+      "top_k": {
+        "type": "integer",
+        "maps_to": "top_k",
+        "label": "Top k",
+        "default": 10,
+        "required": false,
+        "description": "Maximum ranked hits; integer 1..100.",
+        "minimum": 1,
+        "maximum": 100
+      },
+      "minimum_similarity": {
+        "type": "number",
+        "maps_to": "minimum_similarity",
+        "label": "Minimum similarity",
+        "default": 0,
+        "required": false,
+        "description": "Inclusive Tanimoto threshold in [0,1].",
+        "minimum": 0,
+        "maximum": 1
+      }
+    },
+    "input_meta": {
+      "query_smiles": {
+        "type": "string",
+        "label": "Query smiles",
+        "required": true
+      },
+      "collection_csv": {
+        "type": "string",
+        "label": "Collection csv",
+        "required": false,
+        "max_bytes": 2097152
+      },
+      "collection_file": {
+        "type": "stored_file",
+        "label": "Collection file",
+        "required": false,
+        "formats": [
+          "csv"
+        ],
+        "max_bytes": 2097152
+      },
+      "top_k": {
+        "type": "integer",
+        "label": "Top k",
+        "required": false
+      },
+      "minimum_similarity": {
+        "type": "number",
+        "label": "Minimum similarity",
+        "required": false
+      }
+    },
+    "value_meta": {},
+    "compute": {
+      "size": "free",
+      "gpu": null,
+      "cpu": 0.5,
+      "memory_mb": 512,
+      "timeout_seconds": 120,
+      "max_containers": 1,
+      "scaledown_window": 300,
+      "network": "blocked"
+    },
+    "limits": {
+      "pending_per_user": 5,
+      "pending_per_lab": 20,
+      "queue_wait_seconds": 600
+    },
+    "spec_sha256": "9940744e190ff8c004f5345b4c4c2a9408975c93277cc586b029176cef54fdb5",
+    "image_inputs_enabled": true
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "88b7f9e1-8dbb-4aaa-a741-3b1023b0d107",
+  "data": {
+    "invocation_id": "60a14979-31a3-4bb1-8eb0-8ca60a226d87",
+    "status": "failed",
+    "error_code": "lab_execution_failed",
+    "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "hub_sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+    "spec_sha256": "9940744e190ff8c004f5345b4c4c2a9408975c93277cc586b029176cef54fdb5",
+    "input_sha256": "7f01b1e90a8d6cc1c79e38c52b6b633b44d6ecbff73470aff50c5601c694fba6",
+    "source": "api",
+    "attempt": 1,
+    "created_at": "2026-10-04T09:25:36.497552",
+    "completed_at": "2026-10-04T09:25:41.080075",
+    "result": null,
+    "result_included": false,
+    "files": [],
+    "execution_origin": "managed_hosted",
+    "assurance": "Invocation completion is execution evidence, not scientific validation."
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}
