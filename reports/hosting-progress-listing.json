@@ -1,0 +1,26 @@
+{
+  "as_of": "2026-10-04T08:09:11.291896",
+  "item": {
+    "artifact_id": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+    "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+    "package_type": "lab",
+    "visibility": "public",
+    "checksum_sha256": "9de060e143a8b844e614855d6a44ea9d6d3303520897c4db8d1e0f0afd193600",
+    "title": "RDKit Molecular Similarity Search",
+    "description": "Rank molecules in your supplied collection using Morgan radius 2, 2048 bits, chirality enabled and Tanimoto similarity. Query/hit drawings, exact scores and downloadable rankings; CPU only.",
+    "tags": [],
+    "intended_use": {
+      "statement": "Structural ranking against exactly the supplied collection, <=10000 rows; not a search of all chemistry."
+    },
+    "compute_class": null,
+    "qualification": {
+      "schema_valid": true,
+      "runtime_valid": false,
+      "domain_validated": false,
+      "source": "biosimulant_validator"
+    },
+    "created_at": "2026-10-04T06:56:59.099918",
+    "content_trust": "untrusted_descriptive_metadata"
+  },
+  "scope": "Exact public package present in accessible Hub search; other matches omitted"
+}

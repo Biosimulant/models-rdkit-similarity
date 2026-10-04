@@ -1,0 +1,121 @@
+{
+  "schema_version": 2,
+  "key": "rdkit_similarity_candidate",
+  "title": "RDKit Molecular Similarity Search",
+  "summary": "Rank molecules in your supplied collection using Morgan radius 2, 2048 bits, chirality enabled and Tanimoto similarity. Query/hit drawings, exact scores and downloadable rankings; CPU only.",
+  "caveats": [
+    "Morgan radius2, 2048 bits, includeChirality=True; Tanimoto on-bit intersection/union.",
+    "No desalt, neutralization or tautomer standardization; preserve all fragments.",
+    "Keep all duplicates; ties by descending score, exact Unicode ID then row index.",
+    "Structural similarity does not establish potency, activity, toxicity, safety or patent status.",
+    "A score of 1 is not identity; exact_match uses canonical isomeric SMILES.",
+    "Parity and demonstrations are software verification, not broad biological validation."
+  ],
+  "hub": {
+    "ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "sha256": "6e1df71a1593759cdee991beea376fac2d4eed576f449d3eee3ee1a11f11aba4"
+  },
+  "inputs": {
+    "query_smiles": {
+      "type": "string",
+      "maps_to": "query_smiles",
+      "label": "Query smiles",
+      "default": null,
+      "required": true,
+      "description": "One query molecular SMILES; all fragments retained.",
+      "max_length": 8192,
+      "preserve_text": true
+    },
+    "collection_csv": {
+      "type": "string",
+      "maps_to": "collection_csv",
+      "label": "Collection csv",
+      "default": "",
+      "required": false,
+      "description": "Paste UTF-8 molecule_id,smiles CSV; search only this collection, <=10000 rows / 2 MiB.",
+      "max_length": 2097152,
+      "max_bytes": 2097152,
+      "max_rows": 10000,
+      "multiline": true,
+      "preserve_text": true,
+      "format": "csv"
+    },
+    "collection_file": {
+      "type": "stored_file",
+      "maps_to": "collection_file",
+      "label": "Collection file",
+      "default": null,
+      "required": false,
+      "description": "Upload UTF-8 molecule_id,smiles CSV; <=10000 rows / 2 MiB.",
+      "formats": [
+        "csv"
+      ],
+      "max_bytes": 2097152,
+      "max_rows": 10000
+    },
+    "top_k": {
+      "type": "integer",
+      "maps_to": "top_k",
+      "label": "Top k",
+      "default": 10,
+      "required": false,
+      "description": "Maximum ranked hits; integer 1..100.",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "minimum_similarity": {
+      "type": "number",
+      "maps_to": "minimum_similarity",
+      "label": "Minimum similarity",
+      "default": 0.0,
+      "required": false,
+      "description": "Inclusive Tanimoto threshold in [0,1].",
+      "minimum": 0,
+      "maximum": 1
+    }
+  },
+  "outputs": {
+    "values": {},
+    "include_ports": [
+      "*"
+    ],
+    "exclude_ports": [],
+    "inline_file_formats": [
+      "mmcif",
+      "pdb",
+      "sdf",
+      "mol",
+      "mol2",
+      "csv",
+      "json",
+      "jpeg",
+      "png"
+    ],
+    "max_result_bytes": 8000000
+  },
+  "runtime": {
+    "image": {
+      "source": "lab",
+      "base": "cpu",
+      "python_version": "3.12.3"
+    }
+  },
+  "compute": {
+    "cpu": 0.5,
+    "memory_mb": 512,
+    "timeout_seconds": 120,
+    "max_containers": 1,
+    "scaledown_window": 300,
+    "network": "blocked"
+  },
+  "smoke": {
+    "mode": "execution",
+    "parameters": {
+      "query_smiles": "CCO",
+      "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+      "top_k": 100,
+      "minimum_similarity": 0
+    },
+    "expected_values": {}
+  }
+}

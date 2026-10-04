@@ -1,0 +1,162 @@
+{
+  "version": "0.1.1",
+  "scope": "Hosting transport metadata candidate; scoring/model component unchanged at0.1.0; current public0.1.0 preserved",
+  "absolute_tolerance": 1e-12,
+  "files": [
+    {
+      "path": "NOTICE.md",
+      "size_bytes": 503,
+      "sha256": "6ed51c8de68fa1af9807afe6b0f63dc32972c1d9345226249b4644874c2db55a"
+    },
+    {
+      "path": "fixtures/example.csv",
+      "size_bytes": 245,
+      "sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb"
+    },
+    {
+      "path": "lab.yaml",
+      "size_bytes": 4115,
+      "sha256": "67ee10f07aa86af6e1413c26de915deee4faeefdbb85f3f550cdcd6fe64f141f"
+    },
+    {
+      "path": "models/search/assets/drawing-libraries.zip",
+      "size_bytes": 1031610,
+      "sha256": "d266eaf494da3597f1938b1d70379a1c11bf12baa3bae18ad86f54ba5abbbba5"
+    },
+    {
+      "path": "models/search/assets/native-runtime-pin.json",
+      "size_bytes": 373,
+      "sha256": "bf50d31d10c369db6be3cb7f19599574ad5ee593dd2907dbace1bf77b3e2c583"
+    },
+    {
+      "path": "models/search/model.yaml",
+      "size_bytes": 1659,
+      "sha256": "5cbde00e9a551c97c423ef6c6c847b3b1cc959c302d85afc0d918602b1f345d2"
+    },
+    {
+      "path": "models/search/src/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "models/search/src/linux_libraries.py",
+      "size_bytes": 2360,
+      "sha256": "1eef0d6ee0febe82b3ab59269fefd43621a47b0ecc29fad2784e2eea4993b81d"
+    },
+    {
+      "path": "models/search/src/search.py",
+      "size_bytes": 13459,
+      "sha256": "44bb994768d875582dfcaf9dc33724912a9f4513b5fffd5b601fe483c7591e3e"
+    },
+    {
+      "path": "sources/RDKIT-LICENSE.txt",
+      "size_bytes": 1580,
+      "sha256": "daeb8d194502cbcf34c05c39541a0d02be65bc9bada5b891c1974cd24e9fca30"
+    },
+    {
+      "path": "sources/dependency-distributions.json",
+      "size_bytes": 2666,
+      "sha256": "d517576e8b4abbea83d0eb25647e5641f9695cef25fb4ffebff46b8677df53fa"
+    },
+    {
+      "path": "sources/dependency-notices/biosimulant-licenses_LICENSE.txt",
+      "size_bytes": 1068,
+      "sha256": "681636d4c15af45744d3121bd26b3db37477326be423fbbfb6dc49532dfcc2fd"
+    },
+    {
+      "path": "sources/dependency-notices/numpy-LICENSE.txt",
+      "size_bytes": 47755,
+      "sha256": "c002bd26de7dc7aa464250a0de063d58fe55974452e4389e5c21c350a820bf06"
+    },
+    {
+      "path": "sources/dependency-notices/pillow-licenses_LICENSE",
+      "size_bytes": 66498,
+      "sha256": "2c40a7d8894126ff7a993a752505b915694aafe7a620889ef368acbf54b87144"
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-LICENSE.md",
+      "size_bytes": 1077,
+      "sha256": "e39092217179a1f07b086c349ef4e2ef3e816742c7643dce5351e2e3b88df9d6"
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-OFL.txt",
+      "size_bytes": 4390,
+      "sha256": "7c38a22e5878e60fe423360553e63dd7be23d29f1f60336034935dbfc96e8320"
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-license.txt",
+      "size_bytes": 1580,
+      "sha256": "daeb8d194502cbcf34c05c39541a0d02be65bc9bada5b891c1974cd24e9fca30"
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-telex_font_license.txt",
+      "size_bytes": 4401,
+      "sha256": "b76d2e0cf60d47d9ee90148bb1740ab7f13586a0f2c7295861661e67d655cb8e"
+    },
+    {
+      "path": "sources/native-library-distributions.json",
+      "size_bytes": 6170,
+      "sha256": "ca517c2cb909b6e0b2f959b3b454ef516b05098934e4d690d47b7b8e98adf4bf"
+    },
+    {
+      "path": "sources/native-library-notices/libbsd0-copyright",
+      "size_bytes": 23960,
+      "sha256": "00fd7be5d907a6bcc409a80f2d565f508673db4761d54623691f89ae3aa20fc7"
+    },
+    {
+      "path": "sources/native-library-notices/libexpat1-copyright",
+      "size_bytes": 1756,
+      "sha256": "60919fe1a156395ff14511bb6ff79756c50ade2fff59ac60c9bae1d8a7fe6292"
+    },
+    {
+      "path": "sources/native-library-notices/libmd0-copyright",
+      "size_bytes": 8018,
+      "sha256": "4365ef6255ad553fce69dd4bc0e093472c5d0e41b8ea493a545cc926ce171aa6"
+    },
+    {
+      "path": "sources/native-library-notices/libx11-6-copyright",
+      "size_bytes": 47102,
+      "sha256": "0b380a7fd5b2228f26e9585e56f14812efd3350f3df307507d2bc055dfd8de3e"
+    },
+    {
+      "path": "sources/native-library-notices/libxau6-copyright",
+      "size_bytes": 1224,
+      "sha256": "118dd263a7b91c8f21c489f949bf13281dff9e766deea92b829dac4dce66601a"
+    },
+    {
+      "path": "sources/native-library-notices/libxcb1-copyright",
+      "size_bytes": 1781,
+      "sha256": "4f7cb9db6bf6542f5417e3d674c780d3a5fd12291a54d63054fb576ee0cfae80"
+    },
+    {
+      "path": "sources/native-library-notices/libxdmcp6-copyright",
+      "size_bytes": 1265,
+      "sha256": "1bcbb50f8603fe8b86d330bfa460b772ea04fbd3c70e4499f0768b5340b9fd6e"
+    },
+    {
+      "path": "sources/native-library-notices/libxext6-copyright",
+      "size_bytes": 10421,
+      "sha256": "bc57e445ca1d9fe082c8d54189dd411ff26caa8552c9c63d44ea06a982f32124"
+    },
+    {
+      "path": "sources/native-library-notices/libxrender1-copyright",
+      "size_bytes": 2252,
+      "sha256": "ed2a78123a5076b4f11da38cb1ffb85b5cb9fdc26b5746c517b1d7e7a9029704"
+    },
+    {
+      "path": "sources/provenance.json",
+      "size_bytes": 1038,
+      "sha256": "d910ffd4c5a5ff392e6002c2f1a7c7f447e3f0f9503b9cc6b6d4a92f9edea0e3"
+    },
+    {
+      "path": "sources/rdkit-descriptor-guide.rst",
+      "size_bytes": 167232,
+      "sha256": "59a87cf2287f0aa3363dc24d022972bdf83e97b278d7073cc0e0c6c64d92135d"
+    },
+    {
+      "path": "tests/test_acceptance.py",
+      "size_bytes": 8110,
+      "sha256": "4363f0f79c360e8cb3fd00395b411b834958a8201516aab7fba88b72a0bdc788"
+    }
+  ]
+}

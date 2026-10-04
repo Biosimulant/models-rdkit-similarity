@@ -1,0 +1,105 @@
+{
+  "scope": "Local isolated adapter built from synchronized staging; real Python3.12 RDKit child processes; not deployed core staging, managed compute or live hosted evidence",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "package_sha256": "6e1df71a1593759cdee991beea376fac2d4eed576f449d3eee3ee1a11f11aba4",
+  "spec_sha256": "977a3553bd7aa06ba3ba373bbc980d01292f7e29e46ca5d502161c958c18a6ad",
+  "cases": [
+    {
+      "case": "pasted-example",
+      "status": "PASS",
+      "original_bytes_preserved": true,
+      "returned_hits": 11,
+      "eligible_hits": 11,
+      "elapsed_seconds": 0.9741722500184551,
+      "typed_outputs": 7,
+      "renders": [
+        "image",
+        "text",
+        "bar",
+        "table"
+      ],
+      "files": [
+        {
+          "port": "search.rankings_csv",
+          "format": "csv",
+          "bytes": 617,
+          "sha256": "92275b8b60666064b8c7c04695bbaf5aa531280945e3dfae1f71c7982ea69023"
+        },
+        {
+          "port": "search.rankings_json",
+          "format": "json",
+          "bytes": 4845,
+          "sha256": "e5a18dc68faec3bb12b5ebf6eda10cc5cde0f5bba80ec9f802950e909f69ddc7"
+        },
+        {
+          "port": "search.invalid_csv",
+          "format": "csv",
+          "bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "search.receipt_file",
+          "format": "json",
+          "bytes": 1942,
+          "sha256": "55a713a6d7d7dc387b4d232743802d27c6ebe77b5c129db72f1a624341281aa1"
+        },
+        {
+          "port": "search.drawings",
+          "format": "png",
+          "bytes": 63566,
+          "sha256": "11a48b020d490fbc1bfb8840a24b8c19957cb378d21fa29ab1d72865b4f66bea"
+        }
+      ],
+      "scratch_cleaned": true
+    },
+    {
+      "case": "uploaded-example",
+      "status": "PASS",
+      "original_bytes_preserved": true,
+      "returned_hits": 3,
+      "eligible_hits": 3,
+      "elapsed_seconds": 0.6207215839531273,
+      "typed_outputs": 7,
+      "renders": [
+        "image",
+        "text",
+        "bar",
+        "table"
+      ],
+      "files": [
+        {
+          "port": "search.rankings_csv",
+          "format": "csv",
+          "bytes": 180,
+          "sha256": "51cd8c231cb5acc3a2e0c9f09e5ec9cd5de140387c1de48dedffb28a82ca8863"
+        },
+        {
+          "port": "search.rankings_json",
+          "format": "json",
+          "bytes": 3086,
+          "sha256": "58016940aae7fc15afeb5cefb119496d1f0ca878af93be31d9d804453f4291ed"
+        },
+        {
+          "port": "search.invalid_csv",
+          "format": "csv",
+          "bytes": 211,
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224"
+        },
+        {
+          "port": "search.receipt_file",
+          "format": "json",
+          "bytes": 1940,
+          "sha256": "e2caba00c4d4f0660fdf22b1a69bd87062a817b3048c621404adcd6a3ae417c5"
+        },
+        {
+          "port": "search.drawings",
+          "format": "png",
+          "bytes": 14981,
+          "sha256": "2ed74a79bdce75edb4d3eb4ca611b63c698c29335c9ce86667b0b3c9c3b72eb8"
+        }
+      ],
+      "scratch_cleaned": true
+    }
+  ],
+  "production": "Modal unchanged; no remote resources created"
+}

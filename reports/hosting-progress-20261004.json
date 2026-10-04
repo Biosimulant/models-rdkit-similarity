@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-04",
+  "scope": "Meaningful new staging source and local isolated adapter progress; goal remains incomplete",
+  "backend_staging_baseline": "4f6d58fe6a3b3054c3ba90595c1d183bfa586954",
+  "synchronized_main_baseline": "4db9d8fccf853155dfa45f0cb08ee269901695b7",
+  "backend_implementation_commit": "90b8df0080c6421e34dae4991268f22aa6192830",
+  "backend_ci_delivery_commit": "3848b4ed603d56538f9410da24f08085d1378164",
+  "backend_worktree": "/Users/demi/Documents/projects-local/bsim-worktrees/rdkit-similarity-hosting-20261004/biosimulant-backend",
+  "backend_tests": {
+    "passed": 118,
+    "skipped": 1,
+    "deprecation_warnings": 6,
+    "new_cases_passed_after_formatting": 13,
+    "scope": "Serving CSV/image/hosted service + ASGI attachment transfer; no deployed HTTP/worker staging claim",
+    "skip_reason": "Optional pinned Lotka archive test; CURATED_LOTKA_ARCHIVE was not supplied"
+  },
+  "new_changed_files_ruff": "PASS; existing HTTP file has two baseline E501 violations",
+  "lab_candidate": {
+    "version": "0.1.1",
+    "model_component": "0.1.0 unchanged",
+    "tests_passed": 28,
+    "composed_cases_passed": 5,
+    "adapter_real_child_cases": 2,
+    "archive_bytes": 1149313,
+    "archive_sha256": "6e1df71a1593759cdee991beea376fac2d4eed576f449d3eee3ee1a11f11aba4",
+    "spec_sha256": "977a3553bd7aa06ba3ba373bbc980d01292f7e29e46ca5d502161c958c18a6ad",
+    "private_plan_id": "dfaeb752-faec-4ad8-8d16-d28178c57714",
+    "private_plan_digest": "8e6c50c75705939ecabbc628728b6016e41db4bc6920adadc143c742ad960a08",
+    "approval": "No user reply; plan expired at 2026-10-04T08:08:13Z without apply. Refresh exact plan before later approval/apply."
+  },
+  "ci": {
+    "id": 37187418150,
+    "url": "https://github.com/Pledre/biosimulant-backend/actions/runs/37187418150",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "3848b4ed603d56538f9410da24f08085d1378164"
+  },
+  "production": "Modal unchanged by this task; no deployment",
+  "additional_managed_compute_runs": 0,
+  "additional_managed_user_charge_usd": 0,
+  "remaining": [
+    "Actual authenticated staging HTTP/worker input and result integration proof; API/worker source rollout and health now pass",
+    "Fresh exact private revision approval then qualification/publication plans",
+    "New explicit production deployment approval after concrete staging review",
+    "Valid exact hosting plan/admin approval and cold/warm real inputs",
+    "Public actual Experiments display",
+    "Live unmodified HTML byte/hash verification",
+    "Hosted bounds/cancellation/isolation/idle/resource metrics"
+  ],
+  "staging_api_deployment": {
+    "status": "success",
+    "commit": "3848b4ed603d56538f9410da24f08085d1378164",
+    "source": "Coolify visible deployment logs",
+    "manual_deployment_id": "0m2e28o1ztzu3pl5fbadtuuj",
+    "duration_seconds": 12,
+    "webhook_deployment_also_succeeded": true,
+    "health": {
+      "http_status": 200,
+      "status": "healthy",
+      "database": "connected",
+      "schema": "compatible"
+    },
+    "scope": "Deployment and unauthenticated health only; no actual hosted invocation"
+  },
+  "staging_worker_deployment": {
+    "status": "success",
+    "commit": "3848b4ed603d56538f9410da24f08085d1378164",
+    "source": "Coolify visible staging worker deployment history",
+    "trigger": "webhook",
+    "started_at": "2026-10-04T07:58:31Z",
+    "duration_seconds": 67,
+    "deployment_id": "zikr2gw8lobsn1tqomcm67yg"
+  }
+}

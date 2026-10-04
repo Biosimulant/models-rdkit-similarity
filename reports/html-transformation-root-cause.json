@@ -1,0 +1,10 @@
+{
+  "retrieved_bytes": 100630,
+  "injected_bytes": 367,
+  "injection": "Cloudflare Web Analytics beacon script",
+  "reconstructed_original_bytes": 100263,
+  "reconstructed_original_sha256": "2b94ce52c5c567ac682742de21b1466933b953eabdc54ea0daae823c4c2f1b03",
+  "matches_advertised_original_digest": true,
+  "scope": "Forensic reconstruction only; original transformed transfer still fails its metadata; live no-transform fix not deployed/verified",
+  "official_documentation": "https://developers.cloudflare.com/web-analytics/faq/"
+}

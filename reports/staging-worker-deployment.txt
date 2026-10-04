@@ -1,0 +1,185 @@
+Love Coolify? Support our work.
+GitHub Sponsors
+No notifications enabled
+Open Notifications
+Root Team
+/
+Biosimulant
+/
+staging
+/
+Bsim Backend Worker Staging
+Running (no healthcheck)
+Links
+Actions
+D
+Settings
+General
+Application details
+Access
+Build pipeline
+Deployment lifecycle
+Domains
+Environment Variables
+Persistent Storage
+Advanced
+Build
+Container
+Deployment
+Git
+Docker compose
+Proxy
+Operations
+Logs
+Observe & troubleshoot
+Runtime Logs
+Deployment Logs
+Terminal
+Metrics
+Deploy
+Git Source
+Servers
+Preview Deployments
+URL template
+Deployments
+Automation
+Scheduled Tasks
+Webhooks
+Deploy webhook
+Manual Git webhooks
+Backups
+Operations
+Resource Operations
+Clone destination
+Clone environment
+Move resource
+Resource Limits
+CPU
+Memory
+Rollback
+Image retention
+Available images
+Tags
+Danger Zone
+Deployment history
+Filter
+Sort
+Status
+Source
+Commit
+Started
+Duration
+Server
+Success
+Webhook
+3848b4e
+Gate similarity bounds and artifact integrity in staging CI
+10 minutes ago
+01m 07s
+localhost
+Success
+Webhook
+90b8df0
+Honor bounded similarity CSV inputs and preserve artifact downloads
+12 minutes ago
+01m 30s
+localhost
+Success
+Webhook
+4f6d58f
+Record deployed Chat repair and live staging prerequisites
+42 minutes ago
+01m 22s
+localhost
+1–3 of 232
+Finished
+2026-Oct-04 07:58:32
+Docker 28.5.1 with BuildKit and Buildx detected on deployment server (localhost).
+2026-Oct-04 07:58:32
+Starting deployment of Bsim Backend Worker Staging to localhost.
+2026-Oct-04 07:58:32
+Preparing container with helper image: docker.io/coollabsio/coolify-helper:1.0.17
+2026-Oct-04 07:58:34
+----------------------------------------
+2026-Oct-04 07:58:34
+Importing Pledre/biosimulant-backend:staging (commit sha 3848b4ed603d56538f9410da24f08085d1378164) to /artifacts/zikr2gw8lobsn1tqomcm67yg.
+2026-Oct-04 07:58:39
+Added 96 ARG declarations to Dockerfile for service migrate.
+2026-Oct-04 07:58:39
+Service maintenance: All required ARG declarations already exist.
+2026-Oct-04 07:58:41
+Added 96 ARG declarations to Dockerfile for service worker.
+2026-Oct-04 07:58:42
+Added 96 ARG declarations to Dockerfile for service curated-worker.
+2026-Oct-04 07:58:43
+Added 96 ARG declarations to Dockerfile for service curated-release.
+2026-Oct-04 07:58:43
+Pulling & building required images.
+2026-Oct-04 07:58:44
+Adding build arguments to Docker Compose build command.
+2026-Oct-04 07:58:46
+Pulling image-based services before stopping the current deployment.
+2026-Oct-04 07:58:47
+Removing old containers.
+2026-Oct-04 07:59:21
+Starting new application.
+2026-Oct-04 07:59:21
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Creating
+2026-Oct-04 07:59:22
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Created
+2026-Oct-04 07:59:22
+Container worker-l44sccowwcssok04c04go8sg-075838904127 Creating
+2026-Oct-04 07:59:22
+Container maintenance-l44sccowwcssok04c04go8sg-075838890839 Creating
+2026-Oct-04 07:59:22
+Container curated-release-l44sccowwcssok04c04go8sg-075838938301 Creating
+2026-Oct-04 07:59:22
+Container curated-worker-l44sccowwcssok04c04go8sg-075838929477 Creating
+2026-Oct-04 07:59:22
+Container worker-l44sccowwcssok04c04go8sg-075838904127 Created
+2026-Oct-04 07:59:22
+Container curated-release-l44sccowwcssok04c04go8sg-075838938301 Created
+2026-Oct-04 07:59:22
+Container curated-worker-l44sccowwcssok04c04go8sg-075838929477 Created
+2026-Oct-04 07:59:22
+Container maintenance-l44sccowwcssok04c04go8sg-075838890839 Created
+2026-Oct-04 07:59:22
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Starting
+2026-Oct-04 07:59:22
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Started
+2026-Oct-04 07:59:22
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Waiting
+2026-Oct-04 07:59:22
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Waiting
+2026-Oct-04 07:59:22
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Waiting
+2026-Oct-04 07:59:22
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Waiting
+2026-Oct-04 07:59:37
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Exited
+2026-Oct-04 07:59:37
+Container curated-worker-l44sccowwcssok04c04go8sg-075838929477 Starting
+2026-Oct-04 07:59:37
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Exited
+2026-Oct-04 07:59:37
+Container curated-release-l44sccowwcssok04c04go8sg-075838938301 Starting
+2026-Oct-04 07:59:37
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Exited
+2026-Oct-04 07:59:37
+Container worker-l44sccowwcssok04c04go8sg-075838904127 Starting
+2026-Oct-04 07:59:37
+Container migrate-l44sccowwcssok04c04go8sg-075838877753 Exited
+2026-Oct-04 07:59:37
+Container maintenance-l44sccowwcssok04c04go8sg-075838890839 Starting
+2026-Oct-04 07:59:38
+Container curated-worker-l44sccowwcssok04c04go8sg-075838929477 Started
+2026-Oct-04 07:59:38
+Container maintenance-l44sccowwcssok04c04go8sg-075838890839 Started
+2026-Oct-04 07:59:38
+Container worker-l44sccowwcssok04c04go8sg-075838904127 Started
+2026-Oct-04 07:59:38
+Container curated-release-l44sccowwcssok04c04go8sg-075838938301 Started
+2026-Oct-04 07:59:38
+New container started.
+2026-Oct-04 07:59:39
+Gracefully shutting down build container: zikr2gw8lobsn1tqomcm67yg

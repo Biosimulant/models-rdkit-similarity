@@ -1,0 +1,10 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "c3016c70-bcbd-4730-986c-65d6ee1e3f7c",
+  "code": "hosting_request_invalid",
+  "message": "This release cannot be hosted yet: collection_csv has invalid length bounds",
+  "retryable": false,
+  "field": null,
+  "details": {},
+  "resolution": "Read the exact released Lab and prepare hosting again."
+}

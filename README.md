@@ -15,3 +15,5 @@ Code and tests remain on staging. Production remains Modal. Dependency/native/fo
 Local verification: `python -m pytest labs/molecular-similarity/tests -q` then `python scripts/verify_runtime.py` and `python scripts/benchmark.py` in an isolated environment with requirements-test.txt. Local CLI runs create no managed Run or Passport. Every acceptance/hosting gate is tracked in reports/acceptance.md.
 
 MRS/MTS: specifications/rdkit-molecular-similarity-search. Original brief: reports/brief.md. No production deployment or provider switch is authorized by these files. Once hosting exists, read current hosting revision and pause/withdraw it via Biosimulant MCP; preserve immutable evidence.
+
+Candidate Lab0.1.1 explicitly declares the unchanged2MiB/10000-row transport and120s timeout. [New staging evidence](reports/hosting-progress-20261004.json) covers platform bounds and non-transforming downloads. Current public release remains0.1.0; candidate private revision approval is pending.

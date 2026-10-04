@@ -1,0 +1,14 @@
+...s.................................................................... [ 60%]
+...............................................                          [100%]
+=============================== warnings summary ===============================
+../../../../../.local/share/virtualenvs/biosimulant-backend-CwfBCDrK/lib/python3.14/site-packages/slowapi/extension.py:717
+../../../../../.local/share/virtualenvs/biosimulant-backend-CwfBCDrK/lib/python3.14/site-packages/slowapi/extension.py:717
+../../../../../.local/share/virtualenvs/biosimulant-backend-CwfBCDrK/lib/python3.14/site-packages/slowapi/extension.py:717
+../../../../../.local/share/virtualenvs/biosimulant-backend-CwfBCDrK/lib/python3.14/site-packages/slowapi/extension.py:717
+../../../../../.local/share/virtualenvs/biosimulant-backend-CwfBCDrK/lib/python3.14/site-packages/slowapi/extension.py:717
+../../../../../.local/share/virtualenvs/biosimulant-backend-CwfBCDrK/lib/python3.14/site-packages/slowapi/extension.py:717
+  /Users/demi/.local/share/virtualenvs/biosimulant-backend-CwfBCDrK/lib/python3.14/site-packages/slowapi/extension.py:717: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+    if asyncio.iscoroutinefunction(func):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+118 passed, 1 skipped, 6 warnings in 5.03s

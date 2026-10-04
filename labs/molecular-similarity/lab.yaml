@@ -1,6 +1,6 @@
 schema_version: '2.0'
 package: rdkit-molecular-similarity-search
-version: 0.1.0
+version: 0.1.1
 title: RDKit Molecular Similarity Search
 description: Rank molecules in your supplied collection using Morgan radius 2, 2048
   bits, chirality enabled and Tanimoto similarity. Query/hit drawings, exact scores
@@ -20,6 +20,7 @@ io:
     value_type: string
     max_length: 8192
     description: One query molecular SMILES; all fragments retained.
+    preserve_text: true
   - name: collection_csv
     maps_to: search.collection_csv
     signal_type: scalar
@@ -30,6 +31,11 @@ io:
     default: ''
     description: Paste UTF-8 molecule_id,smiles CSV; search only this collection,
       <=10000 rows / 2 MiB.
+    format: csv
+    max_bytes: 2097152
+    max_rows: 10000
+    multiline: true
+    preserve_text: true
   - name: collection_file
     maps_to: search.collection_file
     signal_type: scalar
@@ -38,6 +44,12 @@ io:
     value_type: file
     format: csv
     description: Upload UTF-8 molecule_id,smiles CSV; <=10000 rows / 2 MiB.
+    file:
+      accept:
+      - text/csv
+      - .csv
+      max_bytes: 2097152
+      max_rows: 10000
   - name: top_k
     maps_to: search.top_k
     signal_type: scalar
@@ -46,6 +58,8 @@ io:
     default: 10
     value_type: integer
     description: Maximum ranked hits; integer 1..100.
+    minimum: 1
+    maximum: 100
   - name: minimum_similarity
     maps_to: search.minimum_similarity
     signal_type: scalar
@@ -54,6 +68,8 @@ io:
     default: 0.0
     value_type: number
     description: Inclusive Tanimoto threshold in [0,1].
+    minimum: 0
+    maximum: 1
   outputs:
   - name: report
     maps_to: search.report
@@ -109,6 +125,7 @@ runtime:
     - rdkit==2025.9.1
     - numpy==2.2.6
     - Pillow==11.3.0
+  timeout_seconds: 120
 hardware:
   compute:
     device: cpu

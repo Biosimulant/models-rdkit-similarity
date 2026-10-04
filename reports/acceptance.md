@@ -25,3 +25,52 @@ Dedicated repo https://github.com/Biosimulant/models-rdkit-similarity/tree/stagi
 Next: platform staging must support generic CSV upload, preserved multiline text with declared bounds and120s timeout; public retained experiment display and matching generated-HTML metadata need repair. Then obtain fresh concrete production-deployment approval under AGENTS.md and a valid exact hosting plan approval; enable exact release on Modal and verify cold/warm upload/paste inference, downloads, bounds/cancellation/isolation/idle/resource metrics. Existing unrelated platform worktrees remain untouched.
 
 Public UI download observation: rankings.csv control is present and was clicked; CUA download-event capture timed out without UI/console error. This event capture is inconclusive; direct anonymous CSV transfer is independently verified. See [public UI record](public-ui-verification.json).
+
+## Subsequent staging progress — 2026-10-04
+
+The live preflight now rejects collection_csv length rather than silently truncating it: [current response](hosting-current-preflight.json). Platform source now supports the declared2MiB/10000-row envelope with legacy128KiB/100 defaults preserved and honors declared120s timeout. Backend staging implementation90b8df0080c6421e34dae4991268f22aa6192830 and CI commit3848b4ed603d56538f9410da24f08085d1378164 are pushed; primary checkouts preserved, main baseline4db9d8fccf853155dfa45f0cb08ee269901695b7 synchronized into isolated staging worktree.118 tests pass,1 skipped;13 new cases pass after formatting.
+
+The367-byte HTML difference is exactly a Cloudflare Web Analytics script: [forensic hash proof](html-transformation-root-cause.json). Staging artifact responses now declare private/no-store/no-transform; this is still not verified public transfer. Cloudflare's [official documentation](https://developers.cloudflare.com/web-analytics/faq/) explains that no-transform prevents automatic injection.
+
+Candidate Lab0.1.1 adds explicit CSV format/upload/multiline preservation/byte and row/numeric/timeout metadata while leaving model0.1.0, algorithm, fixtures and all scientific requirements unchanged.28 tests,5 composed CLI cases and [two actual RDKit child adapter cases](hosting-staging-adapter-verification.json) pass; all five downloads and original BOM/CRLF checksums verify. [Freeze](freeze-candidate-v011.json), [spec](hosting-staging-candidate-spec.json), [private plan](candidate-v011-private-plan.json), [progress/commits](hosting-progress-20261004.json). Exact private revision approval requested; not applied. No additional managed run/provider spend, public release or hosting; no production deploy. Public study display and all live hosting gates remain incomplete.
+
+
+### Verified staging rollout — 2026-10-04 08:09 UTC
+
+Backend implementation `90b8df0080c6421e34dae4991268f22aa6192830` and CI gate
+`3848b4ed603d56538f9410da24f08085d1378164` were pushed to staging only.
+[CI](https://github.com/Pledre/biosimulant-backend/actions/runs/37187418150)
+passed on Python 3.12 for the contract and Python 3.11 for the routing gate.
+Coolify staging API and worker webhook deployments succeeded at that exact
+commit; a manual API redeploy also succeeded in 12 seconds, using the existing
+image. Worker deployment took 67 seconds. Staging API `/health` returned HTTP
+200, healthy, database connected and schema compatible. Screenshots, worker
+logs, health response and CI metadata are retained in this reports directory.
+This proves source rollout and health, not actual authenticated HTTP/worker
+invocation or public hosted readiness. No production deployment occurred.
+
+The candidate private change plan expired at 08:08:13 UTC without a user
+reply or apply. Candidate 0.1.1 is retained locally on staging; the public
+0.1.0 and approved immutable private revision remain intact. Refresh its exact
+plan before later approval/apply. No new managed run, publication or hosting
+was executed. All prior checklist statuses remain partial/BLOCKED.
+
+New local checks: 118 backend checks pass, one optional pinned Lotka archive
+check skips because CURATED_LOTKA_ARCHIVE is absent; 28 similarity checks,
+five composed cases and two actual local Python 3.12 adapter child executions
+pass. The adapter verifies raw pasted/uploaded identity, seven outputs, four
+visuals, five byte/hash-pinned downloads and scratch cleanup. The HTML
+367-byte mismatch is traced to a Cloudflare beacon injection; removal
+reconstructs the advertised original hash exactly, but does not count as an
+unmodified download. The tested `no-transform` header is deployed on staging
+only and still requires live transfer verification.
+
+Hub search at 08:09 UTC returned the exact public similarity 0.1.0 release.
+Existing four-run provider estimate remains $0.011064 and beta user charge
+$0; actual invoice and incremental build/deployment cost are unavailable.
+No additional managed/Modal computation or hosting resources were created.
+Production stays on Modal. Remaining gates: authenticated staging integration,
+fresh private/public exact plans, separately approved production rollout,
+correct-contract public hosting/admin approval, cold/warm invocations and
+limits/cancellation/isolation/idle metrics, public actual study display, and
+unmodified public HTML bytes. **Not DONE.**

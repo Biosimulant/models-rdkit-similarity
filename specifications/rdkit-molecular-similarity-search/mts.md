@@ -2,13 +2,14 @@
 
 ## 1. Document Control
 MTS identifier: RDKit-Molecular-Similarity-MTS
-Version: 1.0.0
+Version: 1.0.1
 Status: Approved
 Last revised: 2026-10-04
 MRS: RDKit-Molecular-Similarity-MRS version 1.0.0, Approved by explicit user goal.
 Owner: demi; Codex implements. Approval covers implementation, not consequential MCP plans.
 
 Revision History
+1.0.1 — 2026-10-04 — Explicit unchanged hosting transport bounds and timeout, candidate Lab0.1.1; preserve public0.1.0 and model0.1.0.
 1.0.0 — 2026-10-04 — Fixed finite RDKit adapter implementing approved exact brief. Protected MTS scaffolder failed integrity check in both available skill copies; master left unchanged and document authored independently against required section/traceability validator.
 
 ## 2. Technical Decision Summary
@@ -70,3 +71,7 @@ Fingerprint collisions, unsupported chemistry, runtime drawing dependencies, pla
 
 ## 16. References and Glossary
 Approved RDKit-Molecular-Similarity-MRS1.0.0, complete brief reports/brief.md; upstream RDKit Release_2025_09_1 commit237a1d9027c800784afed8788540f38a3aa595f8; sources and NOTICE.md.
+
+## Hosting transport metadata revision — candidate Lab0.1.1
+
+No scoring/model/fixture/tolerance or intended-use change. The Lab manifest explicitly declares collection format CSV, preserved multiline text,2MiB byte/character limits,10000 parsed data records, identical file-upload limits, numeric top_k1..100 and threshold0..1, and120-second runtime timeout. Model component remains0.1.0. Public Lab0.1.0 remains immutable. Backend staging permits the declared envelope while keeping undeclared CSV defaults128KiB/100rows; actual runtime uses min(declared timeout,selected profile limit). Artifact HTTP responses declare no-transform so CDN analytics cannot alter checksum-pinned downloads. New freeze:reports/freeze-candidate-v011.json. Staging evidence does not authorize production deployment or replace actual hosted cold/warm verification.
