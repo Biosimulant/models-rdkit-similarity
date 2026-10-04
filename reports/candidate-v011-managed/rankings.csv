@@ -1,0 +1,7 @@
+rank,row_index,molecule_id,original_smiles,canonical_smiles,score,exact_match
+1,0,ethanol,CCO,CCO,1.0,True
+2,2,ethanol,CCO,CCO,1.0,True
+3,1,ethanol-equivalent,OCC,CCO,1.0,True
+4,3,propanol,CCCO,CCCO,0.5555555555555556,False
+5,4,butanol,CCCCO,CCCCO,0.4166666666666667,False
+6,5,ethylamine,CCN,CCN,0.3333333333333333,False

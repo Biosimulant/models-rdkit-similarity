@@ -1,0 +1,10 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "d91e5141-ca8c-44f6-b8af-aae5a5a9982c",
+  "code": "hosting_request_invalid",
+  "message": "This release cannot be hosted yet: query_smiles is required",
+  "retryable": false,
+  "field": null,
+  "details": {},
+  "resolution": "Read the exact released Lab and prepare hosting again."
+}

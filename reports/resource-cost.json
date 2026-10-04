@@ -1,5 +1,5 @@
 {
-  "managed_item_runs": 4,
+  "managed_item_runs": 5,
   "managed_item_user_charge_usd": 0,
   "managed_provider_spend_usd": null,
   "hosted_identity": null,
@@ -76,13 +76,14 @@
     "top_k": 100,
     "timeout_seconds": 120
   },
-  "limitations": "Four approved managed Modal runs; provider estimates only, actual invoice/managed peak memory unavailable. No active hosting, cold/warm latency, hosted upload/cancellation or cross-account isolation verification. Benchmark repeats nine small diverse structures; no broad biological validation.",
-  "managed_provider_estimated_usd": 0.011064,
+  "limitations": "Five approved managed Modal runs; provider estimates only, actual invoice/managed peak memory unavailable. Public artifacts now all verify. Public hosting exact plan awaits approval and administrator review. Hosted cold/warm, upload/cancellation, cross-account isolation and idle metrics unverified. Benchmark repeats nine small structures; no broad biological validation.",
+  "managed_provider_estimated_usd": 0.01383,
   "managed_runtime_seconds": {
     "pilot": 1.9433969070669264,
     "threshold_0.2": 2.1706244399538264,
     "threshold_0.6": 1.874264616984874,
-    "benchmark_10000": 4.8350782910129055
+    "benchmark_10000": 4.8350782910129055,
+    "hosting_revision_v011": 1.910192422918044
   },
   "managed_allocation": {
     "provider": "modal",
@@ -96,7 +97,7 @@
     "max_containers": 1,
     "min_warm_containers": 0,
     "scaledown_window_seconds": 300,
-    "timeout_seconds": 300,
+    "timeout_seconds": 120,
     "network": "blocked"
   }
 }

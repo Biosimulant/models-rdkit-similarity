@@ -1,0 +1,32 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "5ed866e6-1408-4a2a-8904-bba0510896a1",
+  "data": {
+    "id": "8ca33c3a-0755-470e-b782-288da6c3a175",
+    "run_id": "8ca33c3a-0755-470e-b782-288da6c3a175",
+    "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+    "revision_id": "67a97dfc-4e38-4510-a85e-da3dc8039e50",
+    "revision_sha256": "ab5902d0f30acef861c6a04df8efbed30b1637dda4ad9604e17f3f272f393868",
+    "status": "queued",
+    "billing_mode": "free_beta",
+    "user_charge": 0,
+    "authorization": {
+      "mode": "per_run_approval"
+    },
+    "experiment_id": null,
+    "idempotent_replay": false
+  },
+  "warnings": [],
+  "next_actions": [
+    {
+      "tool": "run_get",
+      "description": "Monitor this durable run by ID, including after reconnecting.",
+      "arguments": {
+        "run_id": "8ca33c3a-0755-470e-b782-288da6c3a175"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}

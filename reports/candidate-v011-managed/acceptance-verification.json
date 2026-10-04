@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "run_id": "8ca33c3a-0755-470e-b782-288da6c3a175",
+  "revision_id": "67a97dfc-4e38-4510-a85e-da3dc8039e50",
+  "rows": 13,
+  "valid_rows": 11,
+  "invalid_rows": 2,
+  "returned_hits": 6,
+  "independent_method": "Pinned RDKit2025.09.1 legacy AllChem Morgan bit vectors vs managed generator output",
+  "max_score_error": 0.0,
+  "tolerance": 1e-12,
+  "complete_threshold_ranking_verified": true,
+  "typed_outputs": 7,
+  "renders": [
+    "bar",
+    "image",
+    "table",
+    "text"
+  ],
+  "mcp_direct_artifacts_bytes_verified": 7,
+  "including_html": true,
+  "public_edge_html_transfer": "Still independently unverified for this private run; prior public edge transformation remains an open gate"
+}

@@ -1,0 +1,168 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "57ab34fc-9fc1-4617-ad29-eb7132c1ca69",
+  "data": {
+    "passport_id": "e691a059-f41e-4e35-8133-f3c8acb44bef",
+    "decision": "REVIEW",
+    "quality_profile_ref": "research-ready@2",
+    "canonical_json": {
+      "passport_schema_version": "1.1",
+      "subject": {
+        "type": "package_release",
+        "id": "a3abfa03-4553-4341-b059-a30c7860b937",
+        "sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b"
+      },
+      "quality_profile": {
+        "reference": "research-ready@2",
+        "sha256": "ebb11dcdf3b717dc1488af312cbb675be33b23879cba2834a68389c178bd38ec"
+      },
+      "intended_use_profile": {
+        "statement": "Rank only the supplied collection by Morgan radius-2 2048-bit fingerprints with chirality enabled and Tanimoto similarity; no pharmacological or patent claims."
+      },
+      "workspace": {
+        "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091"
+      },
+      "source_records": [],
+      "composition": {
+        "manifest_sha256": "18a647385b91ba4251d59f136d3d214fd24fb5e2fe5db515b97a3e69c186dea0",
+        "dependencies": [
+          {
+            "alias": "search",
+            "path": "models/search"
+          }
+        ],
+        "wiring": []
+      },
+      "checks": [
+        {
+          "check_id": "immutable_subject",
+          "state": "PASS",
+          "summary": "Revision is content-addressed.",
+          "details": {
+            "revision_id": "67a97dfc-4e38-4510-a85e-da3dc8039e50",
+            "sha256": "ab5902d0f30acef861c6a04df8efbed30b1637dda4ad9604e17f3f272f393868"
+          }
+        },
+        {
+          "check_id": "manifest",
+          "state": "PASS",
+          "summary": "Readable lab.yaml manifest is present.",
+          "details": {}
+        },
+        {
+          "check_id": "intended_use",
+          "state": "PASS",
+          "summary": "Intended use is declared.",
+          "details": {}
+        },
+        {
+          "check_id": "requirements",
+          "state": "PASS",
+          "summary": "MRS is present.",
+          "details": {}
+        },
+        {
+          "check_id": "technical_specification",
+          "state": "PASS",
+          "summary": "MTS is present.",
+          "details": {}
+        },
+        {
+          "check_id": "evidence",
+          "state": "WARN",
+          "summary": "No exact scientific evidence is pinned.",
+          "details": {}
+        },
+        {
+          "check_id": "tests",
+          "state": "PASS",
+          "summary": "Tests are present.",
+          "details": {}
+        },
+        {
+          "check_id": "caveats",
+          "state": "PASS",
+          "summary": "Caveats are attached.",
+          "details": {}
+        },
+        {
+          "check_id": "run_completion",
+          "state": "NOT_APPLICABLE",
+          "summary": "This Passport describes an authored revision, not an execution.",
+          "details": {}
+        },
+        {
+          "check_id": "artifacts",
+          "state": "NOT_APPLICABLE",
+          "summary": "Run artifacts are evaluated on a run Passport.",
+          "details": {}
+        },
+        {
+          "check_id": "compatibility",
+          "state": "NOT_APPLICABLE",
+          "summary": "Per-connection compatibility is recorded when a run executes; see the run Passport.",
+          "details": {}
+        }
+      ],
+      "approvals": [
+        {
+          "plan_id": "4480501c-645c-44ea-972e-54be16cc762b",
+          "kind": "workspace_change",
+          "plan_sha256": "9fa38c01bc897f8af8112c78a79574b9c92c197e00d85360c26a854c01f78d54",
+          "oauth_client_record_id": "6970f5e0-a2da-43b2-8ef0-0888b573b804",
+          "executed_at": "2026-10-04T08:31:40.371932Z",
+          "authorization": {
+            "mode": "per_operation_approval"
+          }
+        },
+        {
+          "plan_id": "9c01acb9-1f17-4eeb-abb0-e445e954edfd",
+          "kind": "publish",
+          "plan_sha256": "397d0d12f133a66ff5839c589b55d920e51b6f7ef347c0f909e5ab92ec92c692",
+          "oauth_client_record_id": "6970f5e0-a2da-43b2-8ef0-0888b573b804",
+          "executed_at": "2026-10-04T08:43:45.221233Z",
+          "authorization": {
+            "mode": "per_operation_approval"
+          }
+        }
+      ],
+      "decision": "REVIEW",
+      "caveats": [
+        "Morgan radius2, 2048 bits, includeChirality=True; Tanimoto on-bit intersection/union.",
+        "No desalt, neutralization or tautomer standardization; preserve all fragments.",
+        "Keep all duplicates; ties by descending score, exact Unicode ID then row index.",
+        "Structural similarity does not establish potency, activity, toxicity, safety or patent status.",
+        "A score of 1 is not identity; exact_match uses canonical isomeric SMILES.",
+        "Parity and demonstrations are software verification, not broad biological validation."
+      ],
+      "prohibited_claims": [
+        "Equal potency/activity/toxicity",
+        "Patent clearance",
+        "Search of all known chemistry",
+        "Clinical decisions"
+      ],
+      "issued_at": "2026-10-04T08:43:46.605770+00:00",
+      "release": {
+        "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+        "artifact_id": "a3abfa03-4553-4341-b059-a30c7860b937",
+        "checksum_sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+        "visibility": "public"
+      },
+      "signing": {
+        "algorithm": "Ed25519",
+        "key_id": "agent-passport-v1"
+      }
+    },
+    "canonical_sha256": "1e9b4fba76f7a33825d5c535ec135b00b19090ad469c9f89049e70bb75d1e461",
+    "signature": "KbL1mb7vu5HjxSwAp5LV8ASdSNzFtE5jwwFkEYLW_4RC6-ZhqHrwS7iMK7uNs0dI7tc-CoglvvdM4HT7Ux09CA",
+    "algorithm": "Ed25519",
+    "signing_key_id": "agent-passport-v1",
+    "created_at": "2026-10-04T08:43:46.773663Z"
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {
+    "verification_keys": "https://api.biosimulant.com/api/agent-gateway/passports/jwks.json",
+    "open_in_biosimulant": "https://hub.biosimulant.com/labs/f0291213-a063-4aeb-8981-8e0e739f665d"
+  }
+}

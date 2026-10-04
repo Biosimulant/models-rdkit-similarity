@@ -86,3 +86,7 @@ fresh private/public exact plans, separately approved production rollout,
 correct-contract public hosting/admin approval, cold/warm invocations and
 limits/cancellation/isolation/idle metrics, public actual study display, and
 unmodified public HTML bytes. **Not DONE.**
+
+## 0.1.1 verified publication and production support, still BLOCKED
+
+Latest exact refs, all gates, costs and rollback are in [current operational record](hosting-progress-v011-20261004.json). Public exact0.1.1 release and its own original-fixture managed run8ca33c3a are readable without owner credentials. All28 original artifacts across four public examples verify; H3 passes. Core staging smoke draft and drawing fixes were promoted under fresh explicit user approval via PR32; production API/worker b2a4763 pass deployment/health with Modal unchanged. The correct five-input hosting plan is prepared but unexecuted pending exact digest and administrator approval. A5/public actual study UI and H5 hosted operations still block DONE. Five managed runs estimate$0.013830, beta charge$0; actual invoice/host spend/managed peak unknown. Rollback core API/worker toae81e6a. Hosted pause/withdraw instructions apply only after an actual hosting identity exists.

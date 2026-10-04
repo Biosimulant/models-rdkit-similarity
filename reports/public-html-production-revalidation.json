@@ -1,0 +1,12 @@
+{
+  "scope": "Anonymous unmodified public HTML download after earlier production no-transform rollout",
+  "run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd",
+  "artifact_id": "workspace-report",
+  "status": 200,
+  "cache_control": "private, no-store, no-transform",
+  "advertised_bytes": 100263,
+  "bytes": 100263,
+  "advertised_sha256": "2b94ce52c5c567ac682742de21b1466933b953eabdc54ea0daae823c4c2f1b03",
+  "sha256": "2b94ce52c5c567ac682742de21b1466933b953eabdc54ea0daae823c4c2f1b03",
+  "verified": true
+}

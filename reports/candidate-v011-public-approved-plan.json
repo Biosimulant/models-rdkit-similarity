@@ -1,0 +1,41 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "68e50d68-00d7-4dd3-a8db-e9863f8c5d1d",
+  "data": {
+    "plan_id": "9c01acb9-1f17-4eeb-abb0-e445e954edfd",
+    "plan_sha256": "397d0d12f133a66ff5839c589b55d920e51b6f7ef347c0f909e5ab92ec92c692",
+    "expires_at": "2026-10-04T08:55:43.271534Z",
+    "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "visibility": "public",
+    "package_type": "lab",
+    "revision_id": "67a97dfc-4e38-4510-a85e-da3dc8039e50",
+    "revision_sha256": "ab5902d0f30acef861c6a04df8efbed30b1637dda4ad9604e17f3f272f393868",
+    "passport_id": "8f050ea2-78b9-46a5-a9f5-a640cac58e93",
+    "passport_decision": "REVIEW",
+    "findings": [
+      {
+        "code": "passport_decision",
+        "decision": "REVIEW",
+        "passport_id": "8f050ea2-78b9-46a5-a9f5-a640cac58e93"
+      }
+    ],
+    "blockers": [],
+    "requires_confirmation": true
+  },
+  "warnings": [
+    "No release was published. Execute this exact digest only after explicit approval."
+  ],
+  "next_actions": [
+    {
+      "tool": "publish_execute",
+      "description": "After explicit confirmation, publish this exact immutable snapshot.",
+      "arguments": {
+        "plan_id": "9c01acb9-1f17-4eeb-abb0-e445e954edfd",
+        "plan_sha256": "397d0d12f133a66ff5839c589b55d920e51b6f7ef347c0f909e5ab92ec92c692"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}

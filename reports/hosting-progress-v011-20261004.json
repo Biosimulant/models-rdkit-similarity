@@ -1,0 +1,87 @@
+{
+  "updated_at": "2026-10-04T09:00:00Z",
+  "overall": "BLOCKED, not DONE",
+  "release": {
+    "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.1",
+    "artifact_id": "a3abfa03-4553-4341-b059-a30c7860b937",
+    "sha256": "c9f927c7be8c130b09e829152dc45b16c5997a7b4a0317350a36d328f0984b0b",
+    "workspace_revision": "67a97dfc-4e38-4510-a85e-da3dc8039e50",
+    "passport_id": "e691a059-f41e-4e35-8133-f3c8acb44bef",
+    "passport_decision": "REVIEW; no exact scientific evidence resource pin; source/license files remain pinned"
+  },
+  "managed_verification": {
+    "run_id": "8ca33c3a-0755-470e-b782-288da6c3a175",
+    "seconds": 1.910192422918044,
+    "typed_outputs": 7,
+    "visuals": 4,
+    "all_seven_original_artifact_hashes_verified": true,
+    "independent_complete_ranking_parity": true,
+    "evidence": "candidate-v011-managed/acceptance-verification.json"
+  },
+  "public_verification": {
+    "package_bytes_and_sha256": true,
+    "source_fixtures_assets_notices_matches": 30,
+    "listed": true,
+    "public_page_v011": true,
+    "public_fixture_runs": 4,
+    "all_original_artifact_hashes_verified": 28,
+    "evidence": "public-all-artifact-verification.json",
+    "public_actual_study_ui": false,
+    "exact_v011_example": "candidate-v011-public-example-verification.json"
+  },
+  "staging": {
+    "synchronized_main_baseline": "ae81e6af273ba10c7212e272dcf7a224a27c5266",
+    "source_commits": [
+      "93dabb01384e6f323c54608d88076838e1d075fe",
+      "d393e26bbbafe3e18011e9f43742953db19ed6f7"
+    ],
+    "tested_deployed_commit": "742fd3f3db7b5e1e5186da321623387fd8f0ce9c",
+    "ci": "https://github.com/Pledre/biosimulant-backend/actions/runs/37190330685",
+    "ci_status": "success",
+    "api_deployment": "cphjq2ubt46d1mt3pbo38zxk",
+    "api_seconds": 32,
+    "worker_deployment": "27yghvz0arcskb8oodj8ltjo",
+    "worker_seconds": 74,
+    "local_tests": "82 pass/1 optional skip; 61 other compatibility pass plus 4 legacy CSV pass; 6 dependency deprecation warnings",
+    "scope": "Local isolated software/real RDKit child adapter tests, CI and deployment evidence; authenticated deployed staging invocation remains unverified"
+  },
+  "production": {
+    "approval": "User explicitly approved all remaining Lab requirements, including future requests, after staging evidence on 2026-10-04",
+    "promotion_pr": "https://github.com/Pledre/biosimulant-backend/pull/32",
+    "commit": "b2a47638606b320f3abc756ea3febc7e6ac3405a",
+    "api_deployment": "boczlugq765zuy1bjgeuhewu",
+    "api_seconds": 37,
+    "worker_seconds": 76,
+    "api_worker_status": "success",
+    "health": "HTTP200 healthy/database connected/schema compatible",
+    "provider": "Modal, unchanged",
+    "rollback_commit": "ae81e6af273ba10c7212e272dcf7a224a27c5266",
+    "migrations": false
+  },
+  "hosting": {
+    "state": "exact plan prepared, not executed; no hosting identity",
+    "plan": "candidate-v011-hosting-ready-plan.json",
+    "all_five_inputs_and_exact_bounds": true,
+    "admin_approval_required": true,
+    "max_containers": 1,
+    "cpu": 0.5,
+    "memory_mb": 512,
+    "timeout_seconds": 120,
+    "min_warm_containers": 0,
+    "scaledown_window_seconds": 300,
+    "network": "blocked"
+  },
+  "cost": {
+    "managed_runs": 5,
+    "provider_estimate_usd": 0.01383,
+    "beta_user_charge_usd": 0,
+    "actual_provider_spend_usd": null,
+    "hosting_spend_usd": null
+  },
+  "remaining": [
+    "Exact hosting-plan approval, administrator review and active checks",
+    "Cold and subsequent hosted invocation, pasted/uploaded CSV, all outputs and downloads",
+    "Hosted bounds, timeout/cancellation, cross-account isolation and idle/resource evidence",
+    "Actual public retained study UI; Hub Experiments redirects to authenticated Studio"
+  ]
+}

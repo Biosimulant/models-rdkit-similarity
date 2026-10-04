@@ -1,0 +1,286 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "7e6c1e56-0723-4589-9d04-785658ade246",
+  "data": {
+    "passport_id": "a71346f7-f873-49b4-919a-c115cc1b98ab",
+    "decision": "REVIEW",
+    "quality_profile_ref": "research-ready@2",
+    "canonical_json": {
+      "passport_schema_version": "1.1",
+      "subject": {
+        "type": "run",
+        "id": "8ca33c3a-0755-470e-b782-288da6c3a175",
+        "sha256": "64b179fd63b181d40c013452b4383d3db9cf67e9703b16537d7054049f3ffc56"
+      },
+      "quality_profile": {
+        "reference": "research-ready@2",
+        "sha256": "ebb11dcdf3b717dc1488af312cbb675be33b23879cba2834a68389c178bd38ec"
+      },
+      "intended_use_profile": {
+        "statement": "Rank only the supplied collection by Morgan radius-2 2048-bit fingerprints with chirality enabled and Tanimoto similarity; no pharmacological or patent claims."
+      },
+      "workspace": {
+        "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+        "revision_id": "67a97dfc-4e38-4510-a85e-da3dc8039e50",
+        "revision_sha256": "ab5902d0f30acef861c6a04df8efbed30b1637dda4ad9604e17f3f272f393868"
+      },
+      "source_records": [],
+      "composition": {
+        "manifest_sha256": "18a647385b91ba4251d59f136d3d214fd24fb5e2fe5db515b97a3e69c186dea0",
+        "dependencies": [
+          {
+            "alias": "search",
+            "path": "models/search"
+          }
+        ],
+        "wiring": []
+      },
+      "compatibility": {
+        "standard": "biosimulant.model-compatibility",
+        "version": "0",
+        "catalogue_version": "0.1.0",
+        "catalogue_sha256": "sha256:601d1ca763a7bbf4d631f0335f85f480af2dee82a47024b9dc59b7926b66246f",
+        "profiles": [],
+        "runtime_version": "0.0.34",
+        "runtime_boundary_violation": null,
+        "summary": {
+          "wires": 0,
+          "blocked": 0,
+          "partial": 0,
+          "verified": 0,
+          "structural": 0,
+          "violations": 0,
+          "value_checks": 0,
+          "value_failures": 0
+        },
+        "wires": [],
+        "violations": [],
+        "validation_failure": null
+      },
+      "inputs": {
+        "normalized_input_digest": "4941d083ca61c88b51572e30950ed7a4c3772f4b2fe3a3dc7a00de4058a7e583"
+      },
+      "compute": {
+        "runtime_version": "0.0.34",
+        "provider": "modal",
+        "billing_mode": "free_beta",
+        "user_charge": 0,
+        "duration_seconds": 1.910192422918044
+      },
+      "artifacts": [
+        {
+          "artifact_id": "workspace-results",
+          "role": "results",
+          "file_name": "results.json",
+          "sha256": "68e9e48545a087176a0cefcb6bca169eb2086ea2fd3ead80803ebb7897da88c9",
+          "size_bytes": 53006
+        },
+        {
+          "artifact_id": "search-drawings-9f0de0b4819ff342",
+          "role": "drawings",
+          "file_name": "molecules.png",
+          "sha256": "493dc18ce2175e22f94500bef48c935cc378b840a67c7650fb9d8f8f2b9d344d",
+          "size_bytes": 30708
+        },
+        {
+          "artifact_id": "search-invalid-csv-7dcca34ce920c252",
+          "role": "invalid_csv",
+          "file_name": "invalid-rows.csv",
+          "sha256": "62173cd254e1ec86b092d0eb68f144ab14adea8251b99d6062ae07d9b8899224",
+          "size_bytes": 211
+        },
+        {
+          "artifact_id": "search-rankings-csv-2ef562dfd83bab67",
+          "role": "rankings_csv",
+          "file_name": "rankings.csv",
+          "sha256": "0050733f6bb18831a3987506aa183193e43d0201a583bd049e6d056d8339739f",
+          "size_bytes": 328
+        },
+        {
+          "artifact_id": "search-rankings-json-2191a1daffa1c3c7",
+          "role": "rankings_json",
+          "file_name": "rankings.json",
+          "sha256": "dcc7ca805056b61d938af0cf0260203f1731b7550c78a73c7dcae0a8fbcb1d1c",
+          "size_bytes": 3729
+        },
+        {
+          "artifact_id": "search-receipt-0049efffa74017ba",
+          "role": "receipt_file",
+          "file_name": "receipt.json",
+          "sha256": "98d9724285d9b69f72383c3d503fd3d18d859db6a479d83ec118d56b22da9f37",
+          "size_bytes": 1940
+        },
+        {
+          "artifact_id": "workspace-report",
+          "role": "report",
+          "file_name": "report.html",
+          "sha256": "c52ec708fd12674280c3fe3782dacfaf41d23eaeb47c9c5eae8c3db10e55b181",
+          "size_bytes": 52783
+        }
+      ],
+      "checks": [
+        {
+          "check_id": "immutable_subject",
+          "state": "PASS",
+          "summary": "Run binds an immutable revision and input digest.",
+          "details": {
+            "revision_sha256": "ab5902d0f30acef861c6a04df8efbed30b1637dda4ad9604e17f3f272f393868",
+            "input_digest": "4941d083ca61c88b51572e30950ed7a4c3772f4b2fe3a3dc7a00de4058a7e583"
+          }
+        },
+        {
+          "check_id": "manifest",
+          "state": "PASS",
+          "summary": "Readable manifest is present.",
+          "details": {}
+        },
+        {
+          "check_id": "intended_use",
+          "state": "PASS",
+          "summary": "Intended use is declared.",
+          "details": {}
+        },
+        {
+          "check_id": "evidence",
+          "state": "WARN",
+          "summary": "No exact evidence is pinned.",
+          "details": {}
+        },
+        {
+          "check_id": "caveats",
+          "state": "PASS",
+          "summary": "Caveats are attached.",
+          "details": {}
+        },
+        {
+          "check_id": "requirements",
+          "state": "PASS",
+          "summary": "MRS is present.",
+          "details": {}
+        },
+        {
+          "check_id": "technical_specification",
+          "state": "PASS",
+          "summary": "MTS is present.",
+          "details": {}
+        },
+        {
+          "check_id": "tests",
+          "state": "PASS",
+          "summary": "Tests are present.",
+          "details": {}
+        },
+        {
+          "check_id": "run_completion",
+          "state": "PASS",
+          "summary": "Run status is completed.",
+          "details": {
+            "failure_code": null,
+            "validation_errors": [],
+            "validation_warnings": []
+          }
+        },
+        {
+          "check_id": "artifacts",
+          "state": "PASS",
+          "summary": "A durable result artifact with scientific outputs is present.",
+          "details": {
+            "output_count": 7,
+            "visuals_count": 4,
+            "result_artifact_ids": [
+              "workspace-results"
+            ]
+          }
+        },
+        {
+          "check_id": "visualization_delivery",
+          "state": "PASS",
+          "summary": "Visualization delivery requirements passed.",
+          "details": {
+            "schema_version": "1",
+            "status": "passed",
+            "valid_count": 4,
+            "checks": [
+              {
+                "module": "search",
+                "render": "image",
+                "expected_count": 1,
+                "observed_count": 1,
+                "status": "passed"
+              },
+              {
+                "module": "search",
+                "render": "text",
+                "expected_count": 1,
+                "observed_count": 1,
+                "status": "passed"
+              }
+            ],
+            "diagnostics": [],
+            "diagnostics_count": 0
+          }
+        },
+        {
+          "check_id": "compatibility",
+          "state": "NOT_APPLICABLE",
+          "summary": "No model in this run declares a compatibility profile; 0 wires used structural checks only.",
+          "details": {
+            "wires": 0,
+            "verified": 0,
+            "partial": 0,
+            "structural": 0,
+            "blocked": 0,
+            "value_checks": 0,
+            "value_failures": 0,
+            "violations": 0,
+            "profiles": [],
+            "runtime_version": "0.0.34"
+          }
+        }
+      ],
+      "approvals": [
+        {
+          "plan_id": "89492115-098f-4856-b1c8-bffc76f447fb",
+          "kind": "run",
+          "plan_sha256": "c51dd33749511a9d467ffd0557656d548aff6d59e18f92fe4c8f382b96c09756",
+          "oauth_client_record_id": "6970f5e0-a2da-43b2-8ef0-0888b573b804",
+          "executed_at": "2026-10-04T08:36:12.342373Z",
+          "authorization": {
+            "mode": "per_run_approval"
+          }
+        }
+      ],
+      "decision": "REVIEW",
+      "caveats": [
+        "Morgan radius2, 2048 bits, includeChirality=True; Tanimoto on-bit intersection/union.",
+        "No desalt, neutralization or tautomer standardization; preserve all fragments.",
+        "Keep all duplicates; ties by descending score, exact Unicode ID then row index.",
+        "Structural similarity does not establish potency, activity, toxicity, safety or patent status.",
+        "A score of 1 is not identity; exact_match uses canonical isomeric SMILES.",
+        "Parity and demonstrations are software verification, not broad biological validation."
+      ],
+      "prohibited_claims": [
+        "Equal potency/activity/toxicity",
+        "Patent clearance",
+        "Search of all known chemistry",
+        "Clinical decisions"
+      ],
+      "issued_at": "2026-10-04T08:38:34.639740+00:00",
+      "signing": {
+        "algorithm": "Ed25519",
+        "key_id": "agent-passport-v1"
+      }
+    },
+    "canonical_sha256": "91d03092626219e6a562812854e65ace53d54bfe13291ba0e5314b29e9eb2d74",
+    "signature": "x_qCIPBrUaSJyieyfRqpRQVxt-G6Gs69TTHdvBhfLgIsBpc3J28ngkMP_mFMFJzpFWVr-Io8yHWHmw-RvGcYAw",
+    "algorithm": "Ed25519",
+    "signing_key_id": "agent-passport-v1",
+    "created_at": "2026-10-04T08:38:34.810861Z"
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {
+    "verification_keys": "https://api.biosimulant.com/api/agent-gateway/passports/jwks.json",
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}
