@@ -1,0 +1,238 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "4c7b7cb0-e06f-4c39-9b43-cfe7042a186f",
+  "data": {
+    "id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+    "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+    "kind": "managed",
+    "lab_version_id": null,
+    "experiment_id": null,
+    "workspace_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+    "status": "completed",
+    "progress": {
+      "running": false,
+      "paused": false,
+      "run_status": "completed",
+      "phase": "completed",
+      "phase_message": "Workspace run completed",
+      "message": "Workspace run completed",
+      "exit_code": 0
+    },
+    "compute": {
+      "requested_compute_profile_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06",
+      "resolved_compute_profile_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06",
+      "selection_reason": "explicit",
+      "provider": "modal",
+      "allocated_resources": {
+        "cpu_cores": 0.5,
+        "memory_mb": 512,
+        "disk_mb": 512,
+        "gpu_type": null,
+        "gpu_count": null,
+        "timeout_seconds": 300
+      }
+    },
+    "failure": null,
+    "results_summary": {
+      "duration": 1,
+      "exit_code": 0,
+      "output_count": 7,
+      "visuals_count": 4,
+      "output_names": [
+        "search.drawings",
+        "search.hit_count",
+        "search.invalid_csv",
+        "search.rankings_csv",
+        "search.rankings_json",
+        "search.receipt_file",
+        "search.report"
+      ],
+      "modules": [
+        {
+          "path": "models/search",
+          "alias": "search",
+          "package": "rdkit-similarity-ranker",
+          "version": "0.1.0"
+        }
+      ],
+      "report_artifact_id": "workspace-report",
+      "results_artifact_id": "workspace-results",
+      "compatibility": {
+        "schema_version": "1",
+        "standard": "biosimulant.model-compatibility",
+        "version": "0",
+        "catalogue_version": "0.1.0",
+        "runtime_version": "0.0.34",
+        "profiles": [],
+        "summary": {
+          "wires": 0,
+          "blocked": 0,
+          "partial": 0,
+          "verified": 0,
+          "structural": 0,
+          "violations": 0,
+          "value_checks": 0,
+          "value_failures": 0
+        },
+        "wires": [],
+        "violations": [],
+        "truncated": false
+      }
+    },
+    "artifacts": [
+      {
+        "artifact_id": "search-drawings-62d575134f7fdb4a",
+        "role": "drawings",
+        "file_name": "molecules.png",
+        "content_type": "image/png",
+        "size_bytes": 481651,
+        "sha256": "5ccf84aedf30f50b83d17f20413a70b7126f960584864d516461c89c110989ed",
+        "status": "completed"
+      },
+      {
+        "artifact_id": "search-invalid-csv-f99e97e76e48dca4",
+        "role": "invalid_csv",
+        "file_name": "invalid-rows.csv",
+        "content_type": "text/csv",
+        "size_bytes": 56,
+        "sha256": "c3046020619bbd986b60b8ee087d72bbbd2fd849c5c2ce9d3f9b56de12be46ae",
+        "status": "completed"
+      },
+      {
+        "artifact_id": "search-rankings-csv-cbe5c6f5083d1051",
+        "role": "rankings_csv",
+        "file_name": "rankings.csv",
+        "content_type": "text/csv",
+        "size_bytes": 4057,
+        "sha256": "31b0361ea8ffe4d7ebac5b047665baa560f0934e8b089ba6a2eedb5f9e6eb2cb",
+        "status": "completed"
+      },
+      {
+        "artifact_id": "search-rankings-json-bab39338411edb36",
+        "role": "rankings_json",
+        "file_name": "rankings.json",
+        "content_type": "application/json",
+        "size_bytes": 22577,
+        "sha256": "b7550744f082fe91d1b0aacd61c6550286ff2cbbb00a1318ab61731dcefa3d1f",
+        "status": "completed"
+      },
+      {
+        "artifact_id": "search-receipt-7ad4ce6d8af7ff6b",
+        "role": "receipt_file",
+        "file_name": "receipt.json",
+        "content_type": "application/json",
+        "size_bytes": 1954,
+        "sha256": "650ec1a2a7170524a3481b99e5c59d4d39548bc14cca5ca81aca307f0b20ce7d",
+        "status": "completed"
+      },
+      {
+        "artifact_id": "workspace-results",
+        "role": "results",
+        "file_name": "results.json",
+        "content_type": "application/json",
+        "size_bytes": 398169,
+        "sha256": "9c6dccb3c6f238da15aa8b4d5be0833a058f625328337dcccf5646b0a2953f34",
+        "status": "completed"
+      },
+      {
+        "artifact_id": "workspace-report",
+        "role": "report",
+        "file_name": "report.html",
+        "content_type": "text/html; charset=utf-8",
+        "size_bytes": 397944,
+        "sha256": "ca3cc77d7aeb22a5d54bf90860ecfa4ed6101f6f85741565b774ec8e4691844f",
+        "status": "completed"
+      }
+    ],
+    "billing_mode": "free_beta",
+    "user_charge": 0,
+    "timing": {
+      "queued_at": "2026-10-04T06:57:14.974378Z",
+      "started_at": "2026-10-04T06:57:29.869174Z",
+      "completed_at": "2026-10-04T06:57:39.929212Z",
+      "duration_seconds": 4.8350782910129055
+    },
+    "authorization": {
+      "mode": "per_run_approval"
+    },
+    "passport_id": "7dbfed68-2893-4858-af36-376d6a6b06be",
+    "passport_decision": "REVIEW"
+  },
+  "warnings": [],
+  "next_actions": [
+    {
+      "tool": "run_artifact_get",
+      "description": "Retrieve and independently verify this completed artifact before interpreting it.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+        "artifact_id": "search-drawings-62d575134f7fdb4a",
+        "include_content": true
+      }
+    },
+    {
+      "tool": "run_artifact_get",
+      "description": "Retrieve and independently verify this completed artifact before interpreting it.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+        "artifact_id": "search-invalid-csv-f99e97e76e48dca4",
+        "include_content": true
+      }
+    },
+    {
+      "tool": "run_artifact_get",
+      "description": "Retrieve and independently verify this completed artifact before interpreting it.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+        "artifact_id": "search-rankings-csv-cbe5c6f5083d1051",
+        "include_content": true
+      }
+    },
+    {
+      "tool": "run_artifact_get",
+      "description": "Retrieve and independently verify this completed artifact before interpreting it.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+        "artifact_id": "search-rankings-json-bab39338411edb36",
+        "include_content": true
+      }
+    },
+    {
+      "tool": "run_artifact_get",
+      "description": "Retrieve and independently verify this completed artifact before interpreting it.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+        "artifact_id": "search-receipt-7ad4ce6d8af7ff6b",
+        "include_content": true
+      }
+    },
+    {
+      "tool": "run_artifact_get",
+      "description": "Retrieve and independently verify this completed artifact before interpreting it.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+        "artifact_id": "workspace-results",
+        "include_content": true
+      }
+    },
+    {
+      "tool": "run_artifact_get",
+      "description": "Retrieve and independently verify this completed artifact before interpreting it.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+        "artifact_id": "workspace-report",
+        "include_content": true
+      }
+    },
+    {
+      "tool": "passport_get",
+      "description": "Review per-check evidence, caveats, and signature data.",
+      "arguments": {
+        "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f",
+    "passport_verification_keys": "https://api.biosimulant.com/api/agent-gateway/passports/jwks.json"
+  }
+}

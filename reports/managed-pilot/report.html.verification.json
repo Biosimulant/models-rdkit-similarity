@@ -1,0 +1,8 @@
+{
+  "artifact_id": "workspace-report",
+  "declared_size_bytes": 100263,
+  "actual_size_bytes": 100630,
+  "declared_sha256": "2b94ce52c5c567ac682742de21b1466933b953eabdc54ea0daae823c4c2f1b03",
+  "actual_sha256": "13682ac94f4922d5886f0b7b982761a6d951279f09e8b2efafc0b11a7fd7d802",
+  "verified": false
+}

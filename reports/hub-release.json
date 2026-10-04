@@ -1,0 +1,210 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "12c7b9c8-79b7-495e-91ab-7f4e67572183",
+  "data": {
+    "artifact_id": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+    "requested_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+    "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+    "package_type": "lab",
+    "visibility": "public",
+    "status": "materialized",
+    "checksum_sha256": "9de060e143a8b844e614855d6a44ea9d6d3303520897c4db8d1e0f0afd193600",
+    "size_bytes": 1162009,
+    "created_at": "2026-10-04T06:56:59.099918",
+    "updated_at": "2026-10-04T06:57:07.512157",
+    "descriptive_metadata": {
+      "title": "RDKit Molecular Similarity Search",
+      "description": "Rank molecules in your supplied collection using Morgan radius 2, 2048 bits, chirality enabled and Tanimoto similarity. Query/hit drawings, exact scores and downloadable rankings; CPU only.",
+      "tags": [],
+      "content_trust": "untrusted_descriptive_metadata"
+    },
+    "intended_use": {
+      "statement": "Structural ranking against exactly the supplied collection, <=10000 rows; not a search of all chemistry."
+    },
+    "caveats": [
+      "Morgan radius2, 2048 bits, includeChirality=True; Tanimoto on-bit intersection/union.",
+      "No desalt, neutralization or tautomer standardization; preserve all fragments.",
+      "Keep all duplicates; ties by descending score, exact Unicode ID then row index.",
+      "Structural similarity does not establish potency, activity, toxicity, safety or patent status.",
+      "A score of 1 is not identity; exact_match uses canonical isomeric SMILES.",
+      "Parity and demonstrations are software verification, not broad biological validation."
+    ],
+    "prohibited_claims": [
+      "Equal potency/activity/toxicity",
+      "Patent clearance",
+      "Search of all known chemistry",
+      "Clinical decisions"
+    ],
+    "licenses": "BSD-3-Clause",
+    "source_references": null,
+    "declared_contract": {
+      "io": {
+        "inputs": [
+          {
+            "name": "query_smiles",
+            "maps_to": "search.query_smiles",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "required": true,
+            "value_type": "string",
+            "max_length": 8192,
+            "description": "One query molecular SMILES; all fragments retained."
+          },
+          {
+            "name": "collection_csv",
+            "maps_to": "search.collection_csv",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "required": false,
+            "value_type": "string",
+            "max_length": 2097152,
+            "default": "",
+            "description": "Paste UTF-8 molecule_id,smiles CSV; search only this collection, <=10000 rows / 2 MiB."
+          },
+          {
+            "name": "collection_file",
+            "maps_to": "search.collection_file",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "required": false,
+            "value_type": "file",
+            "format": "csv",
+            "description": "Upload UTF-8 molecule_id,smiles CSV; <=10000 rows / 2 MiB."
+          },
+          {
+            "name": "top_k",
+            "maps_to": "search.top_k",
+            "signal_type": "scalar",
+            "dtype": "int64",
+            "required": false,
+            "default": 10,
+            "value_type": "integer",
+            "description": "Maximum ranked hits; integer 1..100."
+          },
+          {
+            "name": "minimum_similarity",
+            "maps_to": "search.minimum_similarity",
+            "signal_type": "scalar",
+            "dtype": "float64",
+            "required": false,
+            "default": 0,
+            "value_type": "number",
+            "description": "Inclusive Tanimoto threshold in [0,1]."
+          }
+        ],
+        "outputs": [
+          {
+            "name": "report",
+            "maps_to": "search.report",
+            "signal_type": "record",
+            "schema": {
+              "hits": null,
+              "invalid_rows": null,
+              "receipt": null
+            },
+            "emitted_unit": "1"
+          },
+          {
+            "name": "hit_count",
+            "maps_to": "search.hit_count",
+            "signal_type": "scalar",
+            "dtype": "int64",
+            "emitted_unit": "count"
+          },
+          {
+            "name": "rankings_csv",
+            "maps_to": "search.rankings_csv",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "value_type": "file",
+            "format": "csv"
+          },
+          {
+            "name": "rankings_json",
+            "maps_to": "search.rankings_json",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "value_type": "file",
+            "format": "json"
+          },
+          {
+            "name": "invalid_csv",
+            "maps_to": "search.invalid_csv",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "value_type": "file",
+            "format": "csv"
+          },
+          {
+            "name": "receipt_file",
+            "maps_to": "search.receipt_file",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "value_type": "file",
+            "format": "json"
+          },
+          {
+            "name": "drawings",
+            "maps_to": "search.drawings",
+            "signal_type": "scalar",
+            "dtype": "str",
+            "value_type": "file",
+            "format": "png"
+          }
+        ]
+      },
+      "runtime": {
+        "duration": 1,
+        "communication_step": 1,
+        "initial_inputs": {},
+        "python_version": "3.12",
+        "dependencies": {
+          "packages": [
+            "biosimulant==0.0.34",
+            "rdkit==2025.9.1",
+            "numpy==2.2.6",
+            "Pillow==11.3.0"
+          ]
+        }
+      },
+      "hardware": {
+        "compute": {
+          "device": "cpu",
+          "cpu_cores": 0.5,
+          "memory_mb": 512,
+          "recommended_profile": "free"
+        }
+      }
+    },
+    "compute_class": null,
+    "qualification": {
+      "schema_valid": true,
+      "runtime_valid": false,
+      "domain_validated": false,
+      "source": "biosimulant_validator"
+    },
+    "manifest_fingerprint": "fdadc6767ad46a822edca468c802a5646e2edc7a6aade2c492601b921b35690e",
+    "provenance_fingerprint": "07aa2dba22fbb8dee1dd95dd87c583cbe76351126a4ac13f88d0f3a3fe9103d6",
+    "compatibility": {
+      "requires_target_preflight": true,
+      "claim": "No target-specific compatibility decision has been made."
+    },
+    "trust_boundaries": {
+      "manifest_fields": "untrusted_package_assertions",
+      "qualification": "biosimulant_validator_owned"
+    },
+    "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+    "available_versions": [
+      "0.1.0"
+    ]
+  },
+  "warnings": [
+    "Runtime qualification has not been established for this release."
+  ],
+  "next_actions": [],
+  "links": {
+    "hub_search": "https://hub.biosimulant.com/search?search=demi%2Frdkit-molecular-similarity-search%400.1.0",
+    "open_in_biosimulant": "https://studio.biosimulant.com/labs/f0291213-a063-4aeb-8981-8e0e739f665d",
+    "hub": "https://hub.biosimulant.com/labs/f0291213-a063-4aeb-8981-8e0e739f665d"
+  }
+}

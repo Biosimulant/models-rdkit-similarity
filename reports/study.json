@@ -1,0 +1,44 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "fb482144-1550-4186-9386-dce0ea6f4276",
+  "data": {
+    "experiment_id": "f82e8c35-0803-41a7-a253-4541c25ba8ea",
+    "name": "How does a stricter structural similarity threshold change hits?",
+    "goal": "Verify the 13-row public pilot and compare inclusive thresholds 0.2 and 0.6 on the same original collection. Expected six versus three eligible hits; software demonstration only, no activity claim.",
+    "arms": [
+      {
+        "arm": "pilot-unfiltered",
+        "run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd"
+      },
+      {
+        "arm": "threshold-0.2",
+        "run_id": "1169e304-181a-44ad-b089-8d252145cd41"
+      },
+      {
+        "arm": "threshold-0.6",
+        "run_id": "e4b31111-37b1-4faa-aead-323bcd0b54a5"
+      }
+    ],
+    "run_ids": [
+      "0850f12f-e803-4876-8f98-1df512b2e7fd",
+      "1169e304-181a-44ad-b089-8d252145cd41",
+      "e4b31111-37b1-4faa-aead-323bcd0b54a5"
+    ],
+    "billing_mode": "free_beta",
+    "user_charge": 0,
+    "idempotent_replay": false
+  },
+  "warnings": [],
+  "next_actions": [
+    {
+      "tool": "experiment_get",
+      "description": "Read this study's arms and comparison as runs finish.",
+      "arguments": {
+        "experiment_id": "f82e8c35-0803-41a7-a253-4541c25ba8ea"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/experiments/f82e8c35-0803-41a7-a253-4541c25ba8ea"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+  "exact_release": "demi/rdkit-molecular-similarity-search@0.1.0",
+  "state": "BLOCKED: hosting preflight violates frozen input/timeout contract",
+  "omitted_input": "collection_file",
+  "declared_limits": {
+    "query_smiles": 8192,
+    "collection_csv": 2097152,
+    "timeout_seconds": 120
+  },
+  "resolved_limits": {
+    "query_smiles": 2000,
+    "collection_csv": 2000,
+    "timeout_seconds": 300
+  },
+  "administrator_approval_required": true,
+  "hosting_execution": "not executed; no correct-contract hosting approval requested",
+  "production": "Modal unchanged",
+  "remaining": "Generic CSV upload, multiline/preserved CSV text, declared bounds and exact timeout support must be verified in core staging before any new explicit production deployment approval."
+}

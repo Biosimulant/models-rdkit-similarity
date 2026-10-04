@@ -1,0 +1,94 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "f0b838c4-9770-4a5a-9869-11e7bc277b05",
+  "data": {
+    "plan_id": "c4851a3e-cf3d-435c-8326-44f92cd07e38",
+    "plan_sha256": "9f5ecc814d9eb77e5609602eddd4f0659724034867e549b4b51236249fc30de5",
+    "expires_at": "2026-10-04T07:12:38.282923Z",
+    "release_id": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+    "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+    "hub_sha256": "9de060e143a8b844e614855d6a44ea9d6d3303520897c4db8d1e0f0afd193600",
+    "spec_sha256": "28becba2dd72498be2d847e33b62ab3abdbbbf5a83a1ea924e011578d839691d",
+    "scope": "public",
+    "environment": "production",
+    "inputs": {
+      "query_smiles": {
+        "type": "string",
+        "maps_to": "query_smiles",
+        "label": "Query smiles",
+        "default": null,
+        "description": "One query molecular SMILES; all fragments retained.",
+        "max_length": 2000
+      },
+      "collection_csv": {
+        "type": "string",
+        "maps_to": "collection_csv",
+        "label": "Collection csv",
+        "default": "",
+        "description": "Paste UTF-8 molecule_id,smiles CSV; search only this collection, <=10000 rows / 2 MiB.",
+        "max_length": 2000
+      },
+      "top_k": {
+        "type": "integer",
+        "maps_to": "top_k",
+        "label": "Top k",
+        "default": 10,
+        "description": "Maximum ranked hits; integer 1..100."
+      },
+      "minimum_similarity": {
+        "type": "number",
+        "maps_to": "minimum_similarity",
+        "label": "Minimum similarity",
+        "default": 0,
+        "description": "Inclusive Tanimoto threshold in [0,1]."
+      }
+    },
+    "smoke_parameters": {
+      "query_smiles": "CCO",
+      "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+      "top_k": 100,
+      "minimum_similarity": 0.2
+    },
+    "admin_approval_required": true,
+    "compute": {
+      "size": "free",
+      "gpu": null,
+      "cpu": 0.5,
+      "memory_mb": 512,
+      "timeout_seconds": 300,
+      "max_containers": 1,
+      "scaledown_window": 300,
+      "network": "blocked",
+      "provider": "modal",
+      "environment": "production",
+      "keep_warm_min_containers": 0,
+      "ongoing_hosting_cost": true
+    },
+    "side_effects": [
+      {
+        "type": "request_hosting",
+        "release_id": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+        "hub_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+        "hub_sha256": "9de060e143a8b844e614855d6a44ea9d6d3303520897c4db8d1e0f0afd193600",
+        "scope": "public",
+        "admin_approval_required": true
+      }
+    ],
+    "blockers": [],
+    "requires_confirmation": true
+  },
+  "warnings": [
+    "No hosting was changed. Hosting has ongoing costs; approve this exact plan before execution."
+  ],
+  "next_actions": [
+    {
+      "tool": "hosting_execute",
+      "description": "After approval, request this exact hosting configuration.",
+      "arguments": {
+        "plan_id": "c4851a3e-cf3d-435c-8326-44f92cd07e38",
+        "plan_sha256": "9f5ecc814d9eb77e5609602eddd4f0659724034867e549b4b51236249fc30de5"
+      }
+    }
+  ],
+  "links": {}
+}

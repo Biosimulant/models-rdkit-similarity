@@ -1,0 +1,30 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "7befeec8-0ff9-4679-8476-bb5928a94e89",
+  "data": {
+    "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+    "title": "RDKit Molecular Similarity Search",
+    "description": "Rank only your supplied CSV collection (up to 10,000 rows / 2 MiB) using Morgan radius 2, 2048 bits, chirality enabled and Tanimoto similarity. Public original 13-row example: 11 valid, 2 invalid; raising threshold 0.2 to 0.6 reduces hits from 6 to 3. Drawings, exact scores and CSV/JSON downloads. Structural similarity does not establish activity or safety. Active hosting is blocked pending CSV upload and input-bound support; public examples remain readable.",
+    "visibility": "public",
+    "hub_listed": true,
+    "tags": [
+      "other"
+    ],
+    "latest_release_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+    "release_count": 1,
+    "releases": [
+      {
+        "reference": "demi/rdkit-molecular-similarity-search@0.1.0",
+        "visibility": "public",
+        "created_at": "2026-10-04T06:56:59.099918Z"
+      }
+    ],
+    "created_at": "2026-10-04T06:28:49.367611Z",
+    "updated_at": "2026-10-04T07:15:17.872111Z",
+    "open_in_biosimulant": "https://studio.biosimulant.com/labs/f0291213-a063-4aeb-8981-8e0e739f665d",
+    "content_trust": "untrusted_descriptive_metadata"
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

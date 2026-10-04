@@ -1,5 +1,5 @@
 {
-  "managed_item_runs": 0,
+  "managed_item_runs": 4,
   "managed_item_user_charge_usd": 0,
   "managed_provider_spend_usd": null,
   "hosted_identity": null,
@@ -76,5 +76,27 @@
     "top_k": 100,
     "timeout_seconds": 120
   },
-  "limitations": "Local/isolated evidence only; no managed run/Passport, hosted provider invoice or cancellation/account-isolation verification."
+  "limitations": "Four approved managed Modal runs; provider estimates only, actual invoice/managed peak memory unavailable. No active hosting, cold/warm latency, hosted upload/cancellation or cross-account isolation verification. Benchmark repeats nine small diverse structures; no broad biological validation.",
+  "managed_provider_estimated_usd": 0.011064,
+  "managed_runtime_seconds": {
+    "pilot": 1.9433969070669264,
+    "threshold_0.2": 2.1706244399538264,
+    "threshold_0.6": 1.874264616984874,
+    "benchmark_10000": 4.8350782910129055
+  },
+  "managed_allocation": {
+    "provider": "modal",
+    "cpu_cores": 0.5,
+    "memory_mb": 512,
+    "gpu_count": 0,
+    "requested_timeout_seconds": 120,
+    "profile_allocation_timeout_seconds": 300
+  },
+  "hosting_proposed_only": {
+    "max_containers": 1,
+    "min_warm_containers": 0,
+    "scaledown_window_seconds": 300,
+    "timeout_seconds": 300,
+    "network": "blocked"
+  }
 }

@@ -1,0 +1,527 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "0625b066-6fb3-4b92-bb57-1a98064780e5",
+  "data": {
+    "id": "f82e8c35-0803-41a7-a253-4541c25ba8ea",
+    "name": "How does a stricter structural similarity threshold change hits?",
+    "goal": "Completed verified 13-row public-fixture software study: 11 valid/2 invalid rows; thresholds0.2 and0.6 yield6 and3 hits respectively in the same checksummed collection. Raising threshold narrows structural fingerprint overlap, without potency/activity/toxicity/patent implications. Retained artifacts independently hashed; public UI exposure still to be verified.",
+    "status": "completed",
+    "plan": {
+      "arms": [
+        {
+          "label": "pilot-unfiltered",
+          "rationale": "Bounded first pilot retains complete valid ranking, invalid-row report, drawings and exact scoring.",
+          "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+          "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+          "revision_sha256": "0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3",
+          "input_values": {
+            "query_smiles": "CCO",
+            "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+            "top_k": 100,
+            "minimum_similarity": 0
+          },
+          "parameter_overrides": {},
+          "runtime_overrides": {
+            "timeout_seconds": 120
+          },
+          "compute_profile_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06"
+        },
+        {
+          "label": "threshold-0.2",
+          "rationale": "Lower threshold admits moderately similar structures in the identical checksummed collection.",
+          "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+          "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+          "revision_sha256": "0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3",
+          "input_values": {
+            "query_smiles": "CCO",
+            "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+            "top_k": 100,
+            "minimum_similarity": 0.2
+          },
+          "parameter_overrides": {},
+          "runtime_overrides": {
+            "timeout_seconds": 120
+          },
+          "compute_profile_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06"
+        },
+        {
+          "label": "threshold-0.6",
+          "rationale": "Higher threshold keeps only stronger fingerprint overlaps; demonstrate smaller hit count without biological claims.",
+          "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+          "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+          "revision_sha256": "0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3",
+          "input_values": {
+            "query_smiles": "CCO",
+            "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+            "top_k": 100,
+            "minimum_similarity": 0.6
+          },
+          "parameter_overrides": {},
+          "runtime_overrides": {
+            "timeout_seconds": 120
+          },
+          "compute_profile_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06"
+        }
+      ],
+      "plan_sha256": "b2671dd93bf9fb005195daba45279b0d8c4836125d9f2398496b7f98d57a8ff2"
+    },
+    "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+    "chat_thread_id": "c5047973-eee0-4833-af6c-8ee863bfb79f",
+    "client_record_id": "6970f5e0-a2da-43b2-8ef0-0888b573b804",
+    "client_name": "Codex",
+    "operation_plan_id": "5ad01f1d-737d-4346-83d0-afba4fb47c16",
+    "created_at": "2026-10-04T06:51:44.000813",
+    "updated_at": "2026-10-04T06:55:40.325084",
+    "totals": {
+      "runs": 3,
+      "completed": 3
+    },
+    "arms": [
+      {
+        "arm_key": "143eb65618657bf1",
+        "arm": "pilot-unfiltered",
+        "arm_rationale": "Bounded first pilot retains complete valid ranking, invalid-row report, drawings and exact scoring.",
+        "workspace_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+        "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+        "lab_version_id": null,
+        "parameters": {},
+        "simulation_config": {
+          "runtime": {
+            "timeout_seconds": 120
+          },
+          "initial_inputs": {
+            "top_k": 100,
+            "query_smiles": "CCO",
+            "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+            "minimum_similarity": 0
+          }
+        },
+        "runs": [
+          {
+            "run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd",
+            "status": "completed",
+            "arm": "pilot-unfiltered",
+            "arm_rationale": "Bounded first pilot retains complete valid ranking, invalid-row report, drawings and exact scoring.",
+            "arm_key": "143eb65618657bf1",
+            "workspace_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+            "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+            "lab_version_id": null,
+            "parameters": {},
+            "simulation_config": {
+              "runtime": {
+                "timeout_seconds": 120
+              },
+              "initial_inputs": {
+                "top_k": 100,
+                "query_smiles": "CCO",
+                "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+                "minimum_similarity": 0
+              }
+            },
+            "error_message": null,
+            "duration_seconds": 1.9433969070669264,
+            "created_at": "2026-10-04T06:51:46.077893",
+            "completed_at": "2026-10-04T06:52:10.126298",
+            "metrics": {
+              "search.hit_count": {
+                "name": "search.hit_count",
+                "kind": "scalar",
+                "value": 11,
+                "unit": "count"
+              }
+            },
+            "acceptance_status": "not_declared"
+          }
+        ],
+        "status": "completed",
+        "run_count": 1,
+        "acceptance_excluded_count": 0,
+        "representative_run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd",
+        "metrics": {
+          "search.hit_count": {
+            "name": "search.hit_count",
+            "kind": "scalar",
+            "value": 11,
+            "unit": "count"
+          }
+        },
+        "replicate_stats": {
+          "search.hit_count": {
+            "name": "search.hit_count",
+            "kind": "scalar",
+            "unit": "count",
+            "values": [
+              {
+                "run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd",
+                "value": 11
+              }
+            ],
+            "n": 1,
+            "mean": 11,
+            "sd": null,
+            "min": 11,
+            "max": 11
+          }
+        }
+      },
+      {
+        "arm_key": "defcae0be30489d4",
+        "arm": "threshold-0.2",
+        "arm_rationale": "Lower threshold admits moderately similar structures in the identical checksummed collection.",
+        "workspace_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+        "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+        "lab_version_id": null,
+        "parameters": {},
+        "simulation_config": {
+          "runtime": {
+            "timeout_seconds": 120
+          },
+          "initial_inputs": {
+            "top_k": 100,
+            "query_smiles": "CCO",
+            "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+            "minimum_similarity": 0.2
+          }
+        },
+        "runs": [
+          {
+            "run_id": "1169e304-181a-44ad-b089-8d252145cd41",
+            "status": "completed",
+            "arm": "threshold-0.2",
+            "arm_rationale": "Lower threshold admits moderately similar structures in the identical checksummed collection.",
+            "arm_key": "defcae0be30489d4",
+            "workspace_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+            "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+            "lab_version_id": null,
+            "parameters": {},
+            "simulation_config": {
+              "runtime": {
+                "timeout_seconds": 120
+              },
+              "initial_inputs": {
+                "top_k": 100,
+                "query_smiles": "CCO",
+                "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+                "minimum_similarity": 0.2
+              }
+            },
+            "error_message": null,
+            "duration_seconds": 2.1706244399538264,
+            "created_at": "2026-10-04T06:51:47.866707",
+            "completed_at": "2026-10-04T06:52:10.027093",
+            "metrics": {
+              "search.hit_count": {
+                "name": "search.hit_count",
+                "kind": "scalar",
+                "value": 6,
+                "unit": "count"
+              }
+            },
+            "acceptance_status": "not_declared"
+          }
+        ],
+        "status": "completed",
+        "run_count": 1,
+        "acceptance_excluded_count": 0,
+        "representative_run_id": "1169e304-181a-44ad-b089-8d252145cd41",
+        "metrics": {
+          "search.hit_count": {
+            "name": "search.hit_count",
+            "kind": "scalar",
+            "value": 6,
+            "unit": "count"
+          }
+        },
+        "replicate_stats": {
+          "search.hit_count": {
+            "name": "search.hit_count",
+            "kind": "scalar",
+            "unit": "count",
+            "values": [
+              {
+                "run_id": "1169e304-181a-44ad-b089-8d252145cd41",
+                "value": 6
+              }
+            ],
+            "n": 1,
+            "mean": 6,
+            "sd": null,
+            "min": 6,
+            "max": 6
+          }
+        }
+      },
+      {
+        "arm_key": "1eeb728647fe77ce",
+        "arm": "threshold-0.6",
+        "arm_rationale": "Higher threshold keeps only stronger fingerprint overlaps; demonstrate smaller hit count without biological claims.",
+        "workspace_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+        "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+        "lab_version_id": null,
+        "parameters": {},
+        "simulation_config": {
+          "runtime": {
+            "timeout_seconds": 120
+          },
+          "initial_inputs": {
+            "top_k": 100,
+            "query_smiles": "CCO",
+            "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+            "minimum_similarity": 0.6
+          }
+        },
+        "runs": [
+          {
+            "run_id": "e4b31111-37b1-4faa-aead-323bcd0b54a5",
+            "status": "completed",
+            "arm": "threshold-0.6",
+            "arm_rationale": "Higher threshold keeps only stronger fingerprint overlaps; demonstrate smaller hit count without biological claims.",
+            "arm_key": "1eeb728647fe77ce",
+            "workspace_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+            "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+            "lab_version_id": null,
+            "parameters": {},
+            "simulation_config": {
+              "runtime": {
+                "timeout_seconds": 120
+              },
+              "initial_inputs": {
+                "top_k": 100,
+                "query_smiles": "CCO",
+                "collection_csv": "molecule_id,smiles\nethanol,CCO\nethanol-equivalent,OCC\nethanol,CCO\npropanol,CCCO\nbutanol,CCCCO\nethylamine,CCN\nacetate,CC(=O)O\nbenzene,c1ccccc1\nalanine-L,N[C@@H](C)C(=O)O\nalanine-D,N[C@H](C)C(=O)O\nsalt,CC(=O)[O-].[Na+]\ninvalid,not-a-smiles\nblank,\n",
+                "minimum_similarity": 0.6
+              }
+            },
+            "error_message": null,
+            "duration_seconds": 1.874264616984874,
+            "created_at": "2026-10-04T06:51:49.489320",
+            "completed_at": "2026-10-04T06:52:10.642488",
+            "metrics": {
+              "search.hit_count": {
+                "name": "search.hit_count",
+                "kind": "scalar",
+                "value": 3,
+                "unit": "count"
+              }
+            },
+            "acceptance_status": "not_declared"
+          }
+        ],
+        "status": "completed",
+        "run_count": 1,
+        "acceptance_excluded_count": 0,
+        "representative_run_id": "e4b31111-37b1-4faa-aead-323bcd0b54a5",
+        "metrics": {
+          "search.hit_count": {
+            "name": "search.hit_count",
+            "kind": "scalar",
+            "value": 3,
+            "unit": "count"
+          }
+        },
+        "replicate_stats": {
+          "search.hit_count": {
+            "name": "search.hit_count",
+            "kind": "scalar",
+            "unit": "count",
+            "values": [
+              {
+                "run_id": "e4b31111-37b1-4faa-aead-323bcd0b54a5",
+                "value": 3
+              }
+            ],
+            "n": 1,
+            "mean": 3,
+            "sd": null,
+            "min": 3,
+            "max": 3
+          }
+        }
+      }
+    ],
+    "comparison": {
+      "metrics": [
+        "search.hit_count"
+      ],
+      "rows": [
+        {
+          "arm_key": "143eb65618657bf1",
+          "arm": "pilot-unfiltered",
+          "status": "completed",
+          "run_count": 1,
+          "representative_run_id": "0850f12f-e803-4876-8f98-1df512b2e7fd",
+          "values": {
+            "search.hit_count": 11
+          },
+          "stats": {
+            "search.hit_count": {
+              "kind": "scalar",
+              "n": 1,
+              "mean": 11,
+              "sd": null,
+              "min": 11,
+              "max": 11,
+              "unit": "count"
+            }
+          }
+        },
+        {
+          "arm_key": "defcae0be30489d4",
+          "arm": "threshold-0.2",
+          "status": "completed",
+          "run_count": 1,
+          "representative_run_id": "1169e304-181a-44ad-b089-8d252145cd41",
+          "values": {
+            "search.hit_count": 6
+          },
+          "stats": {
+            "search.hit_count": {
+              "kind": "scalar",
+              "n": 1,
+              "mean": 6,
+              "sd": null,
+              "min": 6,
+              "max": 6,
+              "unit": "count"
+            }
+          }
+        },
+        {
+          "arm_key": "1eeb728647fe77ce",
+          "arm": "threshold-0.6",
+          "status": "completed",
+          "run_count": 1,
+          "representative_run_id": "e4b31111-37b1-4faa-aead-323bcd0b54a5",
+          "values": {
+            "search.hit_count": 3
+          },
+          "stats": {
+            "search.hit_count": {
+              "kind": "scalar",
+              "n": 1,
+              "mean": 3,
+              "sd": null,
+              "min": 3,
+              "max": 3,
+              "unit": "count"
+            }
+          }
+        }
+      ]
+    },
+    "sweep": {
+      "parameter": "simulation_config.initial_inputs.minimum_similarity",
+      "points": [
+        {
+          "value": 0,
+          "arm_key": "143eb65618657bf1",
+          "arm": "pilot-unfiltered",
+          "metrics": {
+            "search.hit_count": 11
+          }
+        },
+        {
+          "value": 0.2,
+          "arm_key": "defcae0be30489d4",
+          "arm": "threshold-0.2",
+          "metrics": {
+            "search.hit_count": 6
+          }
+        },
+        {
+          "value": 0.6,
+          "arm_key": "1eeb728647fe77ce",
+          "arm": "threshold-0.6",
+          "metrics": {
+            "search.hit_count": 3
+          }
+        }
+      ]
+    },
+    "experiment_id": "f82e8c35-0803-41a7-a253-4541c25ba8ea",
+    "outstanding_runs": 0,
+    "history": {
+      "entries": [
+        {
+          "kind": "revision",
+          "outcome": "executed",
+          "summary": "The workspace changed.",
+          "detail": "Created blank lab workspace",
+          "agent": null,
+          "revision_sequence": 1,
+          "resource_type": "workspace_revision",
+          "resource_id": "c8a588bc-f70d-4fc9-9031-e006022e4854",
+          "blocked_by": [],
+          "occurred_at": "2026-10-04T06:28:51.951863"
+        },
+        {
+          "kind": "workspace_change",
+          "outcome": "executed",
+          "summary": "Ran.",
+          "detail": "Exact item-02 MRS1.0.0/MTS1.0.0 implementation with original fixtures, bounded finite RDKit ranking, typed outputs and computed reusable visuals; pinned licensed native assets reused. Staging development only; no compute/publication/hosting execution.",
+          "agent": "Codex",
+          "revision_sequence": 2,
+          "resource_type": "workspace_revision",
+          "resource_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+          "blocked_by": [],
+          "occurred_at": "2026-10-04T06:46:59.985220"
+        },
+        {
+          "kind": "run",
+          "outcome": "expired",
+          "summary": "Proposed, never approved in time.",
+          "detail": null,
+          "agent": "Codex",
+          "revision_sequence": null,
+          "resource_type": null,
+          "resource_id": null,
+          "blocked_by": [],
+          "occurred_at": "2026-10-04T06:47:30.822627"
+        },
+        {
+          "kind": "experiment",
+          "outcome": "executed",
+          "summary": "Ran.",
+          "detail": null,
+          "agent": "Codex",
+          "revision_sequence": null,
+          "resource_type": "run_group",
+          "resource_id": "f82e8c35-0803-41a7-a253-4541c25ba8ea",
+          "blocked_by": [],
+          "occurred_at": "2026-10-04T06:51:49.813881"
+        },
+        {
+          "kind": "publish",
+          "outcome": "executed",
+          "summary": "Ran.",
+          "detail": "Deterministic structural search only against the supplied CSV: Morgan radius2,2048-bit,chirality enabled,Tanimoto. Original IDs/SMILES and duplicates retained; inclusive threshold/top_k/stable ties; invalid rows/checksums and computed 2D structures/score bars/CSV+JSON downloads. Pinned RDKit2025.9.1; staging28 tests and local+isolated10k benchmark. Three verified managed pilot/study arms on original13-row fixture yield11/6/3 hits. No potency/activity/toxicity/patent claims. Hosting/public-study visibility are separate unverified gates.",
+          "agent": "Codex",
+          "revision_sequence": null,
+          "resource_type": "package_release",
+          "resource_id": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+          "blocked_by": [],
+          "occurred_at": "2026-10-04T06:57:07.868138"
+        },
+        {
+          "kind": "run",
+          "outcome": "executed",
+          "summary": "Ran.",
+          "detail": null,
+          "agent": "Codex",
+          "revision_sequence": null,
+          "resource_type": "run",
+          "resource_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+          "blocked_by": [],
+          "occurred_at": "2026-10-04T06:57:17.891568"
+        }
+      ],
+      "total": 6,
+      "truncated": false
+    }
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/experiments/f82e8c35-0803-41a7-a253-4541c25ba8ea"
+  }
+}

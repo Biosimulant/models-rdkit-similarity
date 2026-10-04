@@ -1,0 +1,41 @@
+{
+  "study_id": "f82e8c35-0803-41a7-a253-4541c25ba8ea",
+  "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+  "verified_artifact_payloads": true,
+  "arms": [
+    {
+      "arm": "managed-pilot",
+      "threshold": 0,
+      "eligible_hits": 11,
+      "returned_hits": 11,
+      "collection_sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+      "query_sha256": "ab1de819ede91df490e6441934decfa9041b49f91d6bbadbba4df634ccff57fa",
+      "typed_outputs": 7,
+      "valid_visuals": 4,
+      "matches_frozen_reference": true
+    },
+    {
+      "arm": "managed-threshold-low",
+      "threshold": 0.2,
+      "eligible_hits": 6,
+      "returned_hits": 6,
+      "collection_sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+      "query_sha256": "ab1de819ede91df490e6441934decfa9041b49f91d6bbadbba4df634ccff57fa",
+      "typed_outputs": 7,
+      "valid_visuals": 4,
+      "matches_frozen_reference": true
+    },
+    {
+      "arm": "managed-threshold-high",
+      "threshold": 0.6,
+      "eligible_hits": 3,
+      "returned_hits": 3,
+      "collection_sha256": "82d2966a523a3e35e31926135be0238c91abea8e7513b4351ab29834989002fb",
+      "query_sha256": "ab1de819ede91df490e6441934decfa9041b49f91d6bbadbba4df634ccff57fa",
+      "typed_outputs": 7,
+      "valid_visuals": 4,
+      "matches_frozen_reference": true
+    }
+  ],
+  "explanation": "Raising threshold0.2 to0.6 reduces eligible hits6 to3 for the same supplied ethanol-query collection; software demonstration, no biological inference."
+}

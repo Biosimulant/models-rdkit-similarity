@@ -1,0 +1,37 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "8c5f3040-2744-44da-a14f-28426c9da08c",
+  "data": {
+    "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+    "visibility": "public",
+    "package_type": "lab",
+    "package_artifact_id": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+    "checksum_sha256": "9de060e143a8b844e614855d6a44ea9d6d3303520897c4db8d1e0f0afd193600",
+    "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+    "lab_version_id": "9b797fb4-462c-489a-a9fb-0795c037a4ad",
+    "idempotent_replay": false,
+    "passport_id": "193032e6-d8b2-4452-9db1-e49a37d21826",
+    "passport_decision": "REVIEW"
+  },
+  "warnings": [],
+  "next_actions": [
+    {
+      "tool": "hub_inspect",
+      "description": "Inspect the exact immutable published release and checksum.",
+      "arguments": {
+        "reference": "demi/rdkit-molecular-similarity-search@0.1.0"
+      }
+    },
+    {
+      "tool": "passport_get",
+      "description": "Retrieve the signed Passport attached to this exact release.",
+      "arguments": {
+        "passport_id": "193032e6-d8b2-4452-9db1-e49a37d21826"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/labs/f0291213-a063-4aeb-8981-8e0e739f665d",
+    "hub": "https://hub.biosimulant.com/labs/f0291213-a063-4aeb-8981-8e0e739f665d"
+  }
+}

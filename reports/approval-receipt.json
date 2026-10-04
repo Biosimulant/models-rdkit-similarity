@@ -1,0 +1,12 @@
+{
+  "requirements_approval": "User explicitly approved all requirements for this Lab on 2026-10-04; acceptance unchanged",
+  "private_change_approved_plan": "3c30e3ed-a410-4533-b40c-c93dffe65bcf",
+  "bounded_study_approved_plan": "5ad01f1d-737d-4346-83d0-afba4fb47c16",
+  "study_digest": "b2671dd93bf9fb005195daba45279b0d8c4836125d9f2398496b7f98d57a8ff2",
+  "arms": 3,
+  "molecules_per_arm": 13,
+  "requested_seconds_per_arm": 120,
+  "estimated_provider_cost_usd": 0.008298,
+  "user_charge_usd": 0,
+  "authorization_scope": "This Lab only; no production core deployment or provider switch."
+}

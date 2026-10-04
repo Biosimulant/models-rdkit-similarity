@@ -1,0 +1,14 @@
+{
+  "run_id": "05685e99-9f1a-4c16-b172-1bdfabe34461",
+  "scope": "Managed Modal finite run on exact frozen revision; verified artifact payload and independent pinned RDKit legacy calls",
+  "valid_entries": 10000,
+  "invalid_entries": 0,
+  "returned_hits": 100,
+  "collection_size_bytes": 255570,
+  "collection_sha256": "29c2718c1361d923c27b21cad6ae2661f4f3889dab5d0ff72af5f2c5b50cad2c",
+  "every_returned_score_and_complete_top100_ranking_pass": true,
+  "duration_seconds": 4.8350782910129055,
+  "typed_outputs": 7,
+  "visuals": 4,
+  "limitations": "Nine diverse small structures repeated; not a worst-case graph benchmark, hosted cold/warm test or broad biological validation."
+}

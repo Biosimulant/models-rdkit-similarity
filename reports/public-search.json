@@ -1,0 +1,94 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "43d428df-c148-46a6-9ca7-4b04e3d0b428",
+  "data": {
+    "items": [
+      {
+        "artifact_id": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+        "exact_ref": "demi/rdkit-molecular-similarity-search@0.1.0",
+        "package_type": "lab",
+        "visibility": "public",
+        "checksum_sha256": "9de060e143a8b844e614855d6a44ea9d6d3303520897c4db8d1e0f0afd193600",
+        "title": "RDKit Molecular Similarity Search",
+        "description": "Rank molecules in your supplied collection using Morgan radius 2, 2048 bits, chirality enabled and Tanimoto similarity. Query/hit drawings, exact scores and downloadable rankings; CPU only.",
+        "tags": [],
+        "intended_use": {
+          "statement": "Structural ranking against exactly the supplied collection, <=10000 rows; not a search of all chemistry."
+        },
+        "compute_class": null,
+        "qualification": {
+          "schema_valid": true,
+          "runtime_valid": false,
+          "domain_validated": false,
+          "source": "biosimulant_validator"
+        },
+        "created_at": "2026-10-04T06:56:59.099918",
+        "content_trust": "untrusted_descriptive_metadata"
+      },
+      {
+        "artifact_id": "fa6c7a0c-baa0-4509-ba5b-1066ac9207a4",
+        "exact_ref": "demi/rdkit-compound-descriptors@0.1.2",
+        "package_type": "lab",
+        "visibility": "public",
+        "checksum_sha256": "b1933b25a0a3d5c12a5e52b57ccd51f45de7b7b07705b72e9ee39be3f106b13c",
+        "title": "RDKit Compound Descriptors",
+        "description": "Calculate reproducible chemical descriptors, draw 2D molecules and download CSV, JSON and a versioned receipt. CPU only; no biological prediction.",
+        "tags": [],
+        "intended_use": {
+          "statement": "Bounded chemical descriptor calculation for 1..100 molecular SMILES; preserve salts, isotope labels and stereochemistry."
+        },
+        "compute_class": null,
+        "qualification": {
+          "schema_valid": true,
+          "runtime_valid": false,
+          "domain_validated": false,
+          "source": "biosimulant_validator"
+        },
+        "created_at": "2026-10-03T21:53:55.261865",
+        "content_trust": "untrusted_descriptive_metadata"
+      },
+      {
+        "artifact_id": "bfdfa06c-059b-4b86-8f32-1490e1931421",
+        "exact_ref": "demi/boltz-boltz2-affinity-predictor@1.1.2",
+        "package_type": "lab",
+        "visibility": "private",
+        "checksum_sha256": "87a95f7f9a046d8557fc945f8ef4b172e5be9bdc2ae8a0aaa15d4ab66d291789",
+        "title": "Boltz bundled example — affinity and structure",
+        "description": "Multi-model lab with an embedded visualisation sibling for Boltz-2 affinity-focused protein-ligand predictions. Ships with a real protein/ligand pair so the lab runs out of the box on a GPU runner.",
+        "tags": [
+          "docking",
+          "boltz",
+          "structural-biology",
+          "protein-ligand",
+          "affinity",
+          "gpu"
+        ],
+        "intended_use": "Research use only. Predicts a protein-ligand complex structure and Boltz-2 affinity-style outputs for one protein sequence and one small-molecule SMILES, for exploratory comparison of related candidates against the same target. Not for clinical, diagnostic, or regulatory decisions.",
+        "compute_class": null,
+        "qualification": {
+          "schema_valid": true,
+          "runtime_valid": false,
+          "domain_validated": false,
+          "source": "biosimulant_validator"
+        },
+        "created_at": "2026-09-27T23:30:42.859388",
+        "content_trust": "untrusted_descriptive_metadata"
+      }
+    ],
+    "result_count": 3,
+    "total_matched": 3,
+    "next_cursor": null,
+    "as_of": "2026-10-04T07:12:20.827368",
+    "selection_required": true
+  },
+  "warnings": [
+    "Hub search covers released packages. No matching release does not mean no private draft or run exists."
+  ],
+  "next_actions": [
+    {
+      "tool": "hub_inspect",
+      "description": "Inspect an exact release; ask for a choice before running ambiguous matches."
+    }
+  ],
+  "links": {}
+}

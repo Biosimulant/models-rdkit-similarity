@@ -1,0 +1,14 @@
+{
+  "scope": "CUA public Lab Results and deliberately public Studio run Files UI",
+  "hub_results_three_public_runs_and_image_text_bar_table": true,
+  "hub_experiments_actual_public_study_supported": false,
+  "studio_files_seven_download_controls_present": true,
+  "anonymous_non_html_artifact_transfers_verified": "public-examples-verification.json",
+  "rankings_button_download_event_capture": "inconclusive: clicked control; browser download event timed out after20s; no UI/console error; direct anonymous artifact bytes verify",
+  "screenshots": [
+    "public-hub-results.png",
+    "public-experiments-blocker.png",
+    "public-pilot-downloads.png"
+  ],
+  "no_active_hosting": true
+}

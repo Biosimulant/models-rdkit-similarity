@@ -1,0 +1,12 @@
+rank,row_index,molecule_id,original_smiles,canonical_smiles,score,exact_match
+1,0,ethanol,CCO,CCO,1.0,True
+2,2,ethanol,CCO,CCO,1.0,True
+3,1,ethanol-equivalent,OCC,CCO,1.0,True
+4,3,propanol,CCCO,CCCO,0.5555555555555556,False
+5,4,butanol,CCCCO,CCCCO,0.4166666666666667,False
+6,5,ethylamine,CCN,CCN,0.3333333333333333,False
+7,6,acetate,CC(=O)O,CC(=O)O,0.18181818181818182,False
+8,10,salt,CC(=O)[O-].[Na+],CC(=O)[O-].[Na+],0.15384615384615385,False
+9,9,alanine-D,N[C@H](C)C(=O)O,C[C@@H](N)C(=O)O,0.125,False
+10,8,alanine-L,N[C@@H](C)C(=O)O,C[C@H](N)C(=O)O,0.125,False
+11,7,benzene,c1ccccc1,c1ccccc1,0.0,False

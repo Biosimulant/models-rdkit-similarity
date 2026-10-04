@@ -1,0 +1,91 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "b1778c7f-26e6-4103-9cbe-f559dff0be5f",
+  "data": {
+    "plan_id": "d71ad832-9920-439a-aa8f-78e77de40d54",
+    "plan_sha256": "184beb7b0c996b1bf06845617febf8e8cf04b87dc9357da321278283854e9a86",
+    "expires_at": "2026-10-04T07:10:35.729191Z",
+    "base_revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+    "base_sha256": "0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3",
+    "input_digest": "cd6a2a7527d9e8bb8aa4e417e796d541a28c5317ad2bd2a8bbc7be8ad35310de",
+    "findings": [],
+    "blockers": [],
+    "execution": {
+      "timing": "finite",
+      "policies": {
+        "search": "once_before_run"
+      },
+      "undeclared": []
+    },
+    "compute": {
+      "compute_profile": "cpu",
+      "requested_compute_profile_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06",
+      "selection_reason": "explicit",
+      "requirements": {
+        "device": "cpu",
+        "cpu_cores": 0.5,
+        "memory_mb": 512,
+        "recommended_profile": "free",
+        "legacy": false
+      },
+      "resource_class": "free",
+      "provider": "modal",
+      "maximum_runtime_seconds": 120,
+      "expected_duration": "workload-dependent",
+      "provider_cost_class": "free",
+      "user_charge": 0,
+      "billing_mode": "free_beta",
+      "remote_size_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06",
+      "cpu_cores": 0.5,
+      "memory_mb": 512,
+      "disk_mb": 512,
+      "max_concurrent_runs": 3,
+      "gpu_type": null,
+      "gpu_count": null,
+      "estimated_provider_cost_microusd": 2766,
+      "compute_assignment": {
+        "provider": "modal",
+        "configuration_revision": 1,
+        "size_id": "78ce1eb5-1ab5-4439-a999-8e3fcac27f06",
+        "resources": {
+          "cpu_cores": 0.5,
+          "memory_mb": 512,
+          "disk_mb": 512,
+          "gpu_type": null,
+          "gpu_count": null,
+          "timeout_seconds": 300
+        },
+        "cli_version": "0.0.34",
+        "default_python_version": "3.11",
+        "workspace_image": "",
+        "executor_image_source": "/app/tools/sandbox-image/Dockerfile",
+        "executor_image_context": "/app",
+        "executor_image_sha256": "55a162c1fa16b6574042b6e9504021dffec3b3e371952a7ea146a989de95063a",
+        "workspace_image_source": "/app/tools/workspace-image/Dockerfile",
+        "workspace_image_context": "/app",
+        "workspace_image_sha256": "55a162c1fa16b6574042b6e9504021dffec3b3e371952a7ea146a989de95063a"
+      }
+    },
+    "authorization": {
+      "mode": "per_run_approval",
+      "authorization_digest": "e71994d4556ab0198556ca670b75709ea2ea4be219ee2fab7ea9fb5eec2cf1df"
+    },
+    "requires_confirmation": true
+  },
+  "warnings": [
+    "This free-beta run consumes managed infrastructure and requires explicit approval."
+  ],
+  "next_actions": [
+    {
+      "tool": "run_create",
+      "description": "After explicit confirmation, queue this exact run plan.",
+      "arguments": {
+        "plan_id": "d71ad832-9920-439a-aa8f-78e77de40d54",
+        "plan_sha256": "184beb7b0c996b1bf06845617febf8e8cf04b87dc9357da321278283854e9a86"
+      }
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "53f67f93-b672-4a0e-93ee-48ff309a7511",
+  "data": {
+    "lab_id": "f0291213-a063-4aeb-8981-8e0e739f665d",
+    "hosted": null,
+    "environment": "production",
+    "image_inputs_enabled": true
+  },
+  "warnings": [],
+  "next_actions": [],
+  "links": {}
+}

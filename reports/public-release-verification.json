@@ -1,0 +1,49 @@
+{
+  "scope": "Anonymous public API/package fetch; no owner credentials or retained signed URLs",
+  "checks": [
+    {
+      "route": "/labs/f0291213-a063-4aeb-8981-8e0e739f665d",
+      "status": 200,
+      "is_public": true
+    },
+    {
+      "package_artifact": "51644052-5c60-4208-9f86-7a93cdf7d51b",
+      "bytes": 1162009,
+      "sha256": "9de060e143a8b844e614855d6a44ea9d6d3303520897c4db8d1e0f0afd193600",
+      "anonymous_download": true,
+      "exact_source_asset_fixture_notice_matches": [
+        "NOTICE.md",
+        "tests/test_acceptance.py",
+        "sources/RDKIT-LICENSE.txt",
+        "sources/provenance.json",
+        "sources/rdkit-descriptor-guide.rst",
+        "sources/native-library-distributions.json",
+        "sources/dependency-distributions.json",
+        "fixtures/example.csv",
+        "sources/native-library-notices/libexpat1-copyright",
+        "sources/native-library-notices/libmd0-copyright",
+        "sources/native-library-notices/libxdmcp6-copyright",
+        "sources/native-library-notices/libxext6-copyright",
+        "sources/native-library-notices/libxcb1-copyright",
+        "sources/native-library-notices/libx11-6-copyright",
+        "sources/native-library-notices/libbsd0-copyright",
+        "sources/native-library-notices/libxau6-copyright",
+        "sources/native-library-notices/libxrender1-copyright",
+        "sources/dependency-notices/pillow-licenses_LICENSE",
+        "sources/dependency-notices/rdkit-license.txt",
+        "sources/dependency-notices/rdkit-OFL.txt",
+        "sources/dependency-notices/biosimulant-licenses_LICENSE.txt",
+        "sources/dependency-notices/numpy-LICENSE.txt",
+        "sources/dependency-notices/rdkit-LICENSE.md",
+        "sources/dependency-notices/rdkit-telex_font_license.txt",
+        "models/search/model.yaml",
+        "models/search/assets/native-runtime-pin.json",
+        "models/search/assets/drawing-libraries.zip",
+        "models/search/src/linux_libraries.py",
+        "models/search/src/__init__.py",
+        "models/search/src/search.py"
+      ],
+      "members": 39
+    }
+  ]
+}
