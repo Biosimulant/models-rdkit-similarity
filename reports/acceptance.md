@@ -1,6 +1,6 @@
 # Acceptance evidence — RDKit Molecular Similarity Search
 
-Status: IN_PROGRESS — exact private workspace change awaits human approval. Public release, managed run, public study and active hosting have not been executed or verified. No original requirement is waived. Small-fixture parity is software verification, not broad chemistry/biological validation.
+Status: IN_PROGRESS — private revision applied; exact bounded three-arm managed study awaits human approval. Public release, managed run, public study and active hosting have not been executed or verified. No original requirement is waived. Small-fixture parity is software verification, not broad chemistry/biological validation.
 
 | Gate | State | Evidence / remaining work |
 | --- | --- | --- |
@@ -29,3 +29,5 @@ After apply, prepare one item-specific bounded pilot first (<=100 molecules, tim
 New dedicated repository initially has only staging and no main baseline; no preexisting commits to preserve. Core biosim main/staging baseline95071d18412aa9c3a174a38a066fd85e39428cc6. Core backend maincd1b8312b2db5c29ec494d3f063bd8ac2ebfbcc2 is ancestor of inspected staging4b1dfd3529920db7bc3eafb52c9d78c3c9de40da; staging-only commit preserved. Clean local core staging checkouts fast-forwarded to those inspected baselines; no source modification, push, production deployment or provider switch. Existing detached worktrees (including ongoing CSV hosting work) were inspected read-only and left untouched.
 
 All tests run from dedicated staging source. Linux harness is an isolated local adapter/runtime test, not a core end-to-end staging deployment or managed Modal run. Build/provision network allowed for pinned dependencies; test runtime network disabled. Harness containers --rm and unique verification image removed after checks; base cache and local venv retained.
+
+2026-10-04 update: User approved private plan3c30e3ed-a410-4533-b40c-c93dffe65bcf; applied revision97f8a493-fd93-4507-ba30-2c136f31edd7 SHA0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3. Returned source/specs match prepared contents where included; large/binary contents omitted. Revision Passport38061cde-eeec-4ed3-86f4-4303c27a8e6e REVIEW: no curated source resource pinned (source/license files retained), no execution evidence. Prepared bounded three-arm pilot/study plan5ad01f1d-737d-4346-83d0-afba4fb47c16 digestb2671dd93bf9fb005195daba45279b0d8c4836125d9f2398496b7f98d57a8ff2, expires2026-10-04T07:03:05.504738Z; estimated provider$0.008298, user$0, requested120s each/360s total, provider profile allocation300s each. No managed run queued before approval. Earlier blank/pending-private states are superseded.

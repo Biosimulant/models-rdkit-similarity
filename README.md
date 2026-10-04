@@ -2,7 +2,7 @@
 
 Biosimulant finite CPU Lab: search exactly your CSV collection using Morgan radius 2, 2048-bit fingerprints, chirality enabled, and Tanimoto on-bit intersection/union. Similarity scores are dimensionless and do not establish equal potency, activity, toxicity or patent status.
 
-Status: staging implementation verified locally; awaiting exact MCP workspace approval and item-specific managed compute. Public Lab release and active hosting are not yet verified.
+Status: staging implementation verified locally; private immutable workspace revision applied; awaiting exact item-specific bounded managed study approval. Public Lab release and active hosting are not yet verified.
 
 Inputs: query_smiles; exactly one of collection_csv or collection_file (UTF-8 CSV header molecule_id,smiles); top_k integer 1..100; minimum_similarity finite in [0,1], inclusive. Maximum 10000 rows, 2 MiB collection, 8192 SMILES characters, 256 atoms and 512 bonds per structure. An upper-bound staging benchmark is retained; hosted availability requires its own verification.
 

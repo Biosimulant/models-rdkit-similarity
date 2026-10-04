@@ -1,0 +1,50 @@
+{
+  "schema_version": "2026-09-16",
+  "request_id": "e49f602b-c42d-4c60-92d6-50ed937cebf7",
+  "data": {
+    "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+    "session_id": "c5047973-eee0-4833-af6c-8ee863bfb79f",
+    "title": "RDKit Molecular Similarity Search",
+    "status": "active",
+    "quality_profile_ref": "research-ready@2",
+    "intended_use_profile": {
+      "statement": "Rank only the supplied collection by Morgan radius-2 2048-bit fingerprints with chirality enabled and Tanimoto similarity; no pharmacological or patent claims."
+    },
+    "active_revision": {
+      "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+      "sequence": 2,
+      "sha256": "0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3",
+      "created_at": "2026-10-04T06:46:58.875052Z"
+    },
+    "idempotent_replay": false,
+    "session_context": null,
+    "passport_id": "38061cde-eeec-4ed3-86f4-4303c27a8e6e",
+    "passport_decision": "REVIEW"
+  },
+  "warnings": [],
+  "next_actions": [
+    {
+      "tool": "workspace_get",
+      "description": "Inspect the exact committed revision before further work.",
+      "arguments": {
+        "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+        "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7"
+      }
+    },
+    {
+      "tool": "passport_get",
+      "description": "Review the revision's per-check evidence decision and caveats.",
+      "arguments": {
+        "workspace_id": "6d098ff1-41e3-47c8-84f8-29bdbd46f091",
+        "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7"
+      }
+    },
+    {
+      "tool": "run_prepare",
+      "description": "Preflight this exact revision before requesting compute approval."
+    }
+  ],
+  "links": {
+    "open_in_biosimulant": "https://studio.biosimulant.com/c/c5047973-eee0-4833-af6c-8ee863bfb79f"
+  }
+}

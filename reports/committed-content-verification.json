@@ -1,0 +1,170 @@
+{
+  "revision_id": "97f8a493-fd93-4507-ba30-2c136f31edd7",
+  "sha256": "0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3",
+  "comparison": "Full returned text byte representations compared to prepared source; omitted large/binary assets unverified by this read",
+  "records": [
+    {
+      "path": "LICENSE",
+      "state": "OMITTED",
+      "bytes": 1603
+    },
+    {
+      "path": "NOTICE.md",
+      "state": "PASS",
+      "bytes": 503
+    },
+    {
+      "path": "fixtures/example.csv",
+      "state": "PASS",
+      "bytes": 245
+    },
+    {
+      "path": "freeze-manifest.json",
+      "state": "PASS",
+      "bytes": 5714
+    },
+    {
+      "path": "models/search/assets/native-runtime-pin.json",
+      "state": "PASS",
+      "bytes": 373
+    },
+    {
+      "path": "models/search/model.yaml",
+      "state": "PASS",
+      "bytes": 1659
+    },
+    {
+      "path": "models/search/src/__init__.py",
+      "state": "PASS",
+      "bytes": 0
+    },
+    {
+      "path": "models/search/src/linux_libraries.py",
+      "state": "PASS",
+      "bytes": 2360
+    },
+    {
+      "path": "models/search/src/search.py",
+      "state": "PASS",
+      "bytes": 13459
+    },
+    {
+      "path": "sources/RDKIT-LICENSE.txt",
+      "state": "PASS",
+      "bytes": 1580
+    },
+    {
+      "path": "sources/dependency-distributions.json",
+      "state": "PASS",
+      "bytes": 2666
+    },
+    {
+      "path": "sources/dependency-notices/biosimulant-licenses_LICENSE.txt",
+      "state": "PASS",
+      "bytes": 1068
+    },
+    {
+      "path": "sources/dependency-notices/numpy-LICENSE.txt",
+      "state": "OMITTED",
+      "bytes": 47755
+    },
+    {
+      "path": "sources/dependency-notices/pillow-licenses_LICENSE",
+      "state": "OMITTED",
+      "bytes": 66498
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-LICENSE.md",
+      "state": "PASS",
+      "bytes": 1077
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-OFL.txt",
+      "state": "PASS",
+      "bytes": 4390
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-license.txt",
+      "state": "PASS",
+      "bytes": 1580
+    },
+    {
+      "path": "sources/dependency-notices/rdkit-telex_font_license.txt",
+      "state": "PASS",
+      "bytes": 4401
+    },
+    {
+      "path": "sources/native-library-distributions.json",
+      "state": "PASS",
+      "bytes": 6170
+    },
+    {
+      "path": "sources/native-library-notices/libbsd0-copyright",
+      "state": "OMITTED",
+      "bytes": 23960
+    },
+    {
+      "path": "sources/native-library-notices/libexpat1-copyright",
+      "state": "OMITTED",
+      "bytes": 1756
+    },
+    {
+      "path": "sources/native-library-notices/libmd0-copyright",
+      "state": "OMITTED",
+      "bytes": 8018
+    },
+    {
+      "path": "sources/native-library-notices/libx11-6-copyright",
+      "state": "OMITTED",
+      "bytes": 47102
+    },
+    {
+      "path": "sources/native-library-notices/libxau6-copyright",
+      "state": "OMITTED",
+      "bytes": 1224
+    },
+    {
+      "path": "sources/native-library-notices/libxcb1-copyright",
+      "state": "OMITTED",
+      "bytes": 1781
+    },
+    {
+      "path": "sources/native-library-notices/libxdmcp6-copyright",
+      "state": "OMITTED",
+      "bytes": 1265
+    },
+    {
+      "path": "sources/native-library-notices/libxext6-copyright",
+      "state": "OMITTED",
+      "bytes": 10421
+    },
+    {
+      "path": "sources/native-library-notices/libxrender1-copyright",
+      "state": "OMITTED",
+      "bytes": 2252
+    },
+    {
+      "path": "sources/provenance.json",
+      "state": "PASS",
+      "bytes": 1038
+    },
+    {
+      "path": "sources/rdkit-descriptor-guide.rst",
+      "state": "OMITTED",
+      "bytes": 167232
+    },
+    {
+      "path": "tests/test_acceptance.py",
+      "state": "PASS",
+      "bytes": 8110
+    },
+    {
+      "path": "MRS.md",
+      "state": "PASS"
+    },
+    {
+      "path": "MTS.md",
+      "state": "PASS"
+    }
+  ]
+}

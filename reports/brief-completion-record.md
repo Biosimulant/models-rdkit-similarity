@@ -1,4 +1,4 @@
-## Completion record — IN_PROGRESS, awaiting exact private change approval
+## Completion record — IN_PROGRESS, awaiting bounded managed study approval
 
 Updated 2026-10-04. All original requirements remain mandatory; no DONE claim. A1–A4 have local and isolated staging software evidence only. A5 and H1–H8 remain partial or not run until durable managed and public hosted verification.
 
@@ -13,3 +13,5 @@ Updated 2026-10-04. All original requirements remain mandatory; no DONE claim. A
 - Remaining work: approve exact private change and read/hash committed content; prepare/approve item-specific bounded <=100-molecule Modal pilot120s; verify nonempty typed results/visuals and artifact bytes/Passport; measure managed upper bound before enabling; retain actual two-threshold experiment; prepare/approve exact public release and listing; verify non-owner Results/Experiments/downloads; prepare approved exact Modal hosting and verify real uploaded/pasted inputs, cold/subsequent runs, limits/cancellation/isolation/resources/spend. Live hosting authoring topic twice returned internal_error (latest requesta751da37-68b1-4639-8bc9-587438b7758c); previous descriptor CSV/study limitations remain risks to recheck, not proven similarity hosting failures. No rollback deployment needed; if hosting is created read its current revision then pause/withdraw through MCP and preserve artifacts.
 
 Mark DONE only after all A1–A5/H1–H8 pass. The public GitHub repository is not a public Hub Lab or active hosting.
+
+2026-10-04 update: User approved private plan3c30e3ed-a410-4533-b40c-c93dffe65bcf; applied revision97f8a493-fd93-4507-ba30-2c136f31edd7 SHA0343eeaae0e6255ee6f116244b2955b03290545e4f973412d9abcddc1c9cb1a3. Returned source/specs match prepared contents where included; large/binary contents omitted. Revision Passport38061cde-eeec-4ed3-86f4-4303c27a8e6e REVIEW: no curated source resource pinned (source/license files retained), no execution evidence. Prepared bounded three-arm pilot/study plan5ad01f1d-737d-4346-83d0-afba4fb47c16 digestb2671dd93bf9fb005195daba45279b0d8c4836125d9f2398496b7f98d57a8ff2, expires2026-10-04T07:03:05.504738Z; estimated provider$0.008298, user$0, requested120s each/360s total, provider profile allocation300s each. No managed run queued before approval. Earlier blank/pending-private states are superseded.
