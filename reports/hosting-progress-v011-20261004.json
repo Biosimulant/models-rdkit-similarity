@@ -27,7 +27,9 @@
     "all_original_artifact_hashes_verified": 28,
     "evidence": "public-all-artifact-verification.json",
     "public_actual_study_ui": false,
-    "exact_v011_example": "candidate-v011-public-example-verification.json"
+    "exact_v011_example": "candidate-v011-public-example-verification.json",
+    "exact_v011_hub_results": "public-v011-hub-exact-run.png",
+    "transient_browser_network_failure": "One Hub request failed before response; one reload recovered four runs and exact image/text/bar/table. Anonymous artifact verification independently passed."
   },
   "staging": {
     "synchronized_main_baseline": "ae81e6af273ba10c7212e272dcf7a224a27c5266",
@@ -83,5 +85,6 @@
     "Cold and subsequent hosted invocation, pasted/uploaded CSV, all outputs and downloads",
     "Hosted bounds, timeout/cancellation, cross-account isolation and idle/resource evidence",
     "Actual public retained study UI; Hub Experiments redirects to authenticated Studio"
-  ]
+  ],
+  "delivery_commit": "96a3b8aa7f9d8a4a742739e0299b6d5cae2162df"
 }
